@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Criar extensão do Visual Studio igual o Bootstrap tem-->
+    <!--Procurar criticas do Bootstrap, e o que falta nele-->
+    <!--Trocar lorem ipsum por bacon ipsum-->
+    <title>Heartthrob - CSS framework for Fluent Design</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Heartthrob -->
+    <link href="css/heartthrob.css" rel="stylesheet" type="text/css" />
+    <link href="css/doc.css" rel="stylesheet" type="text/css" />
+    <script src="js/heartthrob.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Heartthrob -->
+
+    <!-- Syntax -->
+    <link href="highlight/vs.css" rel="stylesheet" />
+    <script src="highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="bg-purple-light">
+        <div class="hub left">
+
+        </div>
+        <div class="nav-bar left">
+            <ul>
+                <li><a href="index.html">Começe a usar</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="componentes.html">Componentes</a></li>
+                <li><a href="migrar.html">Migrando do bootstrap</a></li>
+                <li><a href="ferramentas.html">Ferramentas</a></li>
+                <li><a href="temas.html">Temas</a></li>
+                <li><a href="sobre.html">Sobre + Recomendações</a></li>
+            </ul>
+        </div>
+        <div class="clean"></div>
+    </header>
+
+    <!-- Rever esse nome -->
+    <!--<div class="title-back bg-purple">
+        <a href="#"><</a>
+        <h1 class="white">CSS</h1>
+    </div>-->
+
+    <nav class="bg-purple" id="autoMenu">
+
+    </nav>
+
+    <content class="right">
+        <section id="main_grupobotoes">
+            <h1>Grupo de Botões</h1>
+            <p>Agrupe botões juntos em uma única linha</p>
+            <blockquote class="border">
+                <h5 class="purple">Dicas de ferramentas precisam de uma configuração personalizada</h5>
+                <hr />
+                <p>Ao utilizar dicas de ferramentas em elementos como <span class="tag">.btn-group</span>, você tera que especificar
+                    a opção <span class="tag">container: 'body'</span> para evitar efeitos indesejados.</p>
+            </blockquote>
+
+            <blockquote class="border">
+                <h5 class="purple">Lembre-sede colocar um <span class="tag">role</span> e forneceruma etiqueta</h5>
+                <hr />
+                <p>Para que os botões agrupados sejam transmitidos da maneira correta, um atributo <span class="tag">role</span>                    precisa ser fornecido. para um grupo de botões você ira utilizar <span class="tag">role="group"</span>,
+                    enquanto em toolbars (barra de ferramentas) utilizará <span class="tag">role="toolbar"</span></p>
+                <p>uma exceção são grupos que contém apenas um único controle, como quando utilizamos o elemento <span class="tag">button</span>ou
+                    um dropdown</p>
+                <p>Grupos de barras de ferramentas devem ter uma etiqueta explícita, pois a maioria das tecnologias assistivas
+                    querem caso contrário não os anunciam, apesar da preseça do atributo <span class="tag">role</span> correto.
+                    Em um exemplo fornecido aqui, nós usamos <span class="tag">aria-label</span>, mas alternativas tal como
+                    <span class="tag">aria-labelledby</span>podem também ser usadas.</p>
+            </blockquote>
+            <section id="sub_exemplo">
+                <h2>Exemplo básico</h2>
+                <p>Envolva uma série de botôes com <span class="tag">.btn</span> em <span class="tag">.btn-group</span></p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Esquerda</button>
+                        <button type="button" class="btn btn-default">Meio</button>
+                        <button type="button" class="btn btn-default">Direita</button>
+                    </div>
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('101'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="101" class="html"></code>
+                </blockquote>
+            </section>
+            <section id="sub_toolbar">
+                <h2>Botão toolbar (barra de ferramentas)</h2>
+                <p>Combine conjuntos de <span class="tag">div class="btn-group"</span> dentro de um <span class="tag">div class="btn-toolbar"</span>                    para componentes mais complexos.</p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar com grupo de botões">
+                        <div class="btn-group" role="group" aria-label="Primeiro grupo">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Segundo grupo">
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="terceiro grupo">
+                            <button type="button" class="btn btn-default">7</button>
+                        </div>
+                    </div>
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('102'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="102" class="html"></code>
+                </blockquote>
+            </section>
+            <section id="sub_dimensionamento">
+                <h2>Dimensionamento</h2>
+                <p>Ao invés de aplicar classes de dimensionamento para todos os botões do grupo basta adicionar <span class="tag">.btn-group-*</span>                    a cada <span class="=tag">.btn-group</span>, incluindo quando aninham multiplos grupos.</p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <div class="bs-exemplo" role="toolbar" aria-label="Dimensionamento de grupamento de botões">
+                        <div class="btn-group" role="group" aria-label="Primeiro grupo">
+                            <div class="btn-group btn-group-lg" role="group" aria-label="grupo de botões grandes">
+                                <button type="button" class="btn btn-default">Esquerda</button>
+                                <button type="button" class="btn btn-default">Meio</button>
+                                <button type="button" class="btn btn-default">Direita</button>
+                            </div>
+                            <hr/>
+                            <div class="btn-group" role="group" aria-label="grupo de botões tamanho padrão">
+                                <button type="button" class="btn btn-default">Esquerda</button>
+                                <button type="button" class="btn btn-default">Meio</button>
+                                <button type="button" class="btn btn-default">Direita</button>
+                            </div>
+                            <hr/>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="grupo de botões pequenos">
+                                <button type="button" class="btn btn-default">Esquerda</button>
+                                <button type="button" class="btn btn-default">Meio</button>
+                                <button type="button" class="btn btn-default">Direita</button>
+                            </div>
+                            <hr/>
+                            <div class="btn-group btn-group-xs" role="group" aria-label="grupo de botões menores">
+                                <button type="button" class="btn btn-default">Esquerda</button>
+                                <button type="button" class="btn btn-default">Meio</button>
+                                <button type="button" class="btn btn-default">Direita</button>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('103'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="103" class="html"></code>
+                </blockquote>
+            </section>
+            <section id="sub_aling">
+                <h2>Aninhamento</h2>
+                <p>Caso queira misturar um grupo de botões com um dropdown basta você colocar um <span class="tag">.btn-group</span>                    dentro de outro <span class="tag">.btn-group</span></p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <div class="bs-ememplo" data-exemple-id="aninhando grupo de botões com dropdowns">
+                        <div class="btn-group" role="group" aria-label="grupo de botões + Dorpdowns">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+
+                            <div class="dropdown">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="true">
+                                 Dropdown
+                                <span class="caret"></span>
+                            </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a href="#">Dropdown link</a></li>
+                                    <li><a href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('104'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="104" class="html"></code>
+                </blockquote>
+            </section>
+            <section id="sub_vert">
+                <h2>Variação vertical</h2>
+                <p>Os botões ao invés de ficarem na posição horizontal, eles ficam na vertical.<b>Divisão de botões dropdowns não são suportados aqui.</b></p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('105'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="105" class="html"></code>
+                </blockquote>
+            </section>
+        </section>
+    </content>
+    <div class="clean"></div>
+
+    <script>
+        $('code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+        generateMenu();
+        $("nav a").click(function () {
+            var id = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - 80
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

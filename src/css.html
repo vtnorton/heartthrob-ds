@@ -1,0 +1,1948 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <!--Criar extensão do Visual Studio igual o Bootstrap tem-->
+      <!--Procurar criticas do Bootstrap, e o que falta nele-->
+      <!--Trocar lorem ipsum por bacon ipsum-->
+      <title>Heartthrob - CSS framework for Fluent Design</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+      <!-- Heartthrob -->
+      <link href="css/heartthrob.css" rel="stylesheet" type="text/css" />
+      <script src="js/heartthrob.js" type="text/javascript" charset="utf-8"></script>
+      <!-- Heartthrob -->
+
+      
+      <link href="css/doc.css" rel="stylesheet" type="text/css" />
+      
+      
+      <!-- Syntax -->
+      <link href="highlight/vs.css" rel="stylesheet" />
+      <script src="highlight/highlight.pack.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+      <script src="js/jquery-1.11.0.min.js"></script>
+      <script src="js/main.js"></script>
+      <!-- Syntax -->
+
+   </head>
+   <body>
+      <header class="bg-purple-light">
+         <div class="hub left">
+         </div>
+         <div class="nav-bar left">
+            <ul>
+               <li><a href="index.html">Começe a usar</a></li>
+               <li><a href="css.html">CSS</a></li>
+               <li><a href="componentes.html">Componentes</a></li>
+               <li><a href="migrar.html">Migrando do bootstrap</a></li>
+               <li><a href="ferramentas.html">Ferramentas</a></li>
+               <li><a href="temas.html">Temas</a></li>
+               <li><a href="sobre.html">Sobre + Recomendações</a></li>
+            </ul>
+         </div>
+         <div class="clean"></div>
+      </header>
+      <!-- Rever esse nome -->
+      <!--<div class="title-back bg-purple">
+         <a href="#"><</a>
+         <h1 class="white">CSS</h1>
+         </div>-->
+      <nav class="bg-purple" id="autoMenu">
+      </nav>
+      <content class="right">
+         <!--<h1>Vamos aprender a usar o Heartthrob</h1>
+            <hr />-->
+         <section id="main_visao">
+            <h1>Visão Geral</h1>
+            <p>O Heartthrob é mais um framework feito em CSS 3 e JavaScript, e aqui você pode ver as regras de utilização do Heartthrob, e então, começar a criar páginas incrívies para a web utilizando esse podereso framework.</p>
+            <section id="sub_html5">
+               <h2>HTML5</h2>
+               <p>O Heartthrob utiliza elementos do HTML5 e propriedades do CSS que requerem o uso do HTML5 doctype. Inclua-o no início de todos os seus projetos.</p>
+               <blockquote>
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('000'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!-- 
+                     <!DOCTYPE html>
+                     <html>
+                         ...
+                     </html>
+                     -->
+                  <code id="000" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_mobilefirst">
+               <h2>Renderização</h2>
+               <p>Para garantir a renderiazação adequada e sensibilidade ao toque, adicione a meta tag viewport dentro de <span class="tag">head</span>.</p>
+               <blockquote>
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('000b'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!-- 
+                     <meta name="viewport" content="width=device-width, initial-scale=1">
+                     -->
+                  <code id="000b" class="html"></code>
+               </blockquote>
+               <p>Você pode desativar a ampliação do zoom em dispositivos móveis adicionando <span class="tag">user-scalable=no</span> na meta tag viewport. Isso desativa o zoom, ou seja, os usuários só são capazes de trabalhar com a barra de rolagem, e o resultado é que seu site ficará parecido com um aplicativo nativo. Entretanto, nós não recomendamos isso em todos os sites, por isso tome cuidado!</p>
+               <blockquote>
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('000c'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!-- 
+                     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+                     -->
+                  <code id="000c" class="html"></code>
+               </blockquote>
+            </section>
+         </section>
+         <section id="main_grid">
+            <h1>Sistema de grid</h1>
+            <p>O Heartthrob inclui um sistema de grid fluido responsivo, mobile first que balança apropriadamente até 12 colunas como dispositivo ou viewport de tamanho aumentado. Ele inclui classes predefinas para opções de layout fácil.</p>
+            <section id="sub_introducao">
+               <h2>Introdução</h2>
+               <p>Sistema de gride é usado para creação de layout de páginas através de uma série de linhas e colunas que abrigam seu conteúdo. Aqui esta como o sistema de grid do Heartthrob trabalhao:</p>
+               <ul>
+                  <li><p>Linhas (row) devem estar localizadas dentro de um conteiner com largura pre definida.</p></li>
+                  <li><p>Use linhas para criar grupos horizontais de colunas.</p></li>
+                  <li><p>O conteúdo deve ser localizado dentro das colunas, e apenas colunas podem ser filhas imediatas de linhas.</p></li>
+                  <li><p>Se mais que 12 colunas são colocadas dentro de uma única linha, cada grupo de colunas extras serão, como uma unidade, colocadas dentro de uma nova linha.</p></li>
+                  <li><p>Classes de grid aplicadas para dispositivos com largura de tela maiores ou iguais aos tamanhos de ponto de parada, e sobrescreve classes de grid direcionadas em dispositivos menores. Portanto, por exemplo, aplicando qualquer classe <span class="tag">.col-md-*</span> para um elementos não irá apenas afetar seu estilo em dispositivos médios mas também em dispositivos grandes se uma classe <span class="tag">.col-lg-*</span> não está presente</p></li>
+               </ul>
+            </section>
+            <section id="sub_opcoes">
+               <h2>Opções de grid</h2>
+               <p>Veja como os aspectos do sistema de grid do Heartthrob trabalha através de múltiplos dispositivos com uma tabela prática.</p>
+               <table class="table table-bordered">
+                   <thead>
+                       <tr>
+                        <td></td>
+                        <td>
+                           Dispositivos extra pequenos<br/ >
+                           <small>Telefones (&lt;768px)</small>
+                        </td>
+                        <td>
+                           Dispositivos pequenos<br/ >
+                           <small>Tablets (≥768px)</small>
+                        </td>
+                        <td>
+                           Dispositivos médios<br/ >
+                           <small>Desktops (≥992px)</small>
+                        </td>
+                        <td>
+                           Dispositivos grandes<br/ >
+                           <small>Desktops (≥1200px)</small>
+                        </td>
+                     </tr>
+                   </thead>
+                  <tbody>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Comportamento do grid</td>
+                        <td>Horizontal em todos os momentos</td>
+                        <td colspan="3">Colapsa ao princípio, horizontal acima de breakpoints</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Largura do container</td>
+                        <td>nenhum (auto)</td>
+                        <td>750px</td>
+                        <td>970px</td>
+                        <td>1170px</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Prefixo de classe</td>
+                        <td><span class="tag">.col-xs-*</span></td>
+                        <td><span class="tag">.col-sm-*</span></td>
+                        <td><span class="tag">.col-md-*</span></td>
+                        <td><span class="tag">.col-lg-*</span></td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">número de colunas</td>
+                        <td colspan="4">12</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Largura da coluna</td>
+                        <td class="text-muted">Auto</td>
+                        <td>~62px</td>
+                        <td>~81px</td>
+                        <td>~97px</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Largura da calha</td>
+                        <td colspan="4">30px (15px em cada lada da coluna)</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Encaixável</td>
+                        <td colspan="4">Sim</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Distância</td>
+                        <td colspan="4">Sim</td>
+                     </tr>
+                     <tr>
+                        <td class="text-nowrap" scope="row">Ordenação de colunas</td>
+                        <td colspan="4">Sim</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+            <section id="sub_exemplo">
+                <h2>Exemplo: Empilhamento horizontal</h2>
+                <p>Usando uma única definição de classe de grid <span class="tag">.col-md-*</span>, você pode criar um sistema de grid bádico que inicia fora da pilha nos dispositivos móveis e tablets (o extra pequeno para alcance pequeno) antes de se tornar horizontal em dispositivos desktop (médio). Coloque colunas de grid em algum <span class="tag">.row.</span></p>
+
+                <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                    <div class="row show-grid">
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                        <div class="col-md-1">.col-md-1</div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-md-8">.col-md-8</div>
+                        <div class="col-md-4">.col-md-4</div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4">.col-md-4</div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-md-6">.col-md-6</div>
+                        <div class="col-md-6">.col-md-6</div>
+                    </div>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('grid01'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="grid01" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_exemplo02">
+                <h2>Exemplo: Celular e desktop</h2>
+                <p>Não quer suas colunas simplesmente empilhadas em dispositivos menores? Use as classes de grid para disposivitos
+                    extra pequenos (xs) e médios (md) adicionado <span class="tag">.col-xs-*</span> <span class="tag">.col-md-*</span>                    em suas colunas. Veja os exemplos abaixo para uma ideia melhor de como isso tudo trabalha.</p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                    <div class="row show-grid">
+                        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+                        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                    </div>
+
+                    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                    <div class="row show-grid">
+                        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                    </div>
+
+                    <!-- Columns are always 50% wide, on mobile and desktop -->
+                    <div class="row show-grid">
+                        <div class="col-xs-6">.col-xs-6</div>
+                        <div class="col-xs-6">.col-xs-6</div>
+                    </div>
+                </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('grid02'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="grid02" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_exemplo03">
+                <h2>Exemplo: Celular, tablet e desktop</h2>
+                <p>Configure sobre o exemplo anterior criando ainda mais dinâmicos e poderosos layouts com classes de tablets
+                    <span class="tag">.col-sm-*</span>.</p>
+                <blockquote>
+                    <p class="small">Exemplo</p>
+                    <hr />
+                    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                    <div class="row show-grid">
+                        <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+                        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                    </div>
+                </blockquote>
+                <blockquote class="after">
+                    <p class="left small">Código usado</p>
+                    <button class="right copy" onclick="copyToClipboard(document.getElementById('grid03'));">Copiar</button>
+                    <div class="clean"></div>
+                    <hr />
+                    <code id="grid03" class="html"></code>
+                </blockquote>
+            </section>
+         </section>
+         <section id="main_Tipografia">
+            <h1>Tipografia</h1>
+            <section id="sub_Title">
+               <h2>Títulos</h2>
+               <p>Vamos aprender a usuar as tags em HTML <span class="tag">h1</span>, <span class="tag">h2</span>, <span class="tag">h3</span>, <span class="tag">h4</span>, <span class="tag">h5</span>, <span class="tag">h6</span>, e mais sobre a estilização e como personalizar estas tags.</p>
+               <p>Também está disponível o uso das tags <span class="tag">.h1</span> até a <span class="tag">.h6</span>, caso queira utilizar a estilização dos títulos mais ainda quer que o texto esteja online.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <h1>Título 1</h1>
+                  <h2>Título 2</h2>
+                  <h3>Título 3</h3>
+                  <h4>Título 4</h4>
+                  <h5>Título 5</h5>
+                  <h6>Título 6</h6>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('001'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="001" class="html">&lt;&#x68;&#x31;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x31;&lt;&sol;&#x68;&#x31;&gt;&NewLine;&lt;&#x68;&#x32;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x32;&lt;&sol;&#x68;&#x32;&gt;&NewLine;&lt;&#x68;&#x33;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x33;&lt;&sol;&#x68;&#x33;&gt;&NewLine;&lt;&#x68;&#x34;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x34;&lt;&sol;&#x68;&#x34;&gt;&NewLine;&lt;&#x68;&#x35;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x35;&lt;&sol;&#x68;&#x35;&gt;&NewLine;&lt;&#x68;&#x36;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x36;&lt;&sol;&#x68;&#x36;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_personalizando-titulo">
+               <h2>Personalizando a tag de títulos</h2>
+               <p>É possível adicionar novas cores para essas tags. Para isso basta adicionar a classe <span class="tag">.nome-da-cor</span> (em inglês).</p>
+            </section>
+            <section id="sub_secondary-text">
+               <h2>Textos secundários nos títulos</h2>
+               <p>Para criar um texto secundário é possível utilizar a tag <span class="tag">small</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <h1>Título 1<small>Texto secundário</small></h1>
+                  <h2>Título 2<small>Texto secundário</small></h2>
+                  <h3>Título 3<small>Texto secundário</small></h3>
+                  <h4>Título 4<small>Texto secundário</small></h4>
+                  <h5>Título 5<small>Texto secundário</small></h5>
+                  <h6>Título 6<small>Texto secundário</small></h6>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('002'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="002" class="html">&lt;&#x68;&#x31;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x31;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x31;&gt;&NewLine;&lt;&#x68;&#x32;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x32;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x32;&gt;&NewLine;&lt;&#x68;&#x33;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x33;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x33;&gt;&NewLine;&lt;&#x68;&#x34;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x34;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x34;&gt;&NewLine;&lt;&#x68;&#x35;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x35;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x35;&gt;&NewLine;&lt;&#x68;&#x36;&gt;&#x54;&iacute;&#x74;&#x75;&#x6C;&#x6F;&#x20;&#x36;&lt;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x73;&#x65;&#x63;&#x75;&#x6E;&#x64;&aacute;&#x72;&#x69;&#x6F;&lt;&sol;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&gt;&lt;&sol;&#x68;&#x36;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_paragrafo">
+               <h2>Paragráfo</h2>
+               <p>A fonte padrão do Heartthrob é o Segoe UI, no tamanho <strong>16px</strong> com o line-height de <strong>24px</strong>. Isto é aplicado a todos os paragráfos. Em adição a isso, a tag <span class="tag">p</span> (parágrafo) recebe uma margem de fundo e de topo.</p>
+               <blockquote>
+                  <p>Exemplo</p>
+                  <hr />
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis sem interdum, congue eros ut, euismod lacus. Nulla quis rutrum diam. Nulla iaculis commodo urna vel malesuada. Duis scelerisque lacus sapien, quis aliquet enim sodales ut. Duis porttitor ultrices ligula, id ultricies augue ultricies ac. </p>
+                  <p>Proin lacinia eros tortor, ut imperdiet ante efficitur eu. Fusce id elit vel purus lacinia placerat id eu turpis. Fusce condimentum urna leo, ac interdum ex eleifend nec. Cras eget lectus laoreet, facilisis ipsum viverra, egestas tortor. </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus eros dui, vitae maximus nibh laoreet eget. Vivamus gravida dapibus felis, vel suscipit nisl egestas vitae. </p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('003'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="003" class="html">&lt;&#x70;&gt;&period;&period;&period;&lt;&sol;&#x70;&gt;</code>
+               </blockquote>
+               <h4>Parágrafo principal</h4>
+               <p>É possível adicionar em um parágrafo a tag <span class="tag">lead</span>, ela irá adicionar ao texto uma fonte maior e o paragráfo irá ganhar mais enfase.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis sem interdum, congue eros ut, euismod lacus. Nulla quis rutrum diam. Nulla iaculis commodo urna vel malesuada. Duis scelerisque lacus sapien, quis aliquet enim sodales ut. Duis porttitor ultrices ligula, id ultricies augue ultricies ac. </p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('004'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="004" class="html">&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x6C;&#x65;&#x61;&#x64;&quot;&gt;&period;&period;&period;&lt;&sol;&#x70;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_inline">
+               <h2>Textos inline</h2>
+               <h4>Texto marcado</h4>
+               <p>Para destacar um texto de acordo com a relavância dele no contexto, use a tag <span class="tag">mark</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Você pode usar a tag mark para <mark>destacar</mark> um texto.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('005'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="005" class="html">&lt;&#x70;&gt;&#x54;&#x65;&#x78;&#x74;&#x6F;&#x20;&lt;&#x6D;&#x61;&#x72;&#x6B;&gt;&#x6D;&#x61;&#x72;&#x63;&#x61;&#x64;&#x6F;&lt;&sol;&#x6D;&#x61;&#x72;&#x6B;&gt;&lt;&sol;&#x70;&gt;</code>
+               </blockquote>
+               <h4>Texto deletado</h4>
+               <p>Para indicar que um texto foi deletado, use a tag <span class="tag">del</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p><del>Esta linha de texto deve ser tratada como se fosse deletada</del></p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('006'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="006" class="html">&#x3C;p&#x3E;&#x3C;del&#x3E;Esta linha de texto deve ser tratada como se fosse deletada&#x3C;/del&#x3E;&#x3C;/p&#x3E;</code>
+               </blockquote>
+               <h4>Texto sublinhado</h4>
+               <p>Para sublinhar um texto use a tag <span class="tag">u</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p><u>Essa linha é para ser sublinhada</u></p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('007'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="007" class="html">&#x3C;p&#x3E;&#x3C;u&#x3E;Essa linha &#xE9; para ser sublinhada&#x3C;/u&#x3E;&#x3C;/p&#x3E;</code>
+               </blockquote>
+               <h4>Texto pequeno</h4>
+               <p>Algumas vezes é preciso utilizar a tag <span class="tag">small</span> para colocar um texto como pequeno. Você pode utilizar pela tag <span class="tag">.small</span> e pela tag <span class="tag">small</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis sem interdum, congue eros ut, euismod lacus. Nulla quis rutrum diam. Nulla iaculis commodo urna vel malesuada. Duis scelerisque lacus sapien, quis aliquet enim sodales ut. Duis porttitor ultrices ligula, id ultricies augue ultricies ac. </small></p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('008'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="008" class="html">&#x3C;p&#x3E;&#x3C;small&#x3E;Bacon Ipsum&#x3C;/small&#x3E;&#x3C;/p&#x3E;</code>
+               </blockquote>
+               <h4>Negrito</h4>
+               <p>Para realçar um texto colocando ele em negrito, use a tag <span class="tag">strong</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>O sequinte texto está <strong>em negrito</strong>.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('009'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="009" class="html">&#x3C;p&#x3E;O sequinte texto est&#xE1; &#x3C;strong&#x3E;em negrito&#x3C;/strong&#x3E;.&#x3C;/p&#x3E;</code>
+               </blockquote>
+               <h4>Itálico</h4>
+               <p>Para enfatizar um texto, colocando ele em itálico, use a tag <span class="tag">em</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>O sequinte texto está <em>em itálico</em>.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('010'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="010" class="html">&#x3C;p&#x3E;O sequinte texto est&#xE1; &#x3C;em&#x3E;em it&#xE1;lico&#x3C;/em&#x3E;.&#x3C;/p&#x3E;</code>
+               </blockquote>
+               <blockquote class="border">
+                  <h5 class="purple">Elementos alternativos</h5>
+                  <hr />
+                  <p>Sinta-se livre para usar as tags <span class="tag">b</span> e <span class="tag">i</span>, do HTML5. <span class="tag">b</span> é feito para dar um destaque nas palavras ou frases sem adicionar uma importância adicional nela, enquanto o <span class="tag">i</span> é mais para voz e termos técnicos, etc.</p>
+               </blockquote>
+            </section>
+            <section id="sub_align">
+               <h2>Classes de alinhamento</h2>
+               <p>Realinhe de forma fácil os seus textos com as classes de alinhamento de texto.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p class="text-left">Para texto alinhado a esquerda, use a tag <span class="tag">.text-left</span>.</p>
+                  <p class="text-right">Para texto alinhado a direita, use a tag <span class="tag">.text-right</span>.</p>
+                  <p class="text-center">Para texto centralizado, use a tag <span class="tag">.text-center</span>.</p>
+                  <p class="text-justify">Para texto justificado, use a tag <span class="tag">.text-justify</span>.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('011a'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="011a" class="html">&#x3C;p class=&#x22;text-left&#x22;&#x3E;...&#x3C;/p&#x3E;&NewLine;&#x3C;p class=&#x22;text-right&#x22;&#x3E;...&#x3C;/p&#x3E;&NewLine;&#x3C;p class=&#x22;text-center&#x22;&#x3E;...&#x3C;/p&#x3E;&NewLine;&#x3C;p class=&#x22;text-justify&#x22;&#x3E;...&#x3C;/p&#x3E;&NewLine;</code>
+               </blockquote>
+            </section>
+            <section id="sub_transformation">
+               <h2>Classes de transformação</h2>
+               <p>É possível alterar a capitalização de texto com algumas classes.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p class="text-lowercase">Para texto em minúsculo, use a tag <span class="tag">.text-lowercase</span>.</p>
+                  <p class="text-uppercase">Para texto em maíusculo, use a tag <span class="tag">.text-uppercase</span>.</p>
+                  <p class="text-capitalize">Para cada palavra com a primeira letra em maíuscula, use a tag <span class="tag">.text-capitalize</span>.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('011b'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="011b" class="html">&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&#x2D;&#x6C;&#x6F;&#x77;&#x65;&#x72;&#x63;&#x61;&#x73;&#x65;&quot;&gt;&period;&period;&period;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&#x2D;&#x75;&#x70;&#x70;&#x65;&#x72;&#x63;&#x61;&#x73;&#x65;&quot;&gt;&period;&period;&period;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&#x2D;&#x63;&#x61;&#x70;&#x69;&#x74;&#x61;&#x6C;&#x69;&#x7A;&#x65;&quot;&gt;&period;&period;&period;&lt;&sol;&#x70;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_abbreviations">
+               <h2>Abreviações</h2>
+               <p>Implementação estilizada do elemento <span class="tag">abbr</span> do HTML para abreviaturas e siglas para mostrar a versão expandida em hover. As abreviações com um atributo <span class="tag">title</span> têm uma borda inferior pontilhada luz e um cursor de ajuda em hover, fornecendo contexto adicional no hover e para os usuários de tecnologias assistivas.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Uma abreviação da palavra attribute é <abbr title="attribute">attr</abbr>.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('012'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="012" class="html">&lt;&#x61;&#x62;&#x62;&#x72;&#x20;&#x74;&#x69;&#x74;&#x6C;&#x65;&equals;&quot;&#x61;&#x74;&#x74;&#x72;&#x69;&#x62;&#x75;&#x74;&#x65;&quot;&gt;&period;&period;&period;&lt;&sol;&#x61;&#x62;&#x62;&#x72;&gt;&period;</code>
+               </blockquote>
+            </section>
+            <section id="sub_addresses">
+               <h2>Endereços</h2>
+               <p>Apresente informações de contato com o atributo de endereço (<span class="tag">address</span>). Mantenha a formatação adicionando, ao final de cada linha, a tag <span class="tag">br</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <address>
+                     <strong>Vítor Norton</strong><br />
+                     Rua West US 42, Apartamento 815  <br />
+                     Azure Microsoft, Cloud <br />
+                     <abbr title="Telefone">T:</abbr> +55 (00) 0000-0000
+                  </address>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('013'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="013" class="html">&lt;&#x61;&#x64;&#x64;&#x72;&#x65;&#x73;&#x73;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x73;&#x74;&#x72;&#x6F;&#x6E;&#x67;&gt;&period;&period;&period;&lt;&sol;&#x73;&#x74;&#x72;&#x6F;&#x6E;&#x67;&gt;&lt;&#x62;&#x72;&#x20;&sol;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&period;&period;&period;&#x20;&lt;&#x62;&#x72;&sol;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x61;&#x62;&#x62;&#x72;&#x20;&#x74;&#x69;&#x74;&#x6C;&#x65;&equals;&quot;&#x54;&#x65;&#x6C;&#x65;&#x66;&#x6F;&#x6E;&#x65;&quot;&gt;&#x54;&colon;&lt;&sol;&#x61;&#x62;&#x62;&#x72;&gt;&#x20;&period;&period;&period;&NewLine;&lt;&sol;&#x61;&#x64;&#x64;&#x72;&#x65;&#x73;&#x73;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_blockquote">
+               <h2>Blockquote</h2>
+               <p>Para os blocos de citações de conteúdos de outras fontes no seu documento, use a tag <span class="tag">blockquote</span>. Use também a tag de parágrafos <span class="tag">p</span>, caso queira manter a tipografia.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <blockquote>
+                     <p>Este é um blockquote dentro de outro blockquote.</p>
+                  </blockquote>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('014'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="014" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;&period;&period;&period;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+               <h4>Opções do blockquote</h4>
+               <p>É possível utilizar algumas tags do css para alterar o estilo e o conteúdo de uma citação.</p>
+               <h4>Nomeando a fonte</h4>
+               <p>Adicione a tag <span class="tag">footer</span> para identificar a fonte. Circule o nome da fonte com a tag <span class="tag">cite</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Este é o exemplo do blockquote dentro de um blockquote com footer.</p>
+                  <footer>Foi dito pelo criador do Heartthrob <cite title="Vítor Norton">Vítor Norton</cite></footer>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('015'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="015" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&lt;&#x66;&#x6F;&#x6F;&#x74;&#x65;&#x72;&gt;&#x20;&period;&period;&period;&#x20;&lt;&#x63;&#x69;&#x74;&#x65;&#x20;&#x74;&#x69;&#x74;&#x6C;&#x65;&equals;&quot;&#x41;&#x75;&#x74;&#x6F;&#x72;&quot;&gt;&#x41;&#x75;&#x74;&#x6F;&#x72;&lt;&sol;&#x63;&#x69;&#x74;&#x65;&gt;&lt;&sol;&#x66;&#x6F;&#x6F;&#x74;&#x65;&#x72;&gt;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+               <h4>Alternativas</h4>
+               <p>Você pode adicionar uma faixa vertical ao lado do blockquote, bastando adicionar a classe <span class="tag">.border</span>, para alterar a cor da borda (o padrão é roxo), use o nome da cor em seguida.</p>
+               <p>Você também pode colorir a borda inteira, por adicionar a classe <span class="tag">.full</span>.</p>
+               <blockquote class="border">
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Este é um blockquote com uma borda roxa.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('016'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="016" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x6F;&#x72;&#x64;&#x65;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&period;&period;&period;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+               <blockquote class="border green">
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Este é um blockquote com uma borda verde.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('017'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="017" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x6F;&#x72;&#x64;&#x65;&#x72;&#x20;&#x67;&#x72;&#x65;&#x65;&#x6E;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&period;&period;&period;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+               <blockquote class="border full red">
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Este é um blockquote com uma borda verde em volta dele, por completo.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('018'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="018" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x6F;&#x72;&#x64;&#x65;&#x72;&#x20;&#x66;&#x75;&#x6C;&#x6C;&#x20;&#x72;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&period;&period;&period;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+               <h4>Blockquote secundário</h4>
+               <p>Caso deseja utilizar um blockquote secundário, para inserir dados referentes ao anterior, assim como utilizado por essa página (ao adicionar o código do exemplo), basta inserir a tag <span class="tag">.after</span> em um novo blockquote.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>Este é um blockquote</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p>Este é um blockquote secundário</p>
+                  <br />
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('019'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="019" class="html">&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x61;&#x66;&#x74;&#x65;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&period;&period;&period;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_lists">
+               <h2>Listas</h2>
+               <p>Para listas de itens que não a ordem não importa, use as tags <span class="tag">ul li</span>.</p>
+               <p>Para listas de itens ordenadas, use as tags <span class="tag">ol li</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo de lista não-ordenada</p>
+                  <hr />
+                  <ul>
+                     <li>Lorem ipsum dolor sit amet</li>
+                     <li>Consectetur adipiscing elit</li>
+                     <li>
+                        Integer molestie lorem at massa
+                        <ul>
+                           <li>Facilisis in pretium nisl aliquet</li>
+                           <li>Nulla volutpat aliquam velit </li>
+                        </ul>
+                     </li>
+                     <li>Aenean sit amet erat nunc</li>
+                  </ul>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('020'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="020" class="html">&lt;&#x75;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x75;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x75;&#x6C;&gt;&NewLine;&#x20;&#x20;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&lt;&sol;&#x75;&#x6C;&gt;</code>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo de lista ordenada</p>
+                  <hr />
+                  <ol>
+                     <li>Lorem ipsum dolor sit amet</li>
+                     <li>Consectetur adipiscing elit</li>
+                     <li>
+                        Integer molestie lorem at massa
+                        <ol>
+                           <li>Facilisis in pretium nisl aliquet</li>
+                           <li>Nulla volutpat aliquam velit </li>
+                        </ol>
+                     </li>
+                     <li>Aenean sit amet erat nunc</li>
+                  </ol>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('021'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="021" class="html">&lt;&#x6F;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6F;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x6F;&#x6C;&gt;&NewLine;&#x20;&#x20;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&lt;&sol;&#x6F;&#x6C;&gt;</code>
+               </blockquote>
+               <h4>Sem estilização</h4>
+               <p>Para remover a estilização padrão de uma lista (a margem que existe a esquerda e os pontos a sua volta, ou os números), adicione a classe <span class="tag">.unstyled</span>.</p>
+               <p><strong>Atenção: ao remover a estilização, só será removida a estilização da lista onde ela foi aplicada. Para que tenha efeito em listas filhas, é preciso adicionar a tag nesta lista também.</strong></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <ul class="unstyled">
+                     <li>Lorem ipsum dolor sit amet</li>
+                     <li>Consectetur adipiscing elit</li>
+                     <li>
+                        Integer molestie lorem at massa
+                        <ul>
+                           <li>Facilisis in pretium nisl aliquet</li>
+                           <li>Nulla volutpat aliquam velit </li>
+                        </ul>
+                     </li>
+                     <li>Aenean sit amet erat nunc</li>
+                  </ul>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('022'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="022" class="html">&lt;&#x75;&#x6C;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x75;&#x6E;&#x73;&#x74;&#x79;&#x6C;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x75;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x69;&gt;&period;&period;&period;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x75;&#x6C;&gt;&NewLine;&#x20;&#x20;&lt;&sol;&#x6C;&#x69;&gt;&NewLine;&lt;&sol;&#x75;&#x6C;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_description">
+               <h2>Descrição</h2>
+               <p>Uma lista de termos com descrições. Use as tags <span class="tag">dl</span>, <span class="tag">dt</span>, <span class="tag">dd</span>.</p>
+               <p>Descrição em listas horizontais truncarão termos que são que são muito grandes para caber na coluna esquerda com <span class="tag">.text-overflow</span>. Em janelas de exibição mais estreitas, eles mudarão para o layout de empilhamento padrão.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <dl>
+                     <dt>Description lists</dt>
+                     <dd>A description list is perfect for defining terms.</dd>
+                     <dt>Euismod</dt>
+                     <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.</dd>
+                     <dt>Malesuada porta</dt>
+                     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                  </dl>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('023'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="023" class="html">&lt;&#x64;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x64;&#x74;&gt;&period;&period;&period;&lt;&sol;&#x64;&#x74;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x64;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x64;&#x64;&gt;&NewLine;&lt;&sol;&#x64;&#x6C;&gt;</code>
+               </blockquote>
+            </section>
+         </section>
+         <hr />
+         <section id="main_tables">
+            <h1>Tabelas</h1>
+            <section id="sub_basics">
+               <h2>Exemplos básicos</h2>
+               <p>As tabelas são estilizadas automaticamente pela tag padrão de tabela <span class="tag">table</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <table>
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr>
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('024'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="024" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+               <p>Caso não queira que a tabela seja estilizada, use a tag <span class="tag">.no-style</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <!--.no-style or .unstyle-->
+                  <table class="no-style">
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr>
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="left small">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('025'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="025" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x6E;&#x6F;&#x2D;&#x73;&#x74;&#x79;&#x6C;&#x65;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+               <p>Caso queira realçar uma linha da sua tabela, acrescente a tag <span class="tag">.strong</span> na sua <span class="tag">tr</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <table class="no-style">
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr class="strong">
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('026'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="026" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x6E;&#x6F;&#x2D;&#x73;&#x74;&#x79;&#x6C;&#x65;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x73;&#x74;&#x72;&#x6F;&#x6E;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_stripedrows">
+               <h2>Linhas listradas</h2>
+               <p>Use a classe <span class="tag">.table-striped</span> para adicionar linhas zebradas à qualquer linha da tabela.</p>
+               <strong>Atenção: as tabelas listradas são estilizadas por meio do seletor CSS <span class="tag">:nth-child</span>, que não está disponível no Internet Explorer 8.</strong>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <table class="table-striped">
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr>
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                        <tr>
+                           <td>04</td>
+                           <td>Joe</td>
+                           <td>Belfiore</td>
+                           <td>@joebelfiore</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('028'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="028" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x2D;&#x73;&#x74;&#x72;&#x69;&#x70;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_tablewithborder">
+               <h2>Tabela com bordas</h2>
+               <p>Adicione <span class="tag">.table-bordered</span> para colocar bordas em todos os lados da tabela e nas celulas.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <table class="table-bordered">
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr>
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('029'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="029" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x2D;&#x62;&#x6F;&#x72;&#x64;&#x65;&#x72;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_tablecondenced">
+               <h2>Tabela condensada</h2>
+               <p>Adicione <span class="tag">.table-condensed</span> para fazer as tabelas mais compactas, cortando o padding pela metade.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <table class="table-condensed">
+                     <thead>
+                        <tr>
+                           <td>Id</td>
+                           <td>Primeiro Nome</td>
+                           <td>Último Nome</td>
+                           <td>Twitter</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>01</td>
+                           <td>Vítor</td>
+                           <td>Norton</td>
+                           <td>@vt_norton</td>
+                        </tr>
+                        <tr>
+                           <td>02</td>
+                           <td>Dona</td>
+                           <td>Sarkar</td>
+                           <td>@donasarkar</td>
+                        </tr>
+                        <tr>
+                           <td>03</td>
+                           <td>Gabe</td>
+                           <td>Aul</td>
+                           <td>@gabeaul</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('030'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="030" class="html">&lt;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x2D;&#x63;&#x6F;&#x6E;&#x64;&#x65;&#x6E;&#x73;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x68;&#x65;&#x61;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x74;&#x64;&gt;&period;&period;&period;&lt;&sol;&#x74;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x72;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x74;&#x62;&#x6F;&#x64;&#x79;&gt;&NewLine;&lt;&sol;&#x74;&#x61;&#x62;&#x6C;&#x65;&gt;</code>
+               </blockquote>
+            </section>
+         </section>
+         <hr />
+         <section id="main_form">
+            <h1>Formulários</h1>
+            <section id="sub_basicform">
+               <h2>Exemplos básicos</h2>
+               <p>Controles de formulários individuais recebem automaticamente estilos definidos pelo próprio navegador. Todos os elementos textuais <span class="tag">input</span>, <span class="tag">textarea</span> e <span class="tag">select</span> são ajustados para width: 100%, por padrão. Envolva labels e controles em <span class="tag">.form-group</span> para melhor espaçamento.</p>
+               <p>Use a classe <span class="tag">.help-block</span> para estilizar o texto de ajuda, como no exemplo abaixo.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <form>
+                     <label for="txtMail">Endereço de e-mail</label>
+                     <input type="email" id="txtMail" placeholder="Email">
+                     <label for="txtSenha">Senha</label>
+                     <input type="password" id="txtSenha" placeholder="Senha">
+                     <label for="fileInput">Entrada de arquivo</label>
+                     <input type="file" id="fileInput">
+                     <p class="help-block">Exemplo de texto de ajuda em nível de bloco.</p>
+                     <label>
+                     <input type="checkbox"> Me selecione
+                     </label>
+                     <br />
+                     <button>Enviar</button>
+                  </form>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('031'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="031" class="html">&lt;&#x66;&#x6F;&#x72;&#x6D;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&quot;&gt;&#x45;&#x6E;&#x64;&#x65;&#x72;&#x65;&ccedil;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x65;&#x6D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6D;&#x61;&#x69;&#x6C;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&gt;&#x53;&#x65;&#x6E;&#x68;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x70;&#x61;&#x73;&#x73;&#x77;&#x6F;&#x72;&#x64;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&#x49;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x20;&#x61;&#x72;&#x71;&#x75;&#x69;&#x76;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&#x49;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x45;&#x78;&#x65;&#x6D;&#x70;&#x6C;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x61;&#x6A;&#x75;&#x64;&#x61;&#x20;&#x65;&#x6D;&#x20;&#x6E;&iacute;&#x76;&#x65;&#x6C;&#x20;&#x64;&#x65;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6F;&period;&lt;&sol;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&gt;&#x20;&#x4D;&#x65;&#x20;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x69;&#x6F;&#x6E;&#x65;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&#x45;&#x6E;&#x76;&#x69;&#x61;&#x72;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x66;&#x6F;&#x72;&#x6D;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_inlineform">
+               <h2>Formulário em linha</h2>
+               <!-- Trabalho pra fazer aqui, no quesito responsivo -->
+               <p>Adicione <span class="tag">.form-inline</span> ao seu formulário (não necessáriamente um form) para controles de left-aligned e inline-block. <strong>Isso se aplia apenas para formulário dentro de viewports que são pelo menos com 768px de largura.</strong></p>
+               <blockquote class="border">
+                  <h5 class="purple">Larguras personalizadas</h5>
+                  <hr />
+                  <p>Inputs e selects tem width: 100% aplicado por padrão no Heartthrob. Dentro de formulários inline, é redefinido para width:auto, assim vários controles podem residier na mesma linha. Dependendo do seu layout, pode ser necessário adiconar larguras personalizadas.</p>
+               </blockquote>
+               <blockquote class="border">
+                  <h5 class="purple">Sempre adicione labels</h5>
+                  <hr />
+                  <p>Os leitores de tela tersão dificuldade com sues formulários, se você  não incluir um label para cada entrada. Para estes formulários in-line, vocêpode ocultar as labels usando a classe <span class="tag">.sr-only</span>. Existem outros métodos alternativos de fornecer uma label para tecnologias assistivas, tias como os atributos <span class="tag">aria-label</span>, <span class="tag">aria-labelledby</span> ou <span class="tag">title</span>. Se nenhum desses estiver presente, leitores de tela podem usar o atributo <span class="tag">placeholder</span>, se presente, mas note que o usuo do <span class="tag">placeholder</span> como um substituto para outros métodos de rotulagem não é aconselhável.</p>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <form class="form-inline">
+                     <label for="txtNome2">Nome</label>
+                     <input type="text" id="txtNome2" placeholder="Cezar Norton">
+                     <label for="txtMail2">Email</label>
+                     <input type="email" id="txtMail2" placeholder="contato@vtnorton.com">
+                     <button>Enviar convite</button>
+                  </form>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('032'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="032" class="html">&lt;&#x66;&#x6F;&#x72;&#x6D;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x2D;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x4E;&#x6F;&#x6D;&#x65;&#x32;&quot;&gt;&#x4E;&#x6F;&#x6D;&#x65;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x4E;&#x6F;&#x6D;&#x65;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x43;&#x65;&#x7A;&#x61;&#x72;&#x20;&#x4E;&#x6F;&#x72;&#x74;&#x6F;&#x6E;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&#x32;&quot;&gt;&#x45;&#x6D;&#x61;&#x69;&#x6C;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x65;&#x6D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x74;&#x6F;&commat;&#x76;&#x74;&#x6E;&#x6F;&#x72;&#x74;&#x6F;&#x6E;&period;&#x63;&#x6F;&#x6D;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&#x45;&#x6E;&#x76;&#x69;&#x61;&#x72;&#x20;&#x63;&#x6F;&#x6E;&#x76;&#x69;&#x74;&#x65;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x66;&#x6F;&#x72;&#x6D;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_addonsform">
+               <h2>Add-ons em formulário</h2>
+               <p>É possível adicionar informações extras a um formulário através da tab <span class="tag">.input-addon</span>, mas para que isso possa acontecer é preciso que o input esteja dentro de um <span class="tag">.form-input</span>, como no exemplo abaixo.</p>
+               <blockquote class="border">
+                  <h5 class="purple">Recomendação</h5>
+                  <hr />
+                  <p>Para um melhor resultado utilize apenas um <span class="tag">.input-addon</span> de cada lado do input. Caso deseje adionar outros, um código manual CSS deverá ser inserido para que o resultado seja o mesmo.</p>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <form>
+                     <!-- Ao remover um dos lados, o css está removendo a borda lateral -->
+                     <!-- O botão está mais alto que os inputs -->
+                     <label class="sr-only">Valor (em dolar)</label>
+                     <div class="form-input">
+                        <div class="input-addon">$</div>
+                        <input type="text" placeholder="Valor">
+                        <div class="input-addon">.00</div>
+                     </div>
+                     <button>Comprar</button>
+                  </form>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('033'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="033" class="html">&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x73;&#x72;&#x2D;&#x6F;&#x6E;&#x6C;&#x79;&quot;&gt;&#x56;&#x61;&#x6C;&#x6F;&#x72;&#x20;&lpar;&#x65;&#x6D;&#x20;&#x64;&#x6F;&#x6C;&#x61;&#x72;&rpar;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x2D;&#x69;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x2D;&#x61;&#x64;&#x64;&#x6F;&#x6E;&quot;&gt;&dollar;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x56;&#x61;&#x6C;&#x6F;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x2D;&#x61;&#x64;&#x64;&#x6F;&#x6E;&quot;&gt;&period;&#x30;&#x30;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&#x43;&#x6F;&#x6D;&#x70;&#x72;&#x61;&#x72;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_supportedControls">
+               <h2>Controles suportados</h2>
+               <p>Exemplo de controles de formulário padrão suportados em um layout exemplo de formulário.</p>
+               <h3>Inputs</h3>
+               <p>A maior parte de controles do formulário comum, campos e entrada baseados em texto. Inclui suporte para todos os tipos de HTML5: <span class="tag">text</span>, <span class="tag">password</span>, <span class="tag">datetime</span>, <span class="tag">datetime-local</span>, <span class="tag">date</span>, <span class="tag">month</span>, <span class="tag">time</span>, <span class="tag">week</span>, <span class="tag">number</span>, <span class="tag">email</span>, <span class="tag">url</span>, <span class="tag">search</span> e <span class="tag">tel</span>.</p>
+               <blockquote class="border">
+                  <h5 class="purple">Declaração de tipo necessária</h5>
+                  <hr />
+                  <p>Inputs só será plenamente denominado se seu tipo estiver devidamente declarado.</p>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <input type="text" placeholder="Entrada de texto">
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('034'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="034" class="html">&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&quot;&gt;</code>
+               </blockquote>
+               <blockquote class="border">
+                  <h5 class="purple">Grupo de Inputs</h5>
+                  <hr />
+                  <p>Para adicionar texto ou botões integrados antes e/ou depois de alguma base de texto <span class="tag">input</span>, <a href="componentes.html">veja o componente de grupo de entrada</a>.</p>
+               </blockquote>
+               <h3>Textarea</h3>
+               <p>Controle de formulário que suporta várias linhas de texto. Mude o atributo <span class="tag">rows</span> se necessário.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <textarea rows="4" placeholder="Área de texto"></textarea>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('035'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="035" class="html">&lt;&#x74;&#x65;&#x78;&#x74;&#x61;&#x72;&#x65;&#x61;&#x20;&#x72;&#x6F;&#x77;&#x73;&equals;&quot;&#x34;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&Aacute;&#x72;&#x65;&#x61;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&quot;&gt;</code>
+               </blockquote>
+               <h3>Checkboxes e radios</h3>
+               <p>Checkboxes (ou caixas de seleção) são para selecionar uma ou várias opções em uma lista, enquanto radios (seleção em rádio - redondo) são para selecionar uma opção de muitas.</p>
+               <p>Desabilitar checkboxes e radios são suportados, mas fornecer um cursor "não-autoriado" no foco do pai <span class="tag">label</span>, você precisará adicionar a classe <span class="tag">.disabled</span> para o pai <span class="tag">.radio</span>, <span class="tag">.radio-inline</span>, <span class="tag">.checkbox</span> ou <span class="tag">.checkbox-inline</span>.</p>
+               <h4>Padrão (empilhado)</h4>
+               <p>Para que ele fique empilhado coloque-o dentro de uma <span class="tag">div</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <div class="checkbox">
+                     <label>
+                     <input type="checkbox" value="">
+                     Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
+                     </label>
+                  </div>
+                  <div class="checkbox disabled">
+                     <label>
+                     <input type="checkbox" value="" disabled>
+                     Opção dois está desabilitada.
+                     </label>
+                  </div>
+                  <br />
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                     Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                     Opção dois pode ser outra coisa e selecionando-o irá desmarcar a opção um.
+                     </label>
+                  </div>
+                  <div class="radio disabled">
+                     <label>
+                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                     Opção três está desabilitada.
+                     </label>
+                  </div>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('036'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="036" class="html">&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x4F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x75;&#x6D;&#x20;&eacute;&#x20;&#x69;&#x73;&#x73;&#x6F;&#x20;&#x65;&#x20;&#x61;&#x71;&#x75;&#x69;&#x6C;&#x6F;&#x20;&amp;&#x6D;&#x64;&#x61;&#x73;&#x68;&semi;&#x20;&#x6E;&atilde;&#x6F;&#x20;&#x64;&#x65;&#x69;&#x78;&#x65;&#x20;&#x64;&#x65;&#x20;&#x69;&#x6E;&#x63;&#x6C;&#x75;&#x69;&#x72;&#x20;&#x70;&#x6F;&#x72;&#x71;&#x75;&#x65;&#x20;&eacute;&#x20;&oacute;&#x74;&#x69;&#x6D;&#x6F;&period;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&quot;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x4F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x64;&#x6F;&#x69;&#x73;&#x20;&#x65;&#x73;&#x74;&aacute;&#x20;&#x64;&#x65;&#x73;&#x61;&#x62;&#x69;&#x6C;&#x69;&#x74;&#x61;&#x64;&#x61;&period;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x62;&#x72;&#x20;&sol;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&#x31;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x65;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x4F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x75;&#x6D;&#x20;&eacute;&#x20;&#x69;&#x73;&#x73;&#x6F;&#x20;&#x65;&#x20;&#x61;&#x71;&#x75;&#x69;&#x6C;&#x6F;&#x20;&amp;&#x6D;&#x64;&#x61;&#x73;&#x68;&semi;&#x20;&#x6E;&atilde;&#x6F;&#x20;&#x64;&#x65;&#x69;&#x78;&#x65;&#x20;&#x64;&#x65;&#x20;&#x69;&#x6E;&#x63;&#x6C;&#x75;&#x69;&#x72;&#x20;&#x70;&#x6F;&#x72;&#x71;&#x75;&#x65;&#x20;&eacute;&#x20;&oacute;&#x74;&#x69;&#x6D;&#x6F;&period;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&#x32;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x32;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x4F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x64;&#x6F;&#x69;&#x73;&#x20;&#x70;&#x6F;&#x64;&#x65;&#x20;&#x73;&#x65;&#x72;&#x20;&#x6F;&#x75;&#x74;&#x72;&#x61;&#x20;&#x63;&#x6F;&#x69;&#x73;&#x61;&#x20;&#x65;&#x20;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x69;&#x6F;&#x6E;&#x61;&#x6E;&#x64;&#x6F;&#x2D;&#x6F;&#x20;&#x69;&#x72;&aacute;&#x20;&#x64;&#x65;&#x73;&#x6D;&#x61;&#x72;&#x63;&#x61;&#x72;&#x20;&#x61;&#x20;&#x6F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x75;&#x6D;&period;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x73;&#x33;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x33;&quot;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x4F;&#x70;&ccedil;&atilde;&#x6F;&#x20;&#x74;&#x72;&ecirc;&#x73;&#x20;&#x65;&#x73;&#x74;&aacute;&#x20;&#x64;&#x65;&#x73;&#x61;&#x62;&#x69;&#x6C;&#x69;&#x74;&#x61;&#x64;&#x61;&period;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;</code>
+               </blockquote>
+               <h4>Checkboxes e radios em linha</h4>
+               <p>Não é necessário adicionar nenhuma classe para que ele fique em linha, bastando colocar as opções dentro da mesma <span class="tag">div</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <!-- Não está alinhado como deveria estar -->
+                  <hr />
+                  <div class="checkbox">
+                     <label>
+                     <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                     </label>
+                     <label>
+                     <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                     </label>
+                     <label>
+                     <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                     </label>
+                  </div>
+                  <br />
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                     </label>
+                     <label>
+                     <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                     </label>
+                     <label>
+                     <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                     </label>
+                  </div>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('037'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="037" class="html">&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x31;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&#x20;&#x31;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x32;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x32;&quot;&gt;&#x20;&#x32;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x33;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x33;&quot;&gt;&#x20;&#x33;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x62;&#x72;&#x20;&sol;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x4F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x31;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&#x20;&#x31;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x4F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x32;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x32;&quot;&gt;&#x20;&#x32;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x72;&#x61;&#x64;&#x69;&#x6F;&quot;&#x20;&#x6E;&#x61;&#x6D;&#x65;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x4F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&#x52;&#x61;&#x64;&#x69;&#x6F;&#x33;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x33;&quot;&gt;&#x20;&#x33;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;</code>
+               </blockquote>
+               <h4>Checkboxes e radios sem texto na etiqueta (label)</h4>
+               <p>Também é possível adicionar checkboxes e radios sem ter um texto dentro de uma <span class="tag">label</span>. Lembre de continuar fornecendo algum tipo de rótulo para tecnologias assistimas (por exemplo, usando <span class="tag">aria-label</span>).</p>
+               <h3>Selects</h3>
+               <p>Note que muitos menus seletores nativamente - a saber, no Safari e Chrome - possuem cantos arredodandos que não podem ser modificados por meio da propriedade <span class="tag">border-radius</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <select>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('038'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="038" class="html">
+                  &lt;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x31;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x32;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x33;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x34;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x35;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&gt;         
+                  </code>
+               </blockquote>
+               <p>Para <span class="tag">select</span> com o atributo de controle <span class="tag">multiple</span>, multiplas opções são exibidas por padrão.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <select multiple>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('039'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="039" class="html">&lt;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&#x20;&#x6D;&#x75;&#x6C;&#x74;&#x69;&#x70;&#x6C;&#x65;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x31;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x32;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x33;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x34;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&#x35;&lt;&sol;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sbu_focusState">
+               <h2>Estado focado</h2>
+               <p>Aqui está um exemplo de como um <span class="tag">input</span> fica ao estar com estilização focada.</p>
+               <p><strong>Atenção:</strong> O exemplo abaixo de entrada usa estilo personalizado, na documentação para demostrar o estado <span class="tag">:focus</span> em um input.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <input type="text" style="border-color:#2572EB;background-color:#fff" placeholder="Entrada de texto">
+               </blockquote>
+            </section>
+            <section id="sub_disabledState">
+               <h2>Estado desativado</h2>
+               <p>Adicione o atributo boleano <span class="tag">disable</span> em uma entrada (input) para impedir interações do usuário. Entrada desativada aparecem mais leves eadicionam um cursor <span class="tag">not-allowed</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <input type="text" disabled placeholder="Entrada de texto">
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('040'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="040" class="html">&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x73;&#x74;&#x79;&#x6C;&#x65;&equals;&quot;&#x62;&#x6F;&#x72;&#x64;&#x65;&#x72;&#x2D;&#x63;&#x6F;&#x6C;&#x6F;&#x72;&colon;&num;&#x32;&#x35;&#x37;&#x32;&#x45;&#x42;&semi;&#x62;&#x61;&#x63;&#x6B;&#x67;&#x72;&#x6F;&#x75;&#x6E;&#x64;&#x2D;&#x63;&#x6F;&#x6C;&#x6F;&#x72;&colon;&num;&#x66;&#x66;&#x66;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&quot;&gt;&NewLine;&lt;&sol;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;&NewLine;&lt;&sol;&#x73;&#x65;&#x63;&#x74;&#x69;&#x6F;&#x6E;&gt;&NewLine;&lt;&#x73;&#x65;&#x63;&#x74;&#x69;&#x6F;&#x6E;&#x20;&#x69;&#x64;&equals;&quot;&#x73;&#x75;&#x62;&lowbar;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&#x53;&#x74;&#x61;&#x74;&#x65;&quot;&gt;&NewLine;&lt;&#x68;&#x32;&gt;&#x45;&#x73;&#x74;&#x61;&#x64;&#x6F;&#x20;&#x64;&#x65;&#x73;&#x61;&#x74;&#x69;&#x76;&#x61;&#x64;&#x6F;&lt;&sol;&#x68;&#x32;&gt;&NewLine;&lt;&#x70;&gt;&#x41;&#x64;&#x69;&#x63;&#x69;&#x6F;&#x6E;&#x65;&#x20;&#x6F;&#x20;&#x61;&#x74;&#x72;&#x69;&#x62;&#x75;&#x74;&#x6F;&#x20;&#x62;&#x6F;&#x6C;&#x65;&#x61;&#x6E;&#x6F;&#x20;&lt;&#x73;&#x70;&#x61;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x61;&#x67;&quot;&gt;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&lt;&sol;&#x73;&#x70;&#x61;&#x6E;&gt;&#x20;&#x65;&#x6D;&#x20;&#x75;&#x6D;&#x61;&#x20;&#x65;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&lpar;&#x69;&#x6E;&#x70;&#x75;&#x74;&rpar;&#x20;&#x70;&#x61;&#x72;&#x61;&#x20;&#x69;&#x6D;&#x70;&#x65;&#x64;&#x69;&#x72;&#x20;&#x69;&#x6E;&#x74;&#x65;&#x72;&#x61;&ccedil;&otilde;&#x65;&#x73;&#x20;&#x64;&#x6F;&#x20;&#x75;&#x73;&#x75;&aacute;&#x72;&#x69;&#x6F;&period;&#x20;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x73;&#x61;&#x74;&#x69;&#x76;&#x61;&#x64;&#x61;&#x20;&#x61;&#x70;&#x61;&#x72;&#x65;&#x63;&#x65;&#x6D;&#x20;&#x6D;&#x61;&#x69;&#x73;&#x20;&#x6C;&#x65;&#x76;&#x65;&#x73;&#x20;&#x65;&#x61;&#x64;&#x69;&#x63;&#x69;&#x6F;&#x6E;&#x61;&#x6D;&#x20;&#x75;&#x6D;&#x20;&#x63;&#x75;&#x72;&#x73;&#x6F;&#x72;&#x20;&lt;&#x73;&#x70;&#x61;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x74;&#x61;&#x67;&quot;&gt;&#x6E;&#x6F;&#x74;&#x2D;&#x61;&#x6C;&#x6C;&#x6F;&#x77;&#x65;&#x64;&lt;&sol;&#x73;&#x70;&#x61;&#x6E;&gt;&period;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x71;&#x75;&#x6F;&#x74;&#x65;&gt;&NewLine;&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x73;&#x6D;&#x61;&#x6C;&#x6C;&quot;&gt;&#x45;&#x78;&#x65;&#x6D;&#x70;&#x6C;&#x6F;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x68;&#x72;&#x20;&sol;&gt;&NewLine;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&quot;&gt;</code>
+               </blockquote>
+               <h3>Fieldsets desativados</h3>
+               <p>Adicione o atributo <span class="tag">disabled</span> a um <span class="tag">fieldset</span> para desabilitar todos os controles dentro do <span class="tag">fieldset</span> de uma vez.</p>
+               <p><strong>Atenção:</strong> As versões anterios do Internet Explorer 11 não suportam totalmente o atributo <span class="tag">disabled</span> em um <span class="tag">fieldset</span>. Use JavaScript para desativar os campos nesses navegadores.</p>
+               <blockquote class="border">
+                  <h5 class="purple">Aviso sobre funcionalidade de link <span class="tag">a</span></h5>
+                  <hr />
+                  <!-- Revisar isso -->
+                  <p>Por padrão, navegadores tratarão todos os controles de formulário (elementos <span class="tag">input</span>, <span class="tag">select</span> e <span class="tag">button</span>) dentro de um <span class="tag">fieldset desabled</span> como desativado, impedindo interações de mouse e teclado neles. Porém, se seu formulário também inclui elemnetos <span class="tag">a ... class="btn btn-*"</span>, ester só irá ser dado o estilo de <span class="tag">pointer-events:none</span>. Como observado na seção sobre o estado desativado para botões (e especificamente na sub-seção para elementos em âncora), essa propriedade CSS ainda não é padronizada e não é totalmente suportada no Opera 18 pra baixo, ou no Internet Explorer 11, e não irá impedir usuários de teclado de serem capazes de encontrar ou ativar esses links. Então, por segurança, use JavaScript para desativar tais links.</p>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <form>
+                     <fieldset disabled>
+                        <label for="txtMail">Endereço de e-mail</label>
+                        <input type="email" id="txtMail" placeholder="Email">
+                        <label for="txtSenha">Senha</label>
+                        <input type="password" id="txtSenha" placeholder="Senha">
+                        <label for="fileInput">Entrada de arquivo</label>
+                        <input type="file" id="fileInput">
+                        <p class="help-block">Exemplo de texto de ajuda em nível de bloco.</p>
+                        <label>
+                        <input type="checkbox"> Me selecione
+                        </label>
+                        <br />
+                        <button>Enviar</button>
+                     </fieldset>
+                  </form>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('041'));">Copiar</button>
+                  <div class="clean">&lt;&#x66;&#x6F;&#x72;&#x6D;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x66;&#x69;&#x65;&#x6C;&#x64;&#x73;&#x65;&#x74;&#x20;&#x64;&#x69;&#x73;&#x61;&#x62;&#x6C;&#x65;&#x64;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&quot;&gt;&#x45;&#x6E;&#x64;&#x65;&#x72;&#x65;&ccedil;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x65;&#x6D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x4D;&#x61;&#x69;&#x6C;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6D;&#x61;&#x69;&#x6C;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x74;&#x78;&#x74;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&gt;&#x53;&#x65;&#x6E;&#x68;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x70;&#x61;&#x73;&#x73;&#x77;&#x6F;&#x72;&#x64;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x74;&#x78;&#x74;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x53;&#x65;&#x6E;&#x68;&#x61;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&#x49;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x64;&#x65;&#x20;&#x61;&#x72;&#x71;&#x75;&#x69;&#x76;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x66;&#x69;&#x6C;&#x65;&#x49;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x70;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x45;&#x78;&#x65;&#x6D;&#x70;&#x6C;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x61;&#x6A;&#x75;&#x64;&#x61;&#x20;&#x65;&#x6D;&#x20;&#x6E;&iacute;&#x76;&#x65;&#x6C;&#x20;&#x64;&#x65;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6F;&period;&lt;&sol;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&gt;&#x20;&#x4D;&#x65;&#x20;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x69;&#x6F;&#x6E;&#x65;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x62;&#x72;&#x20;&sol;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&#x45;&#x6E;&#x76;&#x69;&#x61;&#x72;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x66;&#x69;&#x65;&#x6C;&#x64;&#x73;&#x65;&#x74;&gt;&NewLine;&lt;&sol;&#x66;&#x6F;&#x72;&#x6D;&gt;</div>
+                  <hr />
+                  <code id="041" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_readState">
+               <h2>Estado para leitura</h2>
+               <p>Adicione o atributo boleando <span class="tag">readonly</span> em uma entrada para impedir modificação do valor da entrada. Entrada de apenas leitura aparecem apagadas (assim como entrada desabilitada), mas mantém o cursor padrão.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <input type="text" placeholder="Somente leitura…" readonly>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('042'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="042" class="html">&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x53;&#x6F;&#x6D;&#x65;&#x6E;&#x74;&#x65;&#x20;&#x6C;&#x65;&#x69;&#x74;&#x75;&#x72;&#x61;&mldr;&quot;&#x20;&#x72;&#x65;&#x61;&#x64;&#x6F;&#x6E;&#x6C;&#x79;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_helpText">
+               <h2>Texto de ajuda</h2>
+               <p>Blocos de nível de texto de ajuda para controles de formulário.</p>
+               <p>O texto de ajuda deve estar explicitamente associado com o controle de formulário que se refere ao uso do atributo <span class="tag">aria-describedby</span>. Isso irá assegurar que as tecnologias assistivas - tais como leitores de tela - anunciará estes textos de ajuda quando o usuário focalizar ou entrar no controle.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <label for="inputHelpBlock">Entrada com texto de ajuda</label>
+                  <input type="text" id="inputHelpBlock" aria-describedby="helpBlock">
+                  <span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('043'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <<<<<<< HEAD
+                  <code id="043" class="html"></code>
+                  =======
+                  <code id="043" class="html">&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x48;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x61;&#x6A;&#x75;&#x64;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x48;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&quot;&#x20;&#x61;&#x72;&#x69;&#x61;&#x2D;&#x64;&#x65;&#x73;&#x63;&#x72;&#x69;&#x62;&#x65;&#x64;&#x62;&#x79;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&NewLine;&lt;&#x73;&#x70;&#x61;&#x6E;&#x20;&#x69;&#x64;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x55;&#x6D;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x74;&#x65;&#x78;&#x74;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x61;&#x6A;&#x75;&#x64;&#x61;&#x20;&#x71;&#x75;&#x65;&#x20;&#x64;&#x69;&#x76;&#x69;&#x64;&#x65;&#x20;&#x65;&#x6D;&#x20;&#x75;&#x6D;&#x61;&#x20;&#x6E;&#x6F;&#x76;&#x61;&#x20;&#x6C;&#x69;&#x6E;&#x68;&#x61;&#x20;&#x65;&#x20;&#x70;&#x6F;&#x64;&#x65;&#x20;&#x69;&#x72;&#x20;&#x61;&#x6C;&eacute;&#x6D;&#x20;&#x64;&#x65;&#x20;&#x75;&#x6D;&#x61;&#x20;&#x6C;&#x69;&#x6E;&#x68;&#x61;&#x20;&#x6F;&#x6E;&#x65;&#x20;&#x6C;&#x69;&#x6E;&#x65;&period;&lt;&sol;&#x73;&#x70;&#x61;&#x6E;&gt;</code>
+                  >>>>>>> c7385b31b8a3519b334b26cdbd8d3dae0a6cdc2b
+               </blockquote>
+            </section>
+            <section id="sub_validationState">
+               <h2>Estado de validação</h2>
+               <p>O Heartthrob inclui estilos de validação para estado de erro, aviso e sucesso nos controles de formulário. Para usar, adicione <span class="tag">.has-warning</span>, <span class="tag">.has-error</span>, <span class="tag">.has-success</span> para o elemento pai. Tanto <span class="tag">.control-label</span> e <span class="tag">.help-block</span> dentro desse elemento receberá o estilo de validação.</p>
+               <blockquote class="border">
+                  <h5 class="purple">Transmitir estado de validação para as tecnologias de apoio e usuários daltônicos</h5>
+                  <hr />
+                  <!-- Revisar isso -->
+                  <p>Usando esses estilos de validação para denotar o estado de um controle de formulário apenas fornecerá um viusal, indicação em base de cores, que não serão transmitidos para usuários de tecnologias assistivas - tais como leitores de tela - ou para usuários daltônicos.</p>
+               </blockquote>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <div class="has-success">
+                     <label for="inputSuccess1">Entrada com successo</label>
+                     <input type="text" id="inputSuccess1" aria-describedby="helpBlock2">
+                     <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                  </div>
+                  <div class="has-warning">
+                     <label class="control-label" for="inputWarning1">Entrada com advertência</label>
+                     <input type="text" id="inputWarning1">
+                  </div>
+                  <div class="has-error">
+                     <label for="inputError1">Entrada com erro</label>
+                     <input type="text" id="inputError1">
+                  </div>
+                  <div class="checkbox has-success">
+                     <label>
+                     <input type="checkbox" id="checkboxSuccess" value="option1">
+                     Checkbox com sucesso
+                     </label>
+                  </div>
+                  <div class="checkbox has-warning">
+                     <label>
+                     <input type="checkbox" id="checkboxWarning" value="option1">
+                     Checkbox com advertência
+                     </label>
+                  </div>
+                  <div class="checkbox has-error">
+                     <label>
+                     <input type="checkbox" id="checkboxError" value="option1">
+                     Checkbox com erro
+                     </label>
+                  </div>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('044'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="044" class="html">&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x31;&quot;&#x20;&#x61;&#x72;&#x69;&#x61;&#x2D;&#x64;&#x65;&#x73;&#x63;&#x72;&#x69;&#x62;&#x65;&#x64;&#x62;&#x79;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&#x32;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x73;&#x70;&#x61;&#x6E;&#x20;&#x69;&#x64;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&#x32;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x41;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x20;&#x6F;&#x66;&#x20;&#x68;&#x65;&#x6C;&#x70;&#x20;&#x74;&#x65;&#x78;&#x74;&#x20;&#x74;&#x68;&#x61;&#x74;&#x20;&#x62;&#x72;&#x65;&#x61;&#x6B;&#x73;&#x20;&#x6F;&#x6E;&#x74;&#x6F;&#x20;&#x61;&#x20;&#x6E;&#x65;&#x77;&#x20;&#x6C;&#x69;&#x6E;&#x65;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x6D;&#x61;&#x79;&#x20;&#x65;&#x78;&#x74;&#x65;&#x6E;&#x64;&#x20;&#x62;&#x65;&#x79;&#x6F;&#x6E;&#x64;&#x20;&#x6F;&#x6E;&#x65;&#x20;&#x6C;&#x69;&#x6E;&#x65;&period;&lt;&sol;&#x73;&#x70;&#x61;&#x6E;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x77;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x6F;&#x6E;&#x74;&#x72;&#x6F;&#x6C;&#x2D;&#x6C;&#x61;&#x62;&#x65;&#x6C;&quot;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x61;&#x64;&#x76;&#x65;&#x72;&#x74;&ecirc;&#x6E;&#x63;&#x69;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&#x31;&quot;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x65;&#x72;&#x72;&#x6F;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x45;&#x72;&#x72;&#x6F;&#x72;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x65;&#x72;&#x72;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x45;&#x72;&#x72;&#x6F;&#x72;&#x31;&quot;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x73;&#x75;&#x63;&#x65;&#x73;&#x73;&#x6F;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x77;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x61;&#x64;&#x76;&#x65;&#x72;&#x74;&ecirc;&#x6E;&#x63;&#x69;&#x61;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x65;&#x72;&#x72;&#x6F;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x45;&#x72;&#x72;&#x6F;&#x72;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x65;&#x72;&#x72;&#x6F;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_dimensionedControl">
+               <h2>Controles dimensionados</h2>
+               <p>Defina alturas usando classes como <span class="tag">.input-lg</span>, e defina largurar usando classes de grade de colunas.</p>
+               <h3>Dimensionados de altura</h3>
+               <p>Crie controles de formulário mais altos ou mais curtos que dimencionem os tamanhos de botão.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <input class="input-lg" type="text" placeholder=".input-lg">
+                  <input type="text" placeholder="Entrada padrão">
+                  <input class="input-sm" type="text" placeholder=".input-sm">
+                  <select class="input-lg">...</select>
+                  <select>...</select>
+                  <select class="input-sm">...</select>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('045'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="045" class="html">&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&#x31;&quot;&#x20;&#x61;&#x72;&#x69;&#x61;&#x2D;&#x64;&#x65;&#x73;&#x63;&#x72;&#x69;&#x62;&#x65;&#x64;&#x62;&#x79;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&#x32;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x73;&#x70;&#x61;&#x6E;&#x20;&#x69;&#x64;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x42;&#x6C;&#x6F;&#x63;&#x6B;&#x32;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x65;&#x6C;&#x70;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x41;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&#x20;&#x6F;&#x66;&#x20;&#x68;&#x65;&#x6C;&#x70;&#x20;&#x74;&#x65;&#x78;&#x74;&#x20;&#x74;&#x68;&#x61;&#x74;&#x20;&#x62;&#x72;&#x65;&#x61;&#x6B;&#x73;&#x20;&#x6F;&#x6E;&#x74;&#x6F;&#x20;&#x61;&#x20;&#x6E;&#x65;&#x77;&#x20;&#x6C;&#x69;&#x6E;&#x65;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x6D;&#x61;&#x79;&#x20;&#x65;&#x78;&#x74;&#x65;&#x6E;&#x64;&#x20;&#x62;&#x65;&#x79;&#x6F;&#x6E;&#x64;&#x20;&#x6F;&#x6E;&#x65;&#x20;&#x6C;&#x69;&#x6E;&#x65;&period;&lt;&sol;&#x73;&#x70;&#x61;&#x6E;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x77;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x6F;&#x6E;&#x74;&#x72;&#x6F;&#x6C;&#x2D;&#x6C;&#x61;&#x62;&#x65;&#x6C;&quot;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x61;&#x64;&#x76;&#x65;&#x72;&#x74;&ecirc;&#x6E;&#x63;&#x69;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&#x31;&quot;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x68;&#x61;&#x73;&#x2D;&#x65;&#x72;&#x72;&#x6F;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x45;&#x72;&#x72;&#x6F;&#x72;&#x31;&quot;&gt;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x65;&#x72;&#x72;&#x6F;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x45;&#x72;&#x72;&#x6F;&#x72;&#x31;&quot;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x53;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x73;&#x75;&#x63;&#x65;&#x73;&#x73;&#x6F;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x77;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x57;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x61;&#x64;&#x76;&#x65;&#x72;&#x74;&ecirc;&#x6E;&#x63;&#x69;&#x61;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x68;&#x61;&#x73;&#x2D;&#x65;&#x72;&#x72;&#x6F;&#x72;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x45;&#x72;&#x72;&#x6F;&#x72;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x31;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x43;&#x68;&#x65;&#x63;&#x6B;&#x62;&#x6F;&#x78;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x65;&#x72;&#x72;&#x6F;&NewLine;&#x20;&#x20;&#x20;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&lt;&sol;&#x64;&#x69;&#x76;&gt;</code>
+               </blockquote>
+               <h3>Tamanhos de grupo de formulário horizontal</h3>
+               <p>Rápidos tamanhos de etiquetas e controles de formulário dentro de <span class="tag">.form-inline</span> adicionando <span class="tag">.group-lg</span> ou <span class="tag">.group-sm</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <!-- REVISAR: Colocar sistema de grids em formulários horizontais, e adicionar a documentação. -->
+                  <!-- REVISAR: Checkbox fica desalinhado-->
+                  <form class="form-inline">
+                     <div class="group-lg">
+                        <label for="formGroupInputLarge">Etiqueta grande</label>
+                        <input type="text" id="formGroupInputLarge" placeholder="Entrada grande">
+                     </div>
+                     <br />
+                     <div class="group-sm">
+                        <label for="formGroupInputSmall">Etiqueta pequena</label>
+                        <input type="text" id="formGroupInputSmall" placeholder="Entrada pequena">
+                     </div>
+                  </form>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('046'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="046" class="html">&lt;&#x66;&#x6F;&#x72;&#x6D;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x2D;&#x69;&#x6E;&#x6C;&#x69;&#x6E;&#x65;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x67;&#x72;&#x6F;&#x75;&#x70;&#x2D;&#x6C;&#x67;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x47;&#x72;&#x6F;&#x75;&#x70;&#x49;&#x6E;&#x70;&#x75;&#x74;&#x4C;&#x61;&#x72;&#x67;&#x65;&quot;&gt;&#x45;&#x74;&#x69;&#x71;&#x75;&#x65;&#x74;&#x61;&#x20;&#x67;&#x72;&#x61;&#x6E;&#x64;&#x65;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x47;&#x72;&#x6F;&#x75;&#x70;&#x49;&#x6E;&#x70;&#x75;&#x74;&#x4C;&#x61;&#x72;&#x67;&#x65;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x67;&#x72;&#x61;&#x6E;&#x64;&#x65;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x62;&#x72;&#x20;&sol;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x67;&#x72;&#x6F;&#x75;&#x70;&#x2D;&#x73;&#x6D;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x6C;&#x61;&#x62;&#x65;&#x6C;&#x20;&#x66;&#x6F;&#x72;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x47;&#x72;&#x6F;&#x75;&#x70;&#x49;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x6D;&#x61;&#x6C;&#x6C;&quot;&gt;&#x45;&#x74;&#x69;&#x71;&#x75;&#x65;&#x74;&#x61;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x61;&lt;&sol;&#x6C;&#x61;&#x62;&#x65;&#x6C;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x74;&#x65;&#x78;&#x74;&quot;&#x20;&#x69;&#x64;&equals;&quot;&#x66;&#x6F;&#x72;&#x6D;&#x47;&#x72;&#x6F;&#x75;&#x70;&#x49;&#x6E;&#x70;&#x75;&#x74;&#x53;&#x6D;&#x61;&#x6C;&#x6C;&quot;&#x20;&#x70;&#x6C;&#x61;&#x63;&#x65;&#x68;&#x6F;&#x6C;&#x64;&#x65;&#x72;&equals;&quot;&#x45;&#x6E;&#x74;&#x72;&#x61;&#x64;&#x61;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x61;&quot;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x64;&#x69;&#x76;&gt;&NewLine;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&sol;&#x66;&#x6F;&#x72;&#x6D;&gt;</code>
+               </blockquote>
+            </section>
+         </section>
+         <hr />
+         <section id="main_button">
+            <h1>Botões</h1>
+            <section id="sub_tagsbuttons">
+               <h2>Tags de botão</h2>
+               <p>Use as classes de botão nos elementos <span class="tag">a</span>, <span class="tag">button</span> ou <span class="tag">input</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <a class="btn" href="#" role="button">Link</a>
+                  <button class="btn" type="submit">Botão</button>
+                  <input class="btn" type="button" value="Input">
+                  <input class="btn" type="submit" value="Submit">
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('047'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="047" class="html">&lt;&#x61;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&#x20;&#x68;&#x72;&#x65;&#x66;&equals;&quot;&num;&quot;&#x20;&#x72;&#x6F;&#x6C;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&gt;&#x4C;&#x69;&#x6E;&#x6B;&lt;&sol;&#x61;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x73;&#x75;&#x62;&#x6D;&#x69;&#x74;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x49;&#x6E;&#x70;&#x75;&#x74;&quot;&gt;&NewLine;&lt;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x73;&#x75;&#x62;&#x6D;&#x69;&#x74;&quot;&#x20;&#x76;&#x61;&#x6C;&#x75;&#x65;&equals;&quot;&#x53;&#x75;&#x62;&#x6D;&#x69;&#x74;&quot;&gt;</code>
+               </blockquote>
+               <blockquote class="border">
+                  <h5 class="purple">Uso de contexto específico</h5>
+                  <hr />
+                  <!-- Revisar isso -->
+                  <p>Enquanto as classes de botões podem ser usadas em elementos <span class="tag">a</span> e <span class="tag">button</span>, apenas o elemento <span class="tag">button</span> é suportado dentro de nossos componentes nav e navbar.</p>
+               </blockquote>
+            </section>
+            <section id="sub_tagsopcoesbuttons">
+               <h2>Opções</h2>
+               <p>Use qualquer uma das classes disponíveis para criar rapidamente um botão com estilo.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <button type="button" class="btn">Padrão</button>
+                  <!-- Indica uma ação bem-sucedida ou positiva -->
+                  <button type="button" class="btn btn-success">Sucesso</button>
+                  <!-- Botão contextual para mensagens de alerta informativos -->
+                  <button type="button" class="btn btn-info">Informação</button>
+                  <!-- Indica que o cuidado deve ser tomado com esta ação -->
+                  <button type="button" class="btn btn-warning">Aviso</button>
+                  <!-- Indica uma ação perigosa ou potencialmente negativa -->
+                  <button type="button" class="btn btn-danger">Perigo</button>
+                  <!-- Enfatiza um botão fazendo com que pareça um link enquanto mantém comportamento de botão. -->
+                  <button type="button" class="btn btn-link">Link</button>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('048'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="048" class="html">&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&gt;&#x50;&#x61;&#x64;&#x72;&atilde;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&excl;&#x2D;&#x2D;&#x20;&#x49;&#x6E;&#x64;&#x69;&#x63;&#x61;&#x20;&#x75;&#x6D;&#x61;&#x20;&#x61;&ccedil;&atilde;&#x6F;&#x20;&#x62;&#x65;&#x6D;&#x2D;&#x73;&#x75;&#x63;&#x65;&#x64;&#x69;&#x64;&#x61;&#x20;&#x6F;&#x75;&#x20;&#x70;&#x6F;&#x73;&#x69;&#x74;&#x69;&#x76;&#x61;&#x20;&#x2D;&#x2D;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x73;&#x75;&#x63;&#x63;&#x65;&#x73;&#x73;&quot;&gt;&#x53;&#x75;&#x63;&#x65;&#x73;&#x73;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&excl;&#x2D;&#x2D;&#x20;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x63;&#x6F;&#x6E;&#x74;&#x65;&#x78;&#x74;&#x75;&#x61;&#x6C;&#x20;&#x70;&#x61;&#x72;&#x61;&#x20;&#x6D;&#x65;&#x6E;&#x73;&#x61;&#x67;&#x65;&#x6E;&#x73;&#x20;&#x64;&#x65;&#x20;&#x61;&#x6C;&#x65;&#x72;&#x74;&#x61;&#x20;&#x69;&#x6E;&#x66;&#x6F;&#x72;&#x6D;&#x61;&#x74;&#x69;&#x76;&#x6F;&#x73;&#x20;&#x2D;&#x2D;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&quot;&gt;&#x49;&#x6E;&#x66;&#x6F;&#x72;&#x6D;&#x61;&ccedil;&atilde;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&excl;&#x2D;&#x2D;&#x20;&#x49;&#x6E;&#x64;&#x69;&#x63;&#x61;&#x20;&#x71;&#x75;&#x65;&#x20;&#x6F;&#x20;&#x63;&#x75;&#x69;&#x64;&#x61;&#x64;&#x6F;&#x20;&#x64;&#x65;&#x76;&#x65;&#x20;&#x73;&#x65;&#x72;&#x20;&#x74;&#x6F;&#x6D;&#x61;&#x64;&#x6F;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x65;&#x73;&#x74;&#x61;&#x20;&#x61;&ccedil;&atilde;&#x6F;&#x20;&#x2D;&#x2D;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x77;&#x61;&#x72;&#x6E;&#x69;&#x6E;&#x67;&quot;&gt;&#x41;&#x76;&#x69;&#x73;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&excl;&#x2D;&#x2D;&#x20;&#x49;&#x6E;&#x64;&#x69;&#x63;&#x61;&#x20;&#x75;&#x6D;&#x61;&#x20;&#x61;&ccedil;&atilde;&#x6F;&#x20;&#x70;&#x65;&#x72;&#x69;&#x67;&#x6F;&#x73;&#x61;&#x20;&#x6F;&#x75;&#x20;&#x70;&#x6F;&#x74;&#x65;&#x6E;&#x63;&#x69;&#x61;&#x6C;&#x6D;&#x65;&#x6E;&#x74;&#x65;&#x20;&#x6E;&#x65;&#x67;&#x61;&#x74;&#x69;&#x76;&#x61;&#x20;&#x2D;&#x2D;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x64;&#x61;&#x6E;&#x67;&#x65;&#x72;&quot;&gt;&#x50;&#x65;&#x72;&#x69;&#x67;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&excl;&#x2D;&#x2D;&#x20;&#x45;&#x6E;&#x66;&#x61;&#x74;&#x69;&#x7A;&#x61;&#x20;&#x75;&#x6D;&#x20;&#x62;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x66;&#x61;&#x7A;&#x65;&#x6E;&#x64;&#x6F;&#x20;&#x63;&#x6F;&#x6D;&#x20;&#x71;&#x75;&#x65;&#x20;&#x70;&#x61;&#x72;&#x65;&ccedil;&#x61;&#x20;&#x75;&#x6D;&#x20;&#x6C;&#x69;&#x6E;&#x6B;&#x20;&#x65;&#x6E;&#x71;&#x75;&#x61;&#x6E;&#x74;&#x6F;&#x20;&#x6D;&#x61;&#x6E;&#x74;&eacute;&#x6D;&#x20;&#x63;&#x6F;&#x6D;&#x70;&#x6F;&#x72;&#x74;&#x61;&#x6D;&#x65;&#x6E;&#x74;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x62;&#x6F;&#x74;&atilde;&#x6F;&period;&#x20;&#x2D;&#x2D;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x74;&#x79;&#x70;&#x65;&equals;&quot;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&quot;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x6C;&#x69;&#x6E;&#x6B;&quot;&gt;&#x4C;&#x69;&#x6E;&#x6B;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_tagstamnhos">
+               <h2>Tamanhos</h2>
+               <p>Gosta de botões grandes ou pequenos? Adicione <span class="tag">.btn-lg</span>, <span class="tag">.btn-sm</span>, ou <span class="tag">.btn=xs</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <p>
+                     <button class="btn btn-lg">Botão grande </button>
+                     <button class="btn btn-info btn-lg">Botão grande</button>
+                  </p>
+                  <p>
+                     <button class="btn">Botão padrão</button>
+                     <button class="btn btn-info">Botão padrão</button>
+                  </p>
+                  <p>
+                     <button class="btn btn-sm">Botão pequeno</button>
+                     <button class="btn btn-info btn-sm">Botão pequeno</button>
+                  </p>
+                  <p>
+                     <button class="btn btn-xs">Botão extra pequeno</button>
+                     <button class="btn btn-info btn-xs">Botão extra pequeno</button>
+                  </p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('048b'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="048b" class="html">&lt;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x6C;&#x67;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x67;&#x72;&#x61;&#x6E;&#x64;&#x65;&#x20;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x6C;&#x67;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x67;&#x72;&#x61;&#x6E;&#x64;&#x65;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x70;&#x61;&#x64;&#x72;&atilde;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x70;&#x61;&#x64;&#x72;&atilde;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x73;&#x6D;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x73;&#x6D;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x70;&gt;&NewLine;&lt;&#x70;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x78;&#x73;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x65;&#x78;&#x74;&#x72;&#x61;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&#x20;&#x20;&#x20;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x78;&#x73;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x65;&#x78;&#x74;&#x72;&#x61;&#x20;&#x70;&#x65;&#x71;&#x75;&#x65;&#x6E;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&sol;&#x70;&gt;</code>
+               </blockquote>
+               <p>Crie botões de nível de bloco - aqueles que abrangem toda a largura de um pai - adicionando <span class="tag">.btn=block</span></p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <button class="btn btn-lg btn-block">Botão de nível de bloco</button>
+                  <button class="btn btn-info btn-lg btn-block">Botão de nível de bloco</button>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('048c'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="048c" class="html">&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x6C;&#x67;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x6E;&iacute;&#x76;&#x65;&#x6C;&#x20;&#x64;&#x65;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;&NewLine;&lt;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&equals;&quot;&#x62;&#x74;&#x6E;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x69;&#x6E;&#x66;&#x6F;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x6C;&#x67;&#x20;&#x62;&#x74;&#x6E;&#x2D;&#x62;&#x6C;&#x6F;&#x63;&#x6B;&quot;&gt;&#x42;&#x6F;&#x74;&atilde;&#x6F;&#x20;&#x64;&#x65;&#x20;&#x6E;&iacute;&#x76;&#x65;&#x6C;&#x20;&#x64;&#x65;&#x20;&#x62;&#x6C;&#x6F;&#x63;&#x6F;&lt;&sol;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&gt;</code>
+               </blockquote>
+            </section>
+            <section id="sub_tagsestado">
+               <h2>Estado ativo</h2>
+               <p>Botões aparecerão precionados (com background escuro, borda escura) quando ativos. Para o elemento <span class="tag">button</span>, isso é feito atrabés de <span class="tag">:active</span>. Para um elemento <span class="tag">a</span>, isso é feito com <span class="tag">.active</span>. No entanto, você pode usar <span class="tag">.active</span> no <span class="tag">button</span>s (e incluir o atributo <span class="tag">aria-pressed="true"</span>) você deve precisar replicar o estado ativo programaticamente.</p>
+               <h3>Elemento de botão</h3>
+               <p>Não precisa adicionar <span class="tag">:active</span> como sendo uma pseudo-classe, mas se você precisar forçar a mesma aparência, vá em frente adicone <span class="tag">.active</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <button class="btn btn btn-lg active">Button</button>
+                  <button class="btn btn-danger btn-lg active">Danger button</button>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('049a'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="049a" class="html"></code>
+               </blockquote>
+               <h3>Elemento âncora</h3>
+               <p>Adicione a classe <span class="tag">.active</span> para botões em <span class="tag">a</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <a href="#" class="btn btn-lg active">Danger  link</a>
+                  <a href="#" class="btn btn-success btn-lg active">Success link</a>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('049b'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="049b" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_tagsdesativado">
+               <h2>Estado desativado</h2>
+               <p>Faça botões parecerem inclicáveis pela opacidade de fundo com <span class="tag">opacity</span>.</p>
+               <h3>Elemento de botão</h3>
+               <p>Adicione o atributo <span class="tag">disable</span> para botões <span class="tag">button</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <button class="btn btn-success btn-lg" disabled="disabled">Success button</button>
+                  <button class="btn btn-warning btn-lg" disabled="disabled">Warning button</button>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('050'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="050" class="html"></code>
+               </blockquote>
+               <h3>Elemento âncora</h3>
+               <p>Adicione a classe <span class="tag">.disabled</span> para botões em <span class="tag">a</span>.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <a href="#" class="btn btn-lg disabled">Danger  link</a>
+                  <a href="#" class="btn btn-success btn-lg disabled">Success link</a>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('051'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="051" class="html"></code>
+               </blockquote>
+               <p>Foi utilizado uma classe utilitária para <span class="tag">.disable</span>, então nenhum prefixo é requerido.</p>
+               <blockquote class="border">
+                  <h5 class="purple">Aviso sobre a funcionalidade do link</h5>
+                  <hr />
+                  <!-- Revisar isso -->
+                  <p>Apesar da estilização do link mostrar um botão desativo, no caso do <span class="tag">a</span>, o link ainda continua acessível. Para evitar cliques no link, use, por segurança, o JavaScript para desabilita-lo.</p>
+               </blockquote>
+            </section>
+         </section>
+         <section id="main_images">
+            <h1>Imagens</h1>
+            <section id="sub_responsivo">
+               <h2>Imagens responsivas</h2>
+               <p>Imagens podem ser feitas responsivas amigavelmente através da adição da classe <span class="tag">.img-responsive</span>. Isso irá fazer com que a imagem se dimensione de forma agradável ao elemento pai.</p>
+               <p>Centralize as imagens que usam a classe <span class="tag">.img-responsive</span>, usando <span class="tag">.center-block</span> em vez de <span class="tag">.text-center</span>.</p>
+               <blockquote>
+                  <p class="small left">Código usado</p>
+                  <div class="clean"></div>
+                  <hr />
+                  <!-- Guilherme: usar esse código aqui: <img src="..." class="img-responsive" alt="Imagem responsiva"> -->
+                  <code id="052" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_formas">
+               <h2>Formas</h2>
+               <p>Adicione classes a um elemento <span class="tag">img</span> para estilizar imagens facilmente em qualquer projeto.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <!-- Guilherme: substituir o link da imagem por três pontos, e apagar esse comentário -->
+                  <img src="img/150x150_placeholder.jpg" alt="..." class="img-rounded">
+                  <img src="img/150x150_placeholder.jpg" alt="..." class="img-circle">
+                  <img src="img/150x150_placeholder.jpg" alt="..." class="img-thumbnail">
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('053'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="053" class="html"></code>
+               </blockquote>
+            </section>
+         </section>
+         <section id="main_classes">
+            <h1>Classes de ajuda</h1>
+            <section id="sub_cores">
+               <h2>Cores contextutais</h2>
+               <p>Transmita significado através de cores com um punhado de classes de utilidade de ênfase. Elas podem também ser aplicadas em links e escurecerão ao passar o mouse.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <!-- Guilherme: substituir os lorem ipsum por três pontos, e apagar esse comentário -->
+                  <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                  <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                  <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                  <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                  <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('054'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="054" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_fundocontextual">
+               <h2>Fundo contextual</h2>
+               <p>Similar as classes de cores de texto contextual, defini-se facilmente o fundo de um elemento a qualquer classe contextual.</p>
+               <blockquote>
+                  <p class="small">Exemplo</p>
+                  <hr />
+                  <!-- Guilherme: substituir os lorem ipsum por três pontos, e apagar esse comentário -->
+                  <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                  <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                  <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                  <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+               </blockquote>
+               <blockquote class="after">
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('055'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <code id="055" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_floats">
+               <h2>Floats</h2>
+               <p>Flutuae um elemento para a esquerda ou para a direita com uma classe. Use a classe <span class="tag">.clear</span> ao final dos blocos flutuantes.</p>
+               <blockquote>
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('056'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!--<div class="left">...</div>
+                     <div class="right">...</div>
+                     <div class="clear"></div>-->
+                  <code id="056" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_center">
+               <h2>Blocos de conteúdo centralizados</h2>
+               <p>Defina um elemento para <span class="tag">display: block</span> e centralize através de <span class="tag">margin</span>.</p>
+               <blockquote>
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('056'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!--<div class="center">...</div>-->
+                  <code id="056" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_showhide">
+               <h2>Mostrando e escondendo conteúdo</h2>
+               <p>Você pode forçar um elemnto a ser mostrado ou escondido, ao utilizar as classes <span class="tag">.show</span><span class="tag">.hide</span>. Essas classes usam <span class="tag">!important</span> para evitar conflitos especfícos.</p>
+               <blockquote>
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('057'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!--<div class="show">...</div>
+                     <div class="hidden">...</div>-->
+                  <code id="057" class="html"></code>
+               </blockquote>
+            </section>
+            <section id="sub_screenreaders">
+               <h2>Leitores de tela e navegação por teclado</h2>
+               <!-- boas praticas http://getbootstrap.com.br/getting-started/#accessibility -->
+               <p>Oculte um elemento para todos os dispositivos exceto para leitores de tela com <span class="tag">.sr-only</span>. Necessário seguir as <a href="acessibilidade.html">as boas práticas de acessibilidade</a>.</p>
+               <blockquote>
+                  <p class="small left">Código usado</p>
+                  <button class="right copy" onclick="copyToClipboard(document.getElementById('058'));">Copiar</button>
+                  <div class="clean"></div>
+                  <hr />
+                  <!--<a class="sr-only" href="#content">Pular para conteúdo principal</a>-->
+                  <code id="058" class="html"></code>
+               </blockquote>
+            </section>
+         </section>
+         <section id="main_utilresponsive">
+            <h1>Utilidades responsivas</h1>
+            <p>Para desenvolvimento rápido e amigavelmente para dispositivos movéis, use essas classes de utilidades para mostrar e esconder conteúdo em dispositivos por meio de media query. Também estão incluídas classes de utilidades para alternar conteúdo quando impresso.</p>
+            <p>Tente utilizá-los em uma base limitada e evite criar versões completamente diferentes do mesmo site. Em vez disso, use-os para complementar apresentação de cada dispositivos.</p>
+            <section id="sub_availableclasses">
+               <h2>Classes disponíveis</h2>
+               <p>Use uma única ou combinações de classes disponíveis para alternar conteúdo através de viewport breakpoints.</p>
+               <table class="table responsive-utilities table-bordered table-striped">
+                  <thead>
+                     <tr>
+                        <td></td>
+                        <td>
+                           Dispositivos extra pequenos<br/>
+                           <small>Telefones (&lt;768px)</small>
+                        </td>
+                        <td>
+                           Dispositivos pequenos <br/>
+                           <small>Tablets (≥768px)</small>
+                        </td>
+                        <td>
+                           Dispositivos médios<br/>
+                           <small>Desktops (≥992px)</small>
+                        </td>
+                        <td>
+                           Dispositivos grandes<br/>
+                           <small>Desktops (≥1200px)</small>
+                        </td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th><span class="tag">.visible-xs-*</span></th>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.visible-sm-*</span></th>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.visible-md-*</span></th>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.visible-lg-*</span></th>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                     </tr>
+                  </tbody>
+                  <tbody>
+                     <tr>
+                        <th><span class="tag">.hidden-xs</span></th>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-visible">Visível</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.hidden-sm</span></th>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-visible">Visível</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.hidden-md</span></th>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.hidden-lg</span></th>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-visible">Visible</td>
+                        <td class="is-visible">Visible</td>
+                        <td class="is-hidden">Oculto</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p>Substitua o * em <span class="tag">.visible-*-*</span> pelo valor da propriedade CSS do display, de acordo com a tabela abaixo.</p>
+               <table class="table table-bordered table-striped">
+                  <thead>
+                     <tr class="strong">
+                        <td>Grupo de classes</td>
+                        <td>CSS <span class="tag">display</span></td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><span class="tag">.visible-*-block</span></td>
+                        <td><span class="tag">display: block;</span></td>
+                     </tr>
+                     <tr>
+                        <td><span class="tag">.visible-*-inline</span></td>
+                        <td><span class="tag">display: inline;</span></td>
+                     </tr>
+                     <tr>
+                        <td><span class="tag">.visible-*-inline-block</span></td>
+                        <td><span class="tag">display: inline-block;</span></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p>Também é possível utilizar <span class="tag">.visible-*</span> sem a necessidade de adicionar o valor da propriedade CSS.</p>
+            </section>
+            <section id="sub_printerclass">
+               <h2>Classes de impressão</h2>
+               <p>Semelhante as classes regulares responsivas, use-as para alternar conteúdo para impressão.</p>
+               <table class="table responsive-utilities table-bordered table-striped">
+                  <thead>
+                     <tr>
+                        <td>Classes</td>
+                        <td>Navegador</td>
+                        <td>Impressão</td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th>
+                           <span class="tag">.visible-print</span><br/>
+                           <span class="tag">.visible-print-block</span><br/>
+                           <span class="tag">.visible-print-inline</span><br/>
+                           <span class="tag">.visible-print-inline-block</span>
+                        </th>
+                        <td class="is-hidden">Oculto</td>
+                        <td class="is-visible">Visível</td>
+                     </tr>
+                     <tr>
+                        <th><span class="tag">.hidden-print</span></th>
+                        <td class="is-visible">Visível</td>
+                        <td class="is-hidden">Oculto</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+         </section>
+      </content>
+      <div class="clean"></div>
+      <script>
+         $('code').each(function (i, block) {
+             hljs.highlightBlock(block);
+         });
+         generateMenu();
+         $("nav a").click(function () {
+             var id = $(this).attr('href');
+             $('html, body').animate({
+                 scrollTop: $(id).offset().top - 80
+             }, 1000);
+         });
+      </script>
+   </body>
+</html>
