@@ -1,0 +1,11 @@
+a:visited, a { text-decoration: none }
+body { background: #52658C; }
+.box-header img { margin-left: calc(50% - 62px); height: 124px }
+.box { width: 40%; min-width: 500px; height: auto; background: #e3e3e3; margin-left: 30%; box-shadow: 0px 0px 10px -3px #000; position: absolute; }
+.box-header { width: 100%; border-bottom: 1px solid #1b1b1b; padding-bottom: 10px; margin-bottom: 15px; background: #fff; padding-top: 10px; margin: auto; }
+.box-content { padding: 20px; }
+.box-content h2 { margin: 5px 0 }
+.box-content p { margin: 5px 0 -15px }
+.box-options { margin-top: 15px; margin-left: -2px }
+.box-options .btn { height: 50px }
+.box-options p { margin-bottom: 0 }
