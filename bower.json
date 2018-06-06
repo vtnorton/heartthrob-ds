@@ -9,7 +9,9 @@
       "build/shell.heartthrob.css",
       "build/shell.heartthrob.min.css",
       "build/uap.heartthrob.css",
-      "build/uap.heartthrob.min.css"
+      "build/uap.heartthrob.min.css",
+      "build/colors.heartthrob.css",
+      "build/colors.heartthrob.min.css"
     ],
     "keywords": [
       "heartthrob",
