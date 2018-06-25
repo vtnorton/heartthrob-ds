@@ -65,7 +65,7 @@ footer ul li a:hover { color: #0098DA; transition: all .3s }
 
 body { overflow: hidden }
 .nav-container { width: 240px; background: #0098DA; float: left; z-index: 9; position: fixed; height: calc(100% - 48px); margin-top: 48px; }
-.nav-pane { background: #e3e3e3; border-right: 1px solid #ccc; overflow-x: hidden; position: fixed; width: 340px; margin-top:-5px; margin-left: -20px }
+.nav-pane { background: #e3e3e3; border-right: 1px solid #ccc; overflow-x: hidden; position: fixed; width: 240px; margin-top:-5px; margin-left: -20px }
 .nav-pane ul { list-style: none; margin-left: -40px }
 .nav-pane ul li a { text-decoration: none; color: black; width: 100%; display: block; padding: 15px 20px; }
 .nav-pane i { margin-right: 5px; width: 20px; text-align: center }
@@ -87,7 +87,7 @@ body { overflow: hidden }
 .menu-drop { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/dark.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 185px; }
 .menu-drop-dark { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/light.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 278px; }
 
-.inner-content { width: calc(100% - 330px); float: right }
+.inner-content { width: calc(100% - 230px); float: right }
 .view-bottom .small { color: #334 }
 .toolbar { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: -1px }
 .toolbar a { line-height: 41px; height: 55px; position: relative; top: 1px; padding: 3px 8px !important; }
