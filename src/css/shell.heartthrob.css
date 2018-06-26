@@ -13,9 +13,9 @@ content { width: calc(100% - 240px); float: right; position: relative; margin-to
 .box-profile { width: auto !important; padding-right: 20px !important; font-size: 16px }
 .box-icons li:hover, .box-login a:hover { background: #333; transition: all .3s; }
 
-.box-icons { width: auto; margin: 0; list-style: none; }
+.box-icons { width: auto; margin: 0; list-style: none; padding: 0}
 .box-icons li { float: left; margin: 0 }
-.box-icons li a { height: 48px; display: block; font-size: 20px; width: 48px; padding: 14px 0 0 15px; cursor: pointer }
+.box-icons li a { height: 48px; display: block; font-size: 20px; width: 48px; padding: 11px 0 0 15px; cursor: pointer;margin-left: 10px; }
 .box-icons li ul { display: none; position: absolute; background: #333; list-style: none; padding: 0; width: 200px; right: 0; z-index: 99 }
 .box-icons li ul li { float: none }
 .box-icons li ul li:first-of-type { border: none }
