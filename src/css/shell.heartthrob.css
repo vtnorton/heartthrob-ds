@@ -85,7 +85,7 @@ body { overflow: hidden }
 #nav-bottom-menus:before, #nav-top-menus:before { content: " "; border-top: 1px solid rgba(255,255,255,0.4); display: block; margin: 0 20px 15px }
 #nav-bottom-menus { position: absolute; bottom: 0; width: 100%; }
 .menu-drop { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/dark.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 185px; }
-.menu-drop-dark { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/light.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 278px; }
+.menu-drop-dark { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/light.png) no-repeat -84px -363px; cursor: pointer; float: right;}
 
 .inner-content { width: calc(100% - 230px); float: right }
 .view-bottom .small { color: #334 }
