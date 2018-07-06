@@ -1,4 +1,4 @@
-﻿/* Header */
+﻿﻿/* Header */
 header { width: 100%; background: #252525; height: 48px; position: fixed; z-index: 10 }
 header .pull-left { width: 50%; float: left }
 header .pull-right { width: 50%; float: right }
