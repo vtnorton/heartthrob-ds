@@ -168,8 +168,8 @@ blockquote.after { margin: -30px 0 0; background: #e5e5e5 }
 .btn-danger.active:hover { background: #a31c0b !important; border-color: #a31c0b !important }
 .btn-link { background: transparent !important; color: #5f37be; border-color: transparent !important }
 .btn-link:disabled:hover { background: transparent !important; color: #343434; border-color: transparent !important }
-.btn-link.active, .btn-link:hover { background: transparent !important; color: #1d5bbc !important; border-color: transparent !important; text-decoration: underline }
-.btn-link.active:hover { background: transparent !important; color: #174896 !important; border-color: transparent !important; text-decoration: underline }
+.btn-link.active, .btn-link:hover { background: transparent !important; color: #1d5bbc !important; border-color: transparent !important; }
+.btn-link.active:hover { background: transparent !important; color: #174896 !important; border-color: transparent !important; }
 .disabled { background: GrayText; border-color: GrayText }
 .disabled:hover, .btn-info:disabled:hover, .btn-success:disabled:hover, .btn-warning:disabled:hover, .btn-danger:disabled:hover { background: #343434; border-color: #343434 }
 

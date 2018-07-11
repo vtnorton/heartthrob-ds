@@ -66,11 +66,12 @@ footer ul li a:hover { color: #0098DA; transition: all .3s }
 body { overflow: hidden }
 .nav-container { width: 240px; background: #0098DA; float: left; z-index: 9; position: fixed; height: calc(100% - 48px); margin-top: 48px; }
 .nav-pane { background: #e3e3e3; border-right: 1px solid #ccc; overflow-x: hidden; position: fixed; width: 240px; margin-top:-5px; margin-left: -20px }
-.nav-pane ul { list-style: none; margin-left: -40px }
+.nav-pane ul { list-style: none; padding-left: 0 }
 .nav-pane ul li a { text-decoration: none; color: black; width: 100%; display: block; padding: 15px 20px; }
 .nav-pane i { margin-right: 5px; width: 20px; text-align: center }
 .nav-pane ul li a:hover { background: #e8e8e8 }
-.nav-pane ul li ul { display: none; margin-left: -25px }
+.nav-pane ul li ul { display: none; }
+.nav-pane ul li ul li a{padding-left: 30px}
 .nav-pane .line { width: calc(100% - 40px); height: 1px; background: #bbb; padding: 0 20px; margin: 15px 0; margin-left: 20px; }
 .nav-navigation-list ul { list-style: none; padding: 0 }
 .nav-navigation-list a { color: #fff; }
