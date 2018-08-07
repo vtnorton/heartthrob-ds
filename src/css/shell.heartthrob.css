@@ -28,7 +28,7 @@ content { width: calc(100% - 240px); float: right; position: relative; margin-to
 
 .btn .fa, button .fa { margin-right: 5px }
 
-.view-box, .view-element { background: #fff; border: 1px solid #ccc; padding: 20px 25px; margin-bottom: 10px; overflow: auto; overflow-x: hidden }
+.view-box, .view-element { background: #fff; border: 1px solid #ccc; padding: 20px; margin-bottom: 10px; overflow: auto; overflow-x: hidden }
 .view-closed { background: #d9d9d9 !important; }
 .view-closed hr, .view-closed .view-content { display: none }
 .view-closed h4 { color: #757575 }

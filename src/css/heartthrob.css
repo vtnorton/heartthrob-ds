@@ -130,7 +130,7 @@ a.btn { text-decoration: none }
     .form-inline input[type=search] { width: auto }
 }
 
-blockquote { background: #f5f5f5; padding: 15px 25px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px }
+blockquote { background: #f5f5f5; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px }
 blockquote.border { border-left: 5px solid #6f48cf }
 blockquote.after { margin: -30px 0 0; background: #e5e5e5 }
 
