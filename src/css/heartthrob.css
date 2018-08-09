@@ -54,22 +54,22 @@ dl dd { margin-left: 180px; }
 code { white-space: pre }
 .link{cursor:pointer}
 
-table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }
-table tr { border-bottom: 1px solid #ccc }
-table thead { border-top: none !important; font-weight: 600; border-bottom-width: 2px }
-table thead:hover { background: none; }
-table tr td { padding: 9px 3px 8px 0 }
-table.table-condensed tr td { padding: 3px 1px 4px 5px }
-table tr td:last-of-type { padding-right: 0 !important }
+.table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }
+.table tr { border-bottom: 1px solid #ccc }
+.table thead { border-top: none !important; font-weight: 600; border-bottom-width: 2px }
+.table thead:hover { background: none; }
+.table tr td { padding: 9px 3px 8px 0 }
+.table.table-condensed tr td { padding: 3px 1px 4px 5px }
+.table tr td:last-of-type { padding-right: 0 !important }
 .table-striped > tbody > tr:nth-of-type(2n+1):hover,
-table tr:hover { background: #dedfe7; -moz-transition: all .5s; -o-transition: all .5s; -webkit-transition: all .5s; transition: all .5s; }
-table.no-style tr { border: none }
-table.no-style thead { border-top: none !important; font-weight: 300; border-bottom-width: 0px }
-table.no-style thead:hover { background: none; }
-table.no-style tr td { padding: 0; }
-table.no-style tr td:last-of-type { padding-right: 0 !important }
-table.no-style tr:hover { background: none; }
-table.no-style tr.strong { font-weight: 600 }
+.table tr:hover { background: #dedfe7; -moz-transition: all .5s; -o-transition: all .5s; -webkit-transition: all .5s; transition: all .5s; }
+.table.no-style tr { border: none }
+.table.no-style thead { border-top: none !important; font-weight: 300; border-bottom-width: 0px }
+.table.no-style thead:hover { background: none; }
+.table.no-style tr td { padding: 0; }
+.table.no-style tr td:last-of-type { padding-right: 0 !important }
+.table.no-style tr:hover { background: none; }
+.table.no-style tr.strong { font-weight: 600 }
 .table-striped > tbody > tr:nth-of-type(2n+1) { background: rgba(200,200,200,0.23) }
 .table-bordered tr td,
 .table-bordered { border: 1px solid #767676 }
