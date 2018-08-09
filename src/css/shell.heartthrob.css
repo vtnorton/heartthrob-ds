@@ -92,8 +92,6 @@ body { overflow: hidden }
 .view-bottom .small { color: #334 }
 .toolbar { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: -1px }
 .toolbar a { line-height: 41px; height: 55px; position: relative; top: 1px; padding: 3px 8px !important; }
-.toolbar .btn-link { color: #ccc !important }
-.toolbar .btn-link:hover, .toolbar .btn-link.selected { color: #2572EB !important; transition: all .3s }
 
 .info-bar { padding-left: 25px; }
 .info-bar-item { margin-bottom: 30px }
