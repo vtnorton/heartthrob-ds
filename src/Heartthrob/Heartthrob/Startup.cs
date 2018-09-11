@@ -30,8 +30,9 @@ namespace Heartthrob
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddKendo();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +48,7 @@ namespace Heartthrob
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseKendo(env);
         }
     }
 }

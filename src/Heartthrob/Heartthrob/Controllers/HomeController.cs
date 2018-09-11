@@ -6,13 +6,31 @@ namespace Heartthrob.Controllers
     {
         public IActionResult Index()
         {
-            return View("~/Views/Index.cshtml");
+            return View();
         }
 
-        [Route("/2")]
-        public IActionResult InputFields()
+        [Route("/Layout")]
+        public IActionResult Layout()
         {
-            return View("~/Views/InputFields.cshtml");
+            return View();
+        }
+
+        [Route("/Kendo")]
+        public IActionResult Kendo()
+        {
+            return View();
+        }
+
+        [Route("/Account")]
+        public IActionResult Account()
+        {
+            return View();
+        }
+
+        [Route("/Scripts")]
+        public IActionResult Scripts()
+        {
+            return View();
         }
     }
 }

@@ -5,14 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Heartthrob</title>
     <link href="~/css/heartthrob.css" rel="stylesheet" />
+    <link href="~/css/kendo.heartthrob.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/font-awesome/css/font-awesome.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="~/js/site.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="/kendo-ui/js/kendo.aspnetmvc.min.js"></script>
+
+    <script>
+        kendo.culture("pt-BR");
+    </script>
+
 </head>
 <body>
     <content>
-        @RenderBody()
+        <div class="row">
+            <div class="col-md-2">
+                <ul>
+                    <li><a href="/Index">Pure CSS</a></li>
+                    <li><a href="/Layout">Layout elements</a></li>
+                    <li><a href="/Kendo">Kendo elements</a></li>
+                    <li><a href="/Account">Account page</a></li>
+                    <li><a href="/Scripts">Scripts</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+        </div>
     </content>
 </body>
 </html>
