@@ -1,0 +1,13 @@
+﻿@addTagHelper *, Kendo.Mvc
+@using Kendo.Mvc.UI
+
+@{
+    ViewData["Title"] = "Kendo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kendo</h2>
+
+@(Html.Kendo().DatePicker()
+            .Name("datepicker")
+)
