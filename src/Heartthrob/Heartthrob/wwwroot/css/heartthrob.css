@@ -8,9 +8,9 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahom
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
 :before, :after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
 
+/* Basic and typographi */
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; background: #f8f8f8; font-size: 15px; line-height: 20px; color: #666 }
 content { margin: 48px; display: block }
-
 h1, h2, h3, h4, h5, h6 { color: #000 }
 h1 { font-size: 28px; line-height: 36px; font-weight: 400 }
 h2 { font-size: 24px; line-height: 32px; font-weight: 600 }
@@ -28,6 +28,7 @@ blockquote footer { font-style: italic; color: #665; font-size: 14px; margin-top
 blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
 small { font-size: 12px; line-height: 14px; }
 
+/* Help classes */
 .link { cursor: pointer }
 .text-left { text-align: left }
 .text-right { text-align: right }
@@ -53,6 +54,7 @@ small { font-size: 12px; line-height: 14px; }
 .space-medium { height: 30px }
 .space-long { height: 48px }
 
+/* Buttons */
 .btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 40px; min-width: 140px; padding-top: 10px; cursor: pointer; display: inline-block; text-align: center; }
 .btn:hover, button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .btn:disabled, button:disabled { background: GrayText; border-color: GrayText; -moz-transition: all .3s; -o-transition: all .3s; -webkit-transition: all .3s; transition: all .3s; cursor: not-allowed }
@@ -63,21 +65,41 @@ small { font-size: 12px; line-height: 14px; }
 .btn-link i { margin-right: 8px }
 .btn-link:hover { background: transparent; color: #1d5bbc; border-color: transparent; }
 
+/* Inputs */
 select, textarea, input { border: 1px solid #bababa; background: #fff; margin: 4px 0; width: calc(100% - 20px); min-height: 40px; padding: 0 8px; }
 textarea:focus, input:focus { border-color: #0078D7 }
 textarea:disabled, input:disabled { border-color: #ccc; background: #e3e3e3 }
 textarea { padding: 5px 8px }
-
 select { border: 3px solid #E6E6E6; border-radius: 0; font-weight: 400; color: inherit; padding: 11px 15px; line-height: normal; transition: border-color 0.2s ease, outline 0.2s ease; }
 select:focus { box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset; outline: 3px solid #005BA6; outline-offset: -3px; }
 elect[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
 select:invalid { color: #C7C7C7; }
 
 .ui-autocomplete-input { position: relative; z-index: 9 }
-.ui-autocomplete { position: absolute; z-index: 8; float: left; min-width: 160px; padding: 0; margin: -40px 0 0; list-style: none; background-color: #fcfcfc; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.ui-autocomplete { position: absolute; z-index: 8; float: left; min-width: 160px; padding: 0; margin: -40px 0 0; list-style: none; background-color: #fcfcfc; }
 option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12px; padding-top: 8px }
 .ui-menu-item-wrapper:hover { background: #f8f8f8 }
 .ui-helper-hidden-accessible { display: none }
+
+/* Menu */
+.menu ul { list-style: none; margin: 0; padding: 2px 0; width: 240px; height: auto; background: rgba(255,255,255,0.8) }
+.menu ul ul { position: absolute; z-index: 500; top: auto; display: none; }
+.menu ul li:hover ul { display: block; position: relative; left: 240px; margin-top: -32px }
+.menu ul li a:hover { background: rgba(255,255,255,0.4) }
+.menu ul li { height: 32px; }
+.menu a { color: #000; font-size: 15px; height: 32px; width: 100%; display: block; line-height: 32px }
+.menu .no-icon { padding-left: 40px }
+.menu i { width: 40px; font-size: 16px; padding-left: 14px }
+.menu .line { width: 216px; margin: 0 auto; border-bottom: 1px solid #ccc; height: 2px }
+.menu .more:after { content: ' '; width: 10px; height: 10px; display: inline-grid; top: 10px; position: relative; margin-top: 2px; float: right; border: solid #999; border-width: 0 2px 2px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); margin-right: 13px }
+
+/* Fluent Design Stuff */
+.acrylic { -webkit-backdrop-filter: blur(20px) saturate(125%); backdrop-filter: blur(20px) saturate(125%); background-color: rgba(255,255,255,.3); }
+
+.shadow, .ui-autocomplete, .menu ul { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+
+
+/* Compatible mode */
 
 .table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }
 .table tr { border-bottom: 1px solid #ccc }

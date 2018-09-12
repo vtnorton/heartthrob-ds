@@ -5,4 +5,29 @@
 }
 
 <h2>Layout</h2>
+<h3>Menus</h3>
+<p>Have a single entry point (a File menu at the top of the screen, for example) that is always displayed. Are usually attached to a button or a parent menu item. Are invoked by left-clicking (or an equivalent action, such as tapping with your finger). </p>
 
+<h4>Examples</h4>
+<br />
+<div class="row">
+    <div class="col-md-7 docs-box">
+        <a class="btn btn-primary" onclick="openMenu('#demo-1');" style="margin:20px 20px 0">Open menu</a>
+        <div class="menu" id="demo-1" style="margin-left:20px;">
+            <ul>
+                <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+                <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+                <li>
+                    <a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+                    </ul>
+                </li>
+                <li class="line"></li>
+                <li><a href="#" class="no-icon">Sign out</a></li>
+            </ul>
+            <div></div>
+        </div>
+    </div>
+</div>
