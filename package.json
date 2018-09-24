@@ -1,11 +1,12 @@
 {
   "name": "heartthrob",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Em breve uma descrição aqui",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "3.9.1",
     "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.3"
   },
   "devDependencies": {},
