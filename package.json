@@ -1,6 +1,6 @@
 {
   "name": "heartthrob",
-  "version": "0.1.3",
+  "version": "0.2.2",
   "description": "Em breve uma descrição aqui",
   "main": "gulpfile.js",
   "dependencies": {
@@ -18,6 +18,10 @@
   },
   "keywords": [
     "heartthrob"
+  ],
+  "files": [
+    "build/",
+    "src"
   ],
   "author": "vtnorton",
   "license": "MIT",
