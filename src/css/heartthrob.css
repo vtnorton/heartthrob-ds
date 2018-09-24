@@ -26,11 +26,6 @@ blockquote footer { font-style: italic; color: #665; font-size: 14px; margin-top
 blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
 small { font-size: 12px; line-height: 14px; }
 
-/* TODO: Inserir na documentação */
-nav.main { height: 100%; float: left; }
-content { width: calc(100% - 250px); float: right; padding: 20px; }
-content.middle { width: calc(100% - 200px) }
-
 /* Help classes */
 .link { cursor: pointer }
 .text-left { text-align: left }
@@ -193,7 +188,7 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav a i { width: 25px; text-align: center; font-size: 14px; margin-right: 5px; }
 .nav a.active { border-left: 3px solid #0078D7; background: #444 !important; padding-left: 17px }
 .nav ul, .nav ul li { list-style: none; padding: 0; margin: 0 }
-.nav ul li ul { display: none; max-height: 280px !important; overflow-x: auto }
+.nav ul li ul { display: none; overflow-x: auto }
 .nav ul li ul li a { background: #555; transition: all .3s; height: 40px; padding: 9px 20px; }
 .nav ul li ul li a:hover { background: #444; transition: all 0.3s }
 .nav .nav-bottom-menus { margin-bottom: 10px }
@@ -211,6 +206,7 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav.light ul li ul li a:hover { background: #bcbcbc; transition: all 0.3s }
 .nav.light a.child:after, nav.light .nav-bottom-menus:before, nav.light .nav-top-menus:before { border-color: #bcbcbc; }
 .nav a.closed:after { display: none }
+.nav.light a:hover, .nav.light ul li ul li a {background: #d9d9d9; transition: all .3s;}
 
 .treeview, .treeview ul { margin: 0; padding: 0; list-style: none; min-width: 200px; }
 .treeview ul ul { margin-left: .5em }
@@ -220,8 +216,14 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .treeview ul li a:not(i) { margin-left: 15px }
 .treeview ul li a:hover { color: #000; transition: all .3s }
 .treeview a.active { color: #000; border-left: 3px solid #0078D7; margin-left: 0; padding-left: 12px; }
-
 .treeview .fa-chevron-right { margin-left: 2px; margin-right: -15px; }
+
+/* TODO: Inserir na documentação */
+header + nav{height:calc(100% - 48px) !important;;margin-top: 0}
+nav.main { height: 100%; float: left; }
+content { width: calc(100% - 250px); float: right; padding: 20px; }
+content content {width: calc(100% - 150px)}
+content.middle { width: calc(100% - 200px) }
 
 /* Fluent Design Stuff */
 .acrylic, .menu, .menu ul, .alert, .cards-steps .card.opened, .cards.acrylic, .card.acrylic .taskbar,

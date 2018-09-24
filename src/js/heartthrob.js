@@ -72,7 +72,7 @@
         $(".nav a.active").parent().parent().show();
     };
 
-    
+
     dialog = function (env) {
         if (!env.cancel) {
             env.cancel = "Cancel";
@@ -97,32 +97,28 @@
 
 function minNav() {
     setCookie('hb-menustate', true);
-    $(".nav a.child").addClass("closed");
-    $(".nav a").css("color", "transparent");
-    $(".nav a").css("overflow", "hidden");
-    $(".nav a i").css("color", "#fff");
-    $(".nav.light a i").css("color", "#666");
-    $(".nav").animate({ "width": "65px" }, 400, function () {
+    $(".nav:not(.middle) a.child").addClass("closed");
+    $(".nav:not(.middle) a").css("color", "transparent");
+    $(".nav:not(.middle) a").css("overflow", "hidden");
+    $(".nav:not(.middle) a i").css("color", "#fff");
+    $(".nav:not(.middle).light a i").css("color", "#666");
+    $(".nav:not(.middle)").animate({ "width": "65px" }, 300, function () {
         $("content").css("width", "calc(100% - 65px)");
+        $("content content").css("width", "calc(100% - 150px)");
     });
+
 }
 function maxNav() {
     setCookie('hb-menustate', false);
-
-    var width;
-    if ($(".nav").hasClass("middle")) {
-        width = "200px";
-    } else {
-        width = "250px";
-    }
-
-    $(".nav").animate({ "width": width }, 350, function () {
-        $(".nav a.child").removeClass("closed");
-        $(".nav a").css("color", "#fff");
-        $(".nav.light a").css("color", "#666");
-        $(".nav a").css("overflow", "auto");
-        $(".nav a.child:after").css("", "block");
-        $("content").css("width", "calc(100% - " + width + ")");
+    var menu = $(".nav-action").parent().parent();
+    $(".nav:not(.middle)").animate({ "width": "250px" }, 250, function () {
+        $(".nav:not(.middle) a.child").removeClass("closed");
+        $(".nav:not(.middle) a").css("color", "#fff");
+        $(".nav:not(.middle).light a").css("color", "#666");
+        $(".nav:not(.middle) a").css("overflow", "auto");
+        $(".nav:not(.middle) a.child:after").css("", "block");
+        $("content").css("width", "calc(100% - 250px)");
+        $("content content").css("width", "calc(100% - 150px)");
     });
 }
 
