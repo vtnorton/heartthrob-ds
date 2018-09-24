@@ -1,30 +1,8 @@
-﻿﻿/* Header */
-header { width: 100%; background: #252525; height: 48px; position: fixed; z-index: 10 }
-header .pull-left { width: 50%; float: left }
-header .pull-right { width: 50%; float: right }
-.logo { float: right }
-.logo img { max-height: 35px; margin-top: 8px; float: left; }
-
+﻿
 content { width: calc(100% - 240px); float: right; position: relative; margin-top: 48px; height: calc(100% - 48px) }
 .content-wrapper { padding: 5px 20px 15px; }
 
-.box-icons, .box-login { height: 48px; float: right; }
-.box-login, .box-icons li:first-of-type { border-left: 1px solid #4d4d4d; }
-.box-profile { width: auto !important; padding-right: 20px !important; font-size: 16px }
-.box-icons li:hover, .box-login a:hover { background: #333; transition: all .3s; }
 
-.box-icons { width: auto; margin: 0; list-style: none; padding: 0}
-.box-icons li { float: left; margin: 0 }
-.box-icons li a { height: 48px; display: block; font-size: 20px; width: 48px; padding: 11px 12px; cursor: pointer;}
-.box-icons li ul { display: none; position: absolute; background: #333; list-style: none; padding: 0; width: 200px; right: 0; z-index: 99 }
-.box-icons li ul li { float: none }
-.box-icons li ul li:first-of-type { border: none }
-.box-icons li ul li a { width: 100%; font-size: 16px; padding: 13px 15px; }
-.box-icons li ul li a:hover { background: #404040 }
-
-.box-login { width: auto }
-.box-login a { padding: 14px 20px 0; display: block; cursor: pointer }
-.box-icons a, .box-icons span, .box-login a { text-decoration: none; color: #e3e3e3; height: 48px; }
 
 .btn .fa, button .fa { margin-right: 5px }
 
@@ -62,31 +40,6 @@ footer ul li { float: left; margin-right: 20px }
 footer ul li p { margin-top: -2px }
 footer ul li p, footer ul li a { color: #fff; text-decoration: none }
 footer ul li a:hover { color: #0098DA; transition: all .3s }
-
-body { overflow: hidden }
-.nav-container { width: 240px; background: #0098DA; float: left; z-index: 9; position: fixed; height: calc(100% - 48px); margin-top: 48px; }
-.nav-pane { background: #e3e3e3; border-right: 1px solid #ccc; overflow-x: hidden; position: fixed; width: 240px; margin-top:-5px; margin-left: -20px }
-.nav-pane ul { list-style: none; padding-left: 0 }
-.nav-pane ul li a { text-decoration: none; color: black; width: 100%; display: block; padding: 15px 20px; }
-.nav-pane i { margin-right: 5px; width: 20px; text-align: center }
-.nav-pane ul li a:hover { background: #e8e8e8 }
-.nav-pane ul li ul { display: none; }
-.nav-pane ul li ul li a{padding-left: 30px}
-.nav-pane .line { width: calc(100% - 40px); height: 1px; background: #bbb; padding: 0 20px; margin: 15px 0; margin-left: 20px; }
-.nav-navigation-list ul { list-style: none; padding: 0 }
-.nav-navigation-list a { color: #fff; }
-.nav-navigation-list ul li { margin: 0; padding: 0 }
-.nav-navigation-list ul li a, #nav-hamburguer a { text-decoration: none; width: 100%; display: block; padding: 18px 20px; height: 56px }
-.nav-navigation-list ul li a:hover, #nav-hamburguer a:hover { background: rgba(255,255,255,0.2); transition: all .3s }
-.nav-navigation-list ul li ul { display: none; max-height: 280px !important; overflow-x: auto }
-.nav-side-navigation ul li ul li a { background: rgba(255,255,255,0.3); transition: all .3s }
-.nav-navigation-list ul li ul li a:hover { background: rgba(255,255,255,0.4); transition: all 0.3s }
-.nav-navigation-list i, #nav-hamburguer i { width: 25px; text-align: center; font-size: 16px; margin-right: 8px }
-#nav-hamburguer a { color: #fff !important }
-#nav-bottom-menus:before, #nav-top-menus:before { content: " "; border-top: 1px solid rgba(255,255,255,0.4); display: block; margin: 0 20px 15px }
-#nav-bottom-menus { position: absolute; bottom: 0; width: 100%; }
-.menu-drop { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/dark.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 185px; }
-.menu-drop-dark { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/light.png) no-repeat -84px -363px; cursor: pointer; float: right;}
 
 .inner-content { width: calc(100% - 230px); float: right }
 .view-bottom .small { color: #334 }
