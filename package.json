@@ -4,7 +4,7 @@
   "description": "Em breve uma descrição aqui",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "3.9.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-rename": "^1.2.3"
   },

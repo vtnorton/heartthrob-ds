@@ -2,14 +2,14 @@
     "name": "heartthrob",
     "description": "A simple, elegant CSS framework for using -- mostly, on CMS panels.",
     "main": [
-      "build/colors.heartthrob.css",
-      "build/colors.heartthrob.min.css",
       "build/heartthrob.css",
       "build/heartthrob.min.css",
-      "build/shell.heartthrob.css",
-      "build/shell.heartthrob.min.css",
       "build/uap.heartthrob.css",
       "build/uap.heartthrob.min.css",
+      "build/kendo.heartthrob.css",
+      "build/kendo.heartthrob.min.css",
+      "build/shell.heartthrob.css",
+      "build/shell.heartthrob.min.css",
       "build/colors.heartthrob.css",
       "build/colors.heartthrob.min.css"
     ],
