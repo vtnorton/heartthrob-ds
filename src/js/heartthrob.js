@@ -59,10 +59,12 @@
     );
 
     $(".user-img").each(function () {
-        var nome = this.nextSibling.nodeValue.trim();
-        $(".user-img").append('<span>' + getIntials(nome) + '</span>');
+        if (!this.firstElementChild) {
+            var nome = this.nextSibling.nodeValue.trim();
+            $(".user-img").append('<span>' + getIntials(nome) + '</span>');
+        }
     });
-
+    
     $(".cards-actions .card.link").click(function () {
         $(".cards-actions .card.link").removeClass("opened", 300);
         $(this).addClass("opened", 300);
@@ -273,3 +275,56 @@ $(window).on('load', function () {
     });
 })
 
+function checkStrength(password, output) {
+    var strength = 0;
+
+    if (password.length < 6) {
+        $("#" + output).removeClass();
+        $("#" + output).addClass('validator short');
+        $("#" + output).html('Senha muito curta');
+    }
+
+    if (password.length > 7) strength += 1;
+    if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) strength += 1;
+    if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) strength += 1;
+    if (password.match(/([!,%,&,@@,#,$,^,*,?,_,~])/)) strength += 1;
+    if (password.match(/(.*[!,%,&,@@,#,$,^,*,?,_,~].*[!,%,&,@@,#,$,^,*,?,_,~])/)) strength += 1;
+    if (strength < 2) {
+        $("#" + output).removeClass();
+        $("#" + output).addClass('validator weak');
+        $("#" + output).html('Sua senha está fraca, é preciso adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.');
+    } else if (strength == 2) {
+        $("#" + output).removeClass();
+        $("#" + output).addClass('validator good');
+        $("#" + output).html('Tente adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.');
+    } else {
+        $("#" + output).removeClass();
+        $("#" + output).addClass('validator strong');
+        $("#" + output).html('Sua senha está forte');
+    }
+
+    if (password.length == 0) {
+        $("#" + output).removeClass().html('');
+    }
+}
+
+function checkPasswordMatch(input, output) {
+    var password = $("#password").val();
+    var confirmPassword = $(input).val();
+
+    if (password != confirmPassword)
+        $("#" + output).addClass("validator").html("As senhas estão diferentes, por favor, tente novamente");
+    else
+        $("#" + output).removeClass("validator").html("");
+}
+
+function noEdit(dataItem) {
+    return dataItem.Id == 0;
+}
+
+function allTheSame(array) {
+    var first = array[0];
+    return array.every(function (element) {
+        return element === first;
+    });
+}
