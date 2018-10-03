@@ -361,7 +361,7 @@ div.k-window-iframecontent { padding: 0; overflow: visible }
 .k-menu-scroll-wrapper .k-scroll-left .k-icon, .k-menu-scroll-wrapper .k-scroll-right .k-icon, .k-popups-wrapper .k-scroll-left .k-icon, .k-popups-wrapper .k-scroll-right .k-icon { margin-top: -.5em; position: absolute; top: 50%; left: 0 }
 .k-context-menu { border: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
 .k-grid, .k-listview { position: relative; zoom: 1 }
-.card .k-grid { margin: -5px -20px -20px }
+.card .k-grid { margin: -10px -20px -20px }
 .k-grid table { width: 100%; margin: 0; max-width: none; border-collapse: separate; border-spacing: 0; empty-cells: show; border-width: 0; outline: 0 }
 .k-header.k-drag-clue { overflow: hidden }
 .k-filter-row th, .k-grid-header th.k-header { overflow: hidden; border-style: solid; border-width: 0 0 1px 1px; font-weight: 400; white-space: nowrap; text-overflow: ellipsis; text-align: left; padding: 5px 0 }
@@ -715,7 +715,7 @@ button.k-gantt-toggle { display: none; float: left; margin-right: .5em }
 .k-pdf-export-shadow .k-pivot { width: auto !important; height: auto !important }
 .k-pdf-export-shadow .k-pivot .k-grid-content > table, .k-pdf-export-shadow .k-pivot .k-grid-header-wrap > table { width: 100% !important; height: auto !important }
 .k-pivot .k-field-actions .k-icon { pointer-events: all }
-.k-calendar { position: relative; display: inline-block; width: 20em; overflow: hidden }
+.k-calendar { position: relative; overflow: hidden; width:300px }
 .k-week-number { width: 22.85714286em }
 .k-calendar .k-link, .k-calendar td { text-decoration: none }
 .k-calendar .k-action-link { text-decoration: underline }
@@ -723,8 +723,8 @@ button.k-gantt-toggle { display: none; float: left; margin-right: .5em }
 .k-widget.k-calendar .k-nav-next, .k-widget.k-calendar .k-nav-prev { position: absolute; top: .16666em; line-height: 1.8333em; height: 1.8333em }
 .k-widget.k-calendar .k-nav-prev { left: 1% }
 .k-widget.k-calendar .k-nav-next { right: 1% }
-.k-calendar .k-content { float: left; border-spacing: 0; width: 100%; height: 14.167em; border-width: 0; margin: 0; table-layout: fixed; outline: 0 }
-.k-calendar .k-content, .k-calendar .k-content th { text-align: right }
+.k-calendar .k-content { float: left; border-spacing: 0; width: 100%;  border-width: 0; margin: 0; table-layout: fixed; outline: 0 }
+.k-calendar .k-content, .k-calendar .k-content th { text-align: center; font-size: 12px;  }
 .k-calendar .k-content .k-alt { border-radius: 0; text-align: center; font-weight: 400; cursor: default; line-height: 1.8333em }
 .k-calendar .k-animation-container .k-content { height: 100% }
 .k-widget.k-calendar .k-nav-fast { display: inline-block; width: 75%; height: 1.8333em; line-height: 1.8333em; margin: .16666em -.08333em .3333em 0 }
@@ -756,13 +756,12 @@ div.k-treeview { border-width: 0; background: 0 0; overflow: auto; white-space: 
 .k-treeview .k-i-drag-and-drop { position: absolute; z-index: 10000; visibility: hidden; width: 80px; height: 5px; margin-top: -3px; background-color: transparent; background-repeat: no-repeat }
 .k-treeview .k-state-hover, .k-treeview .k-state-hover:hover { cursor: pointer }
 .k-rtl .k-treeview .k-i-collapse, .k-rtl .k-treeview .k-i-expand { margin-left: 0; margin-right: -16px }
-.k-toolbar .k-split-button, span.k-colorpicker, span.k-combobox, span.k-datepicker, span.k-datetimepicker, span.k-dropdown, span.k-dropdowntree, span.k-numerictextbox, span.k-timepicker { background-image: none }
-.k-autocomplete, .k-colorpicker, .k-combobox, .k-datepicker, .k-datetimepicker, .k-dropdown, .k-dropdowntree, .k-listbox, .k-multiselect, .k-numerictextbox, .k-selectbox, .k-textbox, .k-timepicker, .k-toolbar .k-split-button { position: relative; display: inline-block; width: 12.4em; overflow: visible; border-width: 0; vertical-align: middle }
+.k-autocomplete, .k-colorpicker, .k-combobox, .k-datepicker, .k-datetimepicker, .k-dropdown, .k-dropdowntree, .k-listbox, .k-multiselect, .k-numerictextbox, .k-selectbox, .k-textbox, .k-timepicker, .k-toolbar .k-split-button { position: relative; overflow: visible; border-width: 0; vertical-align: middle }
 .k-autocomplete > .k-i-close, .k-dropdown-wrap > .k-i-close, .k-multiselect-wrap > .k-i-close { font-size: 100%; display: none; position: absolute; cursor: pointer }
 .k-autocomplete > .k-i-close, .k-multiselect-wrap > .k-i-close { right: 6px }
 .k-autocomplete > .k-i-close, .k-dropdown-wrap > .k-i-close { top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%) }
 .k-dropdown-wrap > .k-i-close { right: 2.4em }
-.k-multiselect-wrap > .k-i-close { top: 8px }
+.k-multiselect-wrap > .k-i-close { top: 13px }
 .k-dropdown-wrap .k-readonly, .k-multiselect-wrap .k-readonly { opacity: .5 }
 .k-autocomplete.k-state-focused > .k-i-close, .k-autocomplete.k-state-hover > .k-i-close, .k-dropdown-wrap.k-state-focused > .k-i-close, .k-dropdown-wrap.k-state-hover > .k-i-close, .k-multiselect-wrap.k-state-focused > .k-i-close, .k-multiselect-wrap.k-state-hover > .k-i-close { display: inline-block; outline: 0 }
 .k-multiselect.k-state-focused > .k-multiselect-wrap > .k-i-close, .k-multiselect.k-state-hover > .k-multiselect-wrap > .k-i-close { display: inline-block; outline: 0 }
@@ -774,7 +773,7 @@ div.k-treeview { border-width: 0; background: 0 0; overflow: auto; white-space: 
 .k-autocomplete, .k-numeric-wrap, .k-picker-wrap { position: relative; cursor: default }
 .k-dropdown-wrap, .k-multiselect-wrap, .k-numeric-wrap, .k-picker-wrap { display: block }
 .k-list-scroller { position: relative; overflow: auto }
-.k-popup.k-calendar-container, .k-popup.k-list-container { -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,0); padding: 2px; border-width: 1px; border-style: solid }
+.k-popup.k-calendar-container, .k-popup.k-list-container { -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,0); padding: 2px; }
 .k-list-container.k-popup-dropdowntree { padding: 0 }
 .k-list-container.k-popup-dropdowntree .k-check-all { margin: 10px 10px 0 }
 .k-list-container.k-popup-dropdowntree .k-treeview { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 10px }
@@ -802,7 +801,7 @@ span.k-datetimepicker .k-select, span.k-datetimepicker .k-select + .k-select { r
 .k-autocomplete .k-input, .k-textbox > input { display: block; width: 100% }
 .k-dropdown-wrap .k-select, .k-selectbox .k-select { overflow: hidden; border: 0; text-decoration: none; color: inherit }
 .k-dropdown .k-input, .k-dropdowntree .k-dropdown-wrap .k-input, .k-selectbox .k-input { display: block; overflow: hidden; text-overflow: ellipsis }
-.k-autocomplete .k-input, .k-dropdown-wrap .k-input, .k-multiselect-wrap .k-input, .k-numeric-wrap .k-input, .k-picker-wrap .k-input, .k-selectbox .k-input, .k-textbox > input { line-height: 1.65em; padding: .17857143em 0; text-indent: .571em; border: 0; margin: 0; overflow: hidden; text-overflow: ellipsis }
+.k-autocomplete .k-input, .k-dropdown-wrap .k-input, .k-multiselect-wrap .k-input, .k-numeric-wrap .k-input, .k-picker-wrap .k-input, .k-selectbox .k-input, .k-textbox > input { text-indent: .571em; border: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; position: relative; top: 0; min-height: 38px; }
 .k-dropdown-wrap .k-input:before { content: ""; display: inline-block }
 .k-ie .k-autocomplete .k-input { height: 1.65em }
 .k-ie .k-combobox .k-input, .k-ie .k-numeric-wrap .k-input, .k-ie .k-picker-wrap .k-input, .k-ie .k-textbox > input { height: 2em }
@@ -810,7 +809,7 @@ span.k-datetimepicker .k-select, span.k-datetimepicker .k-select + .k-select { r
 .k-webkit .k-combobox .k-dropdown-wrap:before, .k-webkit .k-numeric-wrap:before, .k-webkit .k-picker-wrap:before { padding-bottom: .38em }
 .km.root .k-combobox .k-dropdown-wrap:before, .km.root .k-numeric-wrap:before, .km.root .k-picker-wrap:before { content: none }
 .k-combobox .k-input, .k-numeric-wrap .k-input, .k-picker-wrap .k-input { display: inline }
-.k-dropdown-wrap .k-select, .k-numeric-wrap .k-select, .k-picker-wrap .k-select { line-height: 2em; vertical-align: middle; -moz-box-sizing: border-box; text-align: center; width: 2em; height: 100% }
+.k-dropdown-wrap .k-select, .k-numeric-wrap .k-select, .k-picker-wrap .k-select { line-height: 35px; vertical-align: middle; -moz-box-sizing: border-box; text-align: center; width: 2em; height: 100% }
 .k-numeric-wrap .k-select { padding: 0 }
 body .k-datetimepicker .k-select { border-radius: 0 }
 .k-combobox .k-select, .k-dropdown, .k-dropdowntree .k-dropdown-wrap, .k-selectbox .k-icon { cursor: pointer }
@@ -820,7 +819,7 @@ body .k-datetimepicker .k-select { border-radius: 0 }
 .k-list { height: auto }
 .k-nodata { min-height: 138px; width: 100%; display: table; text-transform: uppercase; font-size: .85em; font-weight: lighter }
 .k-nodata > div { display: table-cell; text-align: center; vertical-align: middle; padding: 11px }
-.k-fieldselector .k-list .k-item, .k-item.k-drag-clue, .k-list-optionlabel, .k-listbox .k-item, .k-popup .k-list .k-item, .k-popup > .k-group-header, .k-popup > .k-virtual-wrap > .k-group-header { padding: 1px 5px; line-height: 1.8em; min-height: 1.8em; margin: 0 }
+.k-fieldselector .k-list .k-item, .k-item.k-drag-clue, .k-list-optionlabel, .k-listbox .k-item, .k-popup .k-list .k-item, .k-popup > .k-group-header, .k-popup > .k-virtual-wrap > .k-group-header { padding: 2px 8px; line-height: 35px; min-height: 35px; margin: 0; margin: 0 }
 .k-popup .k-list .k-item > .k-group { top: -1px }
 .k-group-header + div > .k-list > .k-item.k-first:before { content: " "; display: block; border-top-width: 1px; border-top-style: solid; position: absolute; top: -1px; left: 0; right: 0 }
 .k-popup > .k-group-header, .k-popup > .k-virtual-wrap > .k-group-header { padding-right: 22px }
@@ -835,18 +834,18 @@ body .k-datetimepicker .k-select { border-radius: 0 }
 .k-multiselect-wrap { border-radius: 4px; padding-right: 22px }
 .k-multiselect-wrap .k-input { min-width: 25px; min-height: 1.65em; padding: .17857143em; text-indent: .571em; background-color: transparent; border: 0; margin: 0; float: left }
 .k-multiselect-wrap .k-input::-ms-clear { display: none }
-.k-multiselect-wrap li { margin: 1px 0 1px 1px; padding: .1em 1.6em .1em .4em; line-height: 1.5em; min-height: -webkit-calc(1.7em + 2px); min-height: calc(1.7em + 2px); float: left; position: relative }
+.k-multiselect-wrap li { margin: 1px 4px 1px 1px; padding: .1em 1.6em .1em .4em; line-height: 1.5em; min-height: -webkit-calc(1.7em + 2px); min-height: calc(1.7em + 2px); float: left; position: relative }
 .k-autocomplete .k-i-loading, .k-multiselect .k-i-loading { position: absolute; top: auto; right: .4em; bottom: .4em }
 .k-multiselect-wrap .k-select { position: absolute; top: 0; bottom: 0; right: 0; padding: .03em .2em }
 .k-autocomplete-clearable .k-input, .k-combobox-clearable .k-input, .k-dropdowntree-clearable .k-input, .k-multiselect-clearable .k-input { overflow: hidden; text-overflow: ellipsis }
-.k-combobox-clearable .k-input, .k-dropdowntree-clearable .k-dropdown-wrap .k-input, .k-dropdowntree-clearable .k-multiselect-wrap, .k-multiselect-clearable .k-multiselect-wrap { padding-right: 2em }
+.k-combobox-clearable .k-input, .k-dropdowntree-clearable .k-dropdown-wrap .k-input, .k-dropdowntree-clearable .k-multiselect-wrap, .k-multiselect-clearable .k-multiselect-wrap { padding: 5px }
 .k-datetimepicker .k-picker-wrap { padding-right: 4em }
 .k-datetimepicker .k-select { width: 4em }
 .k-datetimepicker .k-select .k-link-date { margin-left: -.285em }
 .k-datetimepicker .k-select .k-link-time { margin-right: -.285em; margin-left: .428em }
 .k-datetimepicker .k-picker-wrap .k-icon { margin: 0 2px }
 .k-picker-wrap .k-icon { cursor: pointer }
-.k-datepicker, .k-datetimepicker, .k-textbox, .k-timepicker { display: inline-block; vertical-align: middle }
+.k-datepicker, .k-datetimepicker, .k-textbox, .k-timepicker { vertical-align: middle }
 .k-time-popup .k-item { padding: 1px 3px }
 .k-input { font-size: inherit; padding: .25em 0 }
 .k-input, .k-textbox > input { outline: 0; -webkit-tap-highlight-color: rgba(0,0,0,0) }
@@ -938,7 +937,7 @@ span.k-numerictextbox { background-color: transparent }
 .k-colorpalette .k-item { width: 14px; height: 14px; overflow: hidden; -ms-high-contrast-adjust: none }
 .k-colorpalette .k-item.k-state-selected, .k-colorpalette .k-item.k-state-selected:hover { z-index: 100; background: 0 0; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); position: relative }
 .k-colorpalette .k-item:hover { z-index: 101; position: relative; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3); box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3) }
-table.k-editor { width: 100%; height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
+table.k-editor { width: calc(100% - 2px); height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
 .k-editor-inline { padding: .3em .5em; word-wrap: break-word; overflow: auto; position: relative; -webkit-transition: border-color .5s; transition: border-color .5s }
 .k-editor-inline.k-editor { border: 1px solid transparent }
 .k-editortoolbar-dragHandle { cursor: move; padding-left: 0; padding-right: 3px; -webkit-box-shadow: none !important; box-shadow: none !important }
@@ -1474,7 +1473,7 @@ html .k-upload { position: relative }
 .k-file-information, .k-file-size, .k-file-validation-message { font-size: .78em; line-height: 1.5em }
 .k-file-information, .k-file-validation-message { line-height: 1.5em }
 .k-file-size { line-height: 1.2em }
-.k-upload-files .k-upload-status { line-height: 1; position: absolute; right: 10px; top: 1em; opacity: .65 }
+.k-upload-files .k-upload-status { line-height: 1; position: absolute; right: 10px; top: 8px; opacity: .65 }
 .k-button.k-upload-action.k-state-active:hover, .k-button.k-upload-action:active:hover, .k-button.k-upload-action:hover, .k-upload-action { color: inherit; background: 0 0; border: 0 }
 .k-upload-action { opacity: .6 }
 .k-upload-action:hover { opacity: 1 }
@@ -2758,15 +2757,13 @@ div.k-spreadsheet-window { padding: 1.167em .75em .75em }
 .k-notification-wrap { padding: 1.75em }
 .k-notification-wrap > .k-i-close { top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%) }
 .k-notification-time { padding: 1.25em }
-.k-calendar .k-content { height: 19.36em }
-.k-calendar th { padding: .5em .75em .5em .45em }
-.k-calendar td { padding: .08333em .286em }
-.k-calendar .k-content .k-link { min-height: 2.714em; line-height: 2.714em; padding: 0 .857em 0 .714em }
+.k-calendar th { padding: .5em .75em .5em .45em; }
+.k-calendar td { padding: .08333em .286em; height: 42px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.k-calendar .k-content .k-link { min-height: 40px; line-height: 40px; padding: 0 .857em 0 .714em; }
 .k-calendar .k-meta-view .k-link { padding: .357em .857em .357em .714em }
 .k-calendar .k-century .k-link { text-align: left; padding: 0 .7em; line-height: 1.3em }
-.k-widget.k-calendar .k-nav-fast { height: 2.429em; line-height: 2.429em; margin: .214em -.08333em .357em 0 }
+.k-widget.k-calendar .k-nav-fast { height: 2.429em; line-height: 2.429em; margin: .214em -.08333em .357em 0; font-weight: 600; }
 .k-calendar .k-header .k-link.k-nav-next, .k-calendar .k-header .k-link.k-nav-prev { height: 2.429em; line-height: 2.429em; width: 2.429em; top: .214em }
-.k-calendar .k-footer { border-top-width: 1px; border-top-style: solid }
 .k-calendar .k-footer .k-nav-today { padding: .8em 0 .7em }
 .k-numerictextbox .k-link .k-i-arrow-60-up { vertical-align: bottom }
 .k-numerictextbox .k-link .k-i-arrow-60-down { vertical-align: top }
@@ -2828,7 +2825,7 @@ span.k-tooltip { padding: .643em 1.214em }
 .k-toolbar .k-overflow-anchor { width: 2.143em; height: 2.143em; border-width: 1px; padding: 0; margin: 6px; line-height: inherit }
 .k-toolbar .k-button-group .k-button { margin-right: .143em }
 table.k-editor { border-spacing: 0 }
-.k-editor .k-editable-area .k-content, .k-editor .k-editor-toolbar-wrap { border-width: 1px 0 0; padding: 3px 17px }
+.k-editor .k-editable-area .k-content, .k-editor .k-editor-toolbar-wrap { border-width: 1px 0 0;}
 .k-progressbar, .k-progressbar-horizontal .k-first, .k-progressbar-horizontal .k-last, .k-progressbar-horizontal > .k-state-selected, .k-progressbar-vertical .k-first, .k-progressbar-vertical .k-last, .k-progressbar > .k-reset, .k-progressbar > .k-state-selected, .k-progressbar > .k-state-selected.k-complete, .k-rtl .k-progressbar-horizontal .k-first, .k-rtl .k-progressbar-horizontal .k-last, .k-rtl .k-progressbar-horizontal.k-progressbar-reverse .k-last, .k-rtl .k-progressbar-horizontal.k-progressbar-reverse > .k-state-selected, .k-rtl .k-progressbar > .k-state-selected.k-complete { border-radius: 0 }
 .k-rtl .k-dropdown-wrap, .k-rtl .k-numeric-wrap, .k-rtl .k-picker-wrap { padding-left: 2em }
 .k-progressbar-horizontal { height: 1em }
@@ -2856,7 +2853,7 @@ div.k-window-content { padding: .231em .857em }
 .k-scheduler-footer .k-link, .k-scheduler-toolbar .k-link { padding: 0 .36em }
 .k-scheduler-times th { text-align: left }
 .k-scheduler-footer .k-i-clock { display: none }
-.k-ie9 .k-upload-button, .k-upload-sync .k-upload-button { margin: .36em }
+.k-ie9 .k-upload-button, .k-upload-sync .k-upload-button { margin: 10px 0 }
 .k-file { line-height: 1.143em; padding: .643em .17em .643em 1em }
 .k-upload-status { line-height: 1.29em; top: auto; right: 12px }
 .k-splitbar-horizontal-hover .k-resize-handle { background-position: -165px -6px }
@@ -2952,12 +2949,11 @@ div.k-spreadsheet-window { padding: 1em }
 .k-in, .k-item, .k-window-action { border-color: transparent }
 .k-splitbar .k-resize-handle { background-color: #333 }
 .k-block, .k-widget { background-color: #fff }
-.k-autocomplete, .k-block, .k-button-group .k-tool, .k-calendar th, .k-content, .k-dateinput.k-state-disabled > .k-textbox:hover, .k-dropdown-wrap, .k-dropzone-active, .k-editable-area, .k-grid-header, .k-grid-header-locked, .k-group, .k-group-footer td, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-header, .k-input, .k-maskedtextbox.k-state-disabled > .k-textbox:hover, .k-pager-refresh, .k-pager-wrap, .k-pager-wrap .k-link, .k-panel > .k-item > .k-link, .k-panelbar .k-content, .k-panelbar .k-panel, .k-panelbar > .k-item > .k-link, .k-popup.k-align .k-list .k-item:last-child, .k-separator, .k-slider-track, .k-splitbar, .k-state-default, .k-state-default .k-select, .k-state-disabled, .k-textbox, .k-textbox > input, .k-tiles, .k-toolbar, .k-tooltip, .k-treemap-tile, .k-upload-files, .k-widget { border-color: #ccc }
+.k-autocomplete, .k-block, .k-button-group .k-tool, .k-calendar th, .k-content, .k-dateinput.k-state-disabled > .k-textbox:hover, .k-dropdown-wrap, .k-dropzone-active, .k-editable-area, .k-grid-header, .k-grid-header-locked, .k-group, .k-group-footer td, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-header, .k-input, .k-maskedtextbox.k-state-disabled > .k-textbox:hover, .k-pager-refresh, .k-pager-wrap, .k-pager-wrap .k-link, .k-panel > .k-item > .k-link, .k-panelbar .k-content, .k-panelbar .k-panel, .k-panelbar > .k-item > .k-link, .k-popup.k-align .k-list .k-item:last-child, .k-separator, .k-slider-track, .k-splitbar, .k-state-default, .k-state-default .k-select, .k-state-disabled, .k-textbox, .k-textbox > input, .k-tiles, .k-toolbar, .k-tooltip, .k-treemap-tile, .k-upload-files, .k-widget { border-color: #bababa; }
 .k-calendar th, .k-dropzone-hovered, .k-footer-template td, .k-grid-footer, .k-group, .k-group-footer td, .k-grouping-header, .k-pager-wrap, .k-popup, .k-toolbar, .k-widget .k-status { background-color: #fff }
 .k-grouping-row td, .k-resize-handle-inner, td.k-group-cell { background-color: #fff }
 .k-list-container { border-color: #ccc; background-color: #fff }
 .k-content, .k-panel > li.k-item, .k-panelbar > li.k-item, .k-tiles { background-color: #fff }
-.k-alt, .k-pivot-layout > tbody > tr:first-child > td:first-child, .k-resource.k-alt, .k-separator { background-color: #ebebeb }
 .k-calendar .k-alt, .k-calendar .k-alt:active, .k-header.k-alt, .k-pivot-rowheaders .k-alt .k-alt { background-color: #ebebeb }
 .k-autocomplete.k-header, .k-dropdown-wrap.k-state-active, .k-numeric-wrap.k-state-active, .k-picker-wrap.k-state-active, .k-textbox { border-color: #ccc; background-color: #0078D7 }
 .k-autocomplete .k-input, .k-autocomplete.k-state-focused .k-input, .k-dropdown-wrap .k-input, .k-dropdown-wrap.k-state-focused .k-input, .k-numeric-wrap.k-state-focused .k-input, .k-picker-wrap.k-state-focused .k-input, .k-textbox > input { border-color: #ccc }
@@ -3030,7 +3026,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-calendar .k-link.k-state-hover, .k-window-titlebar .k-link { border-radius: 0 }
 .k-calendar .k-footer .k-link { border-radius: 0 }
 .k-calendar th { background-color: #fff }
-.k-calendar-container.k-group { border-color: #ccc }
+.k-calendar-container.k-group { border: none; }
 .k-draghandle.k-state-selected:hover, .k-ghost-splitbar-horizontal, .k-ghost-splitbar-vertical, .k-list > .k-state-highlight, .k-list > .k-state-selected, .k-marquee-color, .k-panel > .k-state-selected, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-tool.k-state-selected { color: #333; background-color: #cde6f7; border-color: #cde6f7 }
 .k-group-header + .k-list > .k-item.k-first, .k-static-header + .k-list > .k-item.k-first, .k-virtual-item.k-first { border-top-color: #8f8f8f }
 .k-group-header + div > .k-list > .k-item.k-first:before { border-top-color: #8f8f8f }
@@ -3041,7 +3037,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-listview > .k-state-focused, .k-listview > .k-state-focused.k-state-selected { -webkit-box-shadow: inset 0 0 0 1px #0078D7; box-shadow: inset 0 0 0 1px #0078D7 }
 .k-list-optionlabel.k-state-selected.k-state-focused { -webkit-box-shadow: none; box-shadow: none }
 .k-panelbar > li.k-state-default > .k-link.k-state-selected, .k-panelbar > li > .k-state-selected, .k-state-selected > .k-link { color: #333 }
-.k-dropdown .k-state-focused, .k-filebrowser-dropzone, .k-list > .k-state-hover, .k-mobile-list .k-edit-label.k-check:active, .k-mobile-list .k-item > .k-label:active, .k-mobile-list .k-item > .k-link:active, .k-mobile-list .k-recur-view .k-check:active, .k-pager-wrap .k-link:hover, .k-scheduler .k-scheduler-toolbar ul li.k-state-hover, .k-splitbar-horizontal-hover:hover, .k-splitbar-vertical-hover:hover, .k-state-hover, .k-state-hover:hover { color: #000; background-color: #e8e8e8; border-color: #8f8f8f }
+.k-dropdown .k-state-focused, .k-filebrowser-dropzone, .k-list > .k-state-hover, .k-mobile-list .k-edit-label.k-check:active, .k-mobile-list .k-item > .k-label:active, .k-mobile-list .k-item > .k-link:active, .k-mobile-list .k-recur-view .k-check:active, .k-pager-wrap .k-link:hover, .k-scheduler .k-scheduler-toolbar ul li.k-state-hover, .k-splitbar-horizontal-hover:hover, .k-splitbar-vertical-hover:hover { color: #000; background-color: #e8e8e8; border-color: #bcbcbc }
 .k-pager-wrap .k-link.k-state-disabled { color: #0078D7 }
 .k-mobile-list .k-scheduler-timezones .k-edit-field:nth-child(2):active { color: #000; background-color: #f4f4f4; border-color: #8f8f8f }
 .k-state-focused > .k-select, .k-state-hover > .k-select { border-color: #8f8f8f }
@@ -3060,7 +3056,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-state-error { border-color: #dbdbdb; background-color: #f54c40; color: #6b6b6b }
 .k-state-disabled { opacity: .7 }
 .k-loading-mask.k-state-selected, .k-tile-empty.k-state-selected { border-width: 0; background-image: none; background-color: transparent }
-.k-dropzone .k-upload-status, .k-dropzone em, .k-other-month, .k-other-month .k-link, .k-slider .k-draghandle, .k-state-disabled, .k-state-disabled .k-link, .k-tile-empty strong { color: #a5a5a5 }
+.k-dropzone .k-upload-status, .k-dropzone em, .k-other-month, .k-other-month .k-link, .k-slider .k-draghandle, .k-state-disabled, .k-state-disabled .k-link, .k-tile-empty strong { color: #777; background:#e5e5e5 }
 .k-file .k-upload-status { color: #333 }
 .k-progressbar-indeterminate { background: url(KendoImages/indeterminate.gif) }
 .k-progressbar-indeterminate .k-progress-status-wrap, .k-progressbar-indeterminate .k-state-selected { display: none }
@@ -3154,7 +3150,6 @@ div.k-spreadsheet-window { padding: 1em }
 .k-split-button.k-state-border-up > .k-button { border-radius: 0 }
 .k-split-button.k-state-border-down > .k-split-button-arrow { border-radius: 0 }
 .k-split-button.k-state-border-up > .k-split-button-arrow { border-radius: 0 }
-.k-dropdown-wrap .k-input, .k-numeric-wrap .k-input, .k-picker-wrap .k-input { border-radius: 0 }
 .k-rtl .k-dropdown-wrap .k-input, .k-rtl .k-numeric-wrap .k-input, .k-rtl .k-picker-wrap .k-input { border-radius: 0 }
 .k-numeric-wrap .k-link { border-radius: 0 }
 .k-numeric-wrap .k-link + .k-link { border-radius: 0 }
@@ -3196,7 +3191,7 @@ div.k-spreadsheet-window { padding: 1em }
 .km-pane-wrapper .k-mobile-list .k-edit-field { -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc }
 .km-actionsheet .k-grid-delete, .km-actionsheet .k-scheduler-delete, .km-pane-wrapper .k-filter-menu .k-button[type=reset], .km-pane-wrapper .k-scheduler-delete { color: #fff; border-color: #dbdbdb; background-color: red; background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.3)),to(rgba(255,255,255,.15))); background-image: -webkit-linear-gradient(top,rgba(255,255,255,.3),rgba(255,255,255,.15)); background-image: linear-gradient(to bottom,rgba(255,255,255,.3),rgba(255,255,255,.15)) }
 .km-actionsheet .k-grid-delete:active, .km-actionsheet .k-scheduler-delete:active, .km-pane-wrapper .k-filter-menu .k-button[type=reset]:active, .km-pane-wrapper .k-scheduler-delete:active { background-color: #900 }
-.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default { background-position: 50% 50%; background-color: #fff; border-color: #bababa }
+.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default { background-position: 50% 50%; background-color: #fff; border-color: #bababa; margin-top: 4px; height: 38px }
 .k-autocomplete.k-state-hover, .k-dropdown-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-picker-wrap.k-state-hover { background-color: #eaeaea; background-image: none; background-position: 50% 50%; border-color: #8b8b8b }
 .k-multiselect-wrap { border-color: #bababa }
 .k-multiselect-wrap.k-state-hover, .k-state-hover > .k-multiselect-wrap { border-color: #8b8b8b; background: #fff; color: #333 }
@@ -3204,7 +3199,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-multiselect-wrap.k-state-focused, .k-state-focused > .k-multiselect-wrap { border-color: #0078D7; -webkit-box-shadow: none; box-shadow: none }
 .k-list-container { color: #333 }
 .k-nodata { color: #a5a5a5 }
-.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333 }
+.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333; margin-top: 4px; }
 .k-state-default > .k-select { border-color: #bababa }
 .k-state-hover > .k-select { border-color: #8b8b8b }
 .k-state-focused > .k-select { border-color: #0078D7 }
@@ -3279,7 +3274,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-button.k-state-disabled .k-icon, .k-state-disabled .k-button .k-icon, .k-state-disabled .k-icon { opacity: .3 }
 .k-combobox .k-select, .k-numerictextbox .k-select, .k-picker-wrap .k-select { border-color: #fff }
 .k-autocomplete.k-state-focused, .k-dropdown-wrap.k-state-focused, .k-numeric-wrap.k-state-focused, .k-picker-wrap.k-state-focused { background-color: #fff }
-.k-autocomplete.k-state-disabled, .k-dropdown-wrap.k-state-disabled, .k-multiselect.k-state-disabled, .k-numeric-wrap.k-state-disabled, .k-picker-wrap.k-state-disabled, .k-state-disabled .k-picker-wrap, .k-textbox.k-state-disabled { border-color: #e5e5e5 }
+.k-autocomplete.k-state-disabled, .k-dropdown-wrap.k-state-disabled, .k-multiselect.k-state-disabled, .k-numeric-wrap.k-state-disabled, .k-picker-wrap.k-state-disabled, .k-state-disabled .k-picker-wrap, .k-textbox.k-state-disabled { border-color: #e5e5e5; margin-top: 3px; }
 .k-multiselect-wrap.k-state-disabled, .k-state-disabled > .k-multiselect-wrap { border-color: #e5e5e5 }
 .k-autocomplete.k-state-border-down { border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 0 }
 input.k-textbox:focus { border-color: #0078D7 }
@@ -3288,9 +3283,8 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-dropdown-wrap.k-state-default.k-state-active .k-select, .k-picker-wrap.k-state-default.k-state-active .k-select { border-color: #0078D7 }
 .k-dropdown .k-state-default.k-state-active .k-input, .k-state-selected .k-progress-status { color: #fff }
 .k-list > .k-state-hover { border-color: #f4f4f4 }
-.k-popup { -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.18); box-shadow: 0 0 5px 2px rgba(0,0,0,.18) }
-.k-calendar .k-state-focused, .k-calendar .k-state-selected.k-state-focused { -webkit-box-shadow: inset 0 0 0 1px #0078D7; box-shadow: inset 0 0 0 1px #0078D7 }
-.k-calendar .k-state-selected { background-color: #cde6f7 }
+.k-popup { box-shadow: 0 0px 10px rgba(0,0,0,0.25); }
+.k-calendar .k-state-selected { background-color: #0078D7; }
 .k-calendar .k-state-selected.k-state-hover, .k-calendar td:active { background-color: #c2dbec }
 .k-calendar .k-nav-fast.k-state-hover, .k-calendar .k-nav-next.k-state-hover, .k-calendar .k-nav-prev.k-state-hover { background-color: #fff }
 .k-calendar .k-today { background-color: #0078D7 }
@@ -3298,7 +3292,6 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-calendar .k-today.k-state-hover { background-color: #1d5bbc }
 .k-calendar .k-today.k-state-focused, .k-calendar .k-today.k-state-selected:active, .k-calendar .k-today:active { -webkit-box-shadow: inset 0 0 0 1px #00467a; box-shadow: inset 0 0 0 1px #00467a }
 .k-calendar .k-footer .k-nav-today { color: #0078D7 }
-.k-calendar .k-footer { border-color: #ccc }
 .k-splitbar { border-color: #f4f4f4 }
 .k-splitbar-horizontal-hover:hover, .k-splitbar-vertical-hover:hover { background-color: #eaeaea; border-color: #eaeaea }
 .k-splitbar.k-state-focused { background-color: #0078D7; border-color: #0078D7 }
@@ -3309,7 +3302,9 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-grid td.k-state-selected:hover, .k-grid tr.k-state-selected:hover { background-color: #d7e4ed }
 .k-gantt .k-header.k-nonwork-hour, .k-gantt .k-treelist .k-alt { background-color: #fff }
 .k-grid td.k-state-focused, .k-grid-header th.k-state-focused { -webkit-box-shadow: inset 0 0 0 1px #0078D7; box-shadow: inset 0 0 0 1px #0078D7 }
-.k-grid .k-grouping-header, .k-grid td, .k-grid-header-wrap, .k-header.k-grid-toolbar { border-color: transparent }
+.k-grid .k-grouping-header, .k-grid td, .k-grid-header-wrap, .k-header.k-grid-toolbar { border-color: transparent;  }
+.k-grid td { border-bottom: 1px solid #e5e5e5 }
+.k-grid tr:last-of-type td { border-bottom: none }
 .k-grid tr th { border-left-color: transparent }
 .k-pivot .k-grid-header th.k-header, .k-pivot-layout > tbody > tr:first-child > td:first-child { border-color: #ccc }
 .k-group-footer td { border-top-color: #ccc }
@@ -3387,7 +3382,7 @@ input.k-textbox:focus { border-color: #0078D7 }
     .k-edge .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover, .k-ff .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover, .k-ie11 .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover, .k-safari .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover, .k-webkit .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover { border-color: #8f8f8f; background-image: none; background-color: #f4f4f4 }
     .k-edge .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover > .k-link, .k-edge .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view > .k-link, .k-ff .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover > .k-link, .k-ff .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view > .k-link, .k-ie11 .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover > .k-link, .k-ie11 .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view > .k-link, .k-safari .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover > .k-link, .k-safari .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view > .k-link, .k-webkit .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view:hover > .k-link, .k-webkit .k-scheduler-toolbar > ul.k-scheduler-views > li.k-current-view > .k-link { color: #333; min-width: 20px }
     .k-edge .k-scheduler-views > li.k-state-selected > .k-link:after, .k-ff .k-scheduler-views > li.k-state-selected > .k-link:after, .k-ie11 .k-scheduler-views > li.k-state-selected > .k-link:after, .k-safari .k-scheduler-views > li.k-state-selected > .k-link:after, .k-webkit .k-scheduler-views > li.k-state-selected > .k-link:after { display: block; content: ""; position: absolute; top: 50%; margin-top: -.5em; right: .333em; width: 16px; height: 16px }
-    .k-edge .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ff .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ie11 .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-safari .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-webkit .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded { border-width: 1px 1px 0; border-style: solid; border-color: #ccc; background-color: #fff; border-radius: 0; border-width: 1px; background-image: none; -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.18); box-shadow: 0 0 5px 2px rgba(0,0,0,.18) }
+    .k-edge .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ff .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ie11 .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-safari .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-webkit .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded { border-width: 1px 1px 0; border-style: solid; border-color: #ccc; background-color: #fff; border-radius: 0; border-width: 1px; background-image: none; box-shadow: 0 0px 10px rgba(0,0,0,0.25); }
     .k-edge .k-rtl .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ff .k-rtl .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-ie11 .k-rtl .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-safari .k-rtl .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded, .k-webkit .k-rtl .k-scheduler-toolbar > ul.k-scheduler-views.k-state-expanded { text-align: left }
     .k-edge .k-pager-wrap, .k-ff .k-pager-wrap, .k-ie11 .k-pager-wrap, .k-safari .k-pager-wrap, .k-webkit .k-pager-wrap { min-height: 2.2em }
     .k-edge .k-pager-input, .k-edge .k-pager-wrap .k-pager-nav, .k-ff .k-pager-input, .k-ff .k-pager-wrap .k-pager-nav, .k-ie11 .k-pager-input, .k-ie11 .k-pager-wrap .k-pager-nav, .k-safari .k-pager-input, .k-safari .k-pager-wrap .k-pager-nav, .k-webkit .k-pager-input, .k-webkit .k-pager-wrap .k-pager-nav { display: inline-block; vertical-align: top }
@@ -3404,7 +3399,7 @@ input.k-textbox:focus { border-color: #0078D7 }
     .k-edge .k-pager-wrap .k-pager-numbers .k-link, .k-edge .k-pager-wrap .k-pager-numbers .k-state-selected, .k-ff .k-pager-wrap .k-pager-numbers .k-link, .k-ff .k-pager-wrap .k-pager-numbers .k-state-selected, .k-ie11 .k-pager-wrap .k-pager-numbers .k-link, .k-ie11 .k-pager-wrap .k-pager-numbers .k-state-selected, .k-safari .k-pager-wrap .k-pager-numbers .k-link, .k-safari .k-pager-wrap .k-pager-numbers .k-state-selected, .k-webkit .k-pager-wrap .k-pager-numbers .k-link, .k-webkit .k-pager-wrap .k-pager-numbers .k-state-selected { display: block; margin-top: 0; margin-right: 0; padding: 1px 5px 1px .8em; text-align: left; border-width: 0 }
     .k-edge .k-pager-wrap .k-pager-numbers .k-state-selected, .k-ff .k-pager-wrap .k-pager-numbers .k-state-selected, .k-ie11 .k-pager-wrap .k-pager-numbers .k-state-selected, .k-safari .k-pager-wrap .k-pager-numbers .k-state-selected, .k-webkit .k-pager-wrap .k-pager-numbers .k-state-selected { background-color: #cde6f7 }
     .k-edge .k-pager-wrap .k-pager-numbers li:not(.k-current-page) .k-link:hover, .k-ff .k-pager-wrap .k-pager-numbers li:not(.k-current-page) .k-link:hover, .k-ie11 .k-pager-wrap .k-pager-numbers li:not(.k-current-page) .k-link:hover, .k-safari .k-pager-wrap .k-pager-numbers li:not(.k-current-page) .k-link:hover, .k-webkit .k-pager-wrap .k-pager-numbers li:not(.k-current-page) .k-link:hover { background-color: #f4f4f4 }
-    .k-edge .k-pager-numbers.k-state-expanded, .k-ff .k-pager-numbers.k-state-expanded, .k-ie11 .k-pager-numbers.k-state-expanded, .k-safari .k-pager-numbers.k-state-expanded, .k-webkit .k-pager-numbers.k-state-expanded { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; border-style: solid; border-color: #ccc; background-color: #fff; border-radius: 0; -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.18); box-shadow: 0 0 5px 2px rgba(0,0,0,.18) }
+    .k-edge .k-pager-numbers.k-state-expanded, .k-ff .k-pager-numbers.k-state-expanded, .k-ie11 .k-pager-numbers.k-state-expanded, .k-safari .k-pager-numbers.k-state-expanded, .k-webkit .k-pager-numbers.k-state-expanded { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; border-style: solid; border-color: #ccc; background-color: #fff; border-radius: 0; box-shadow: 0 0px 10px rgba(0,0,0,0.25); }
     .k-edge .k-pager-numbers.k-state-expanded .k-current-page, .k-ff .k-pager-numbers.k-state-expanded .k-current-page, .k-ie11 .k-pager-numbers.k-state-expanded .k-current-page, .k-safari .k-pager-numbers.k-state-expanded .k-current-page, .k-webkit .k-pager-numbers.k-state-expanded .k-current-page { margin: -2.2em -1px 0; padding: 0 }
     .k-edge .k-pager-numbers.k-state-expanded .k-current-page .k-link, .k-ff .k-pager-numbers.k-state-expanded .k-current-page .k-link, .k-ie11 .k-pager-numbers.k-state-expanded .k-current-page .k-link, .k-safari .k-pager-numbers.k-state-expanded .k-current-page .k-link, .k-webkit .k-pager-numbers.k-state-expanded .k-current-page .k-link { border-radius: 0; background-color: #0078D7; border: 1px solid #0078D7; border-top-color: #ccc; color: #fff }
     .k-edge .k-pager-numbers.k-state-expanded .k-current-page .k-link:after, .k-ff .k-pager-numbers.k-state-expanded .k-current-page .k-link:after, .k-ie11 .k-pager-numbers.k-state-expanded .k-current-page .k-link:after, .k-safari .k-pager-numbers.k-state-expanded .k-current-page .k-link:after, .k-webkit .k-pager-numbers.k-state-expanded .k-current-page .k-link:after { background-position: 0 0; opacity: 1 }
@@ -3554,3 +3549,9 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-menu-scroll-wrapper.horizontal .k-scroll-right { border-left-width: 1px }
 .k-menu-scroll-wrapper.vertical .k-scroll-up { border-bottom-width: 1px }
 .k-menu-scroll-wrapper.vertical .k-scroll-down { border-top-width: 1px }
+.k-calendar .k-state-selected a { color: #fff; font-weight: 600 }
+.k-calendar .k-state-hover{background:#ebebeb; transition: all .3s}
+.k-calendar tr td:first-of-type { border-left: none }
+.k-grid .icon { border-radius: 50%; max-width: 30px; margin-top: 4px }
+.k-grid .btn { min-height: 32px; min-width: 110px; }
+.k-editor-toolbar .k-dropdown-wrap{margin-top:0; min-width:150px}

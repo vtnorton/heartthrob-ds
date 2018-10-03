@@ -11,6 +11,12 @@
         return this;
     };
 
+    var domain = location.host;
+    var domain_index = window.location.href.indexOf(domain);
+    var long_app_name = window.location.href.slice(domain_index + domain.length + 1);
+
+    $("a[href='/" + long_app_name + "']").addClass("active");
+
     /* Menu event */
     $(document).click(function () {
         $('.menu').slideUp("fast");
@@ -266,3 +272,4 @@ $(window).on('load', function () {
         tree.treeview();
     });
 })
+

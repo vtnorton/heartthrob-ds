@@ -23,10 +23,14 @@ gulp.task('copy-files', () => {
     return gulp.src('src/css/**')
       .pipe(gulp.dest('build/css'));
   });
+  gulp.task('copy-files-img', () => {
+    return gulp.src('src/img/**')
+      .pipe(gulp.dest('build/img'));
+  });
 
   gulp.task('copy-files-js', () => {
     return gulp.src('src/js/**')
       .pipe(gulp.dest('build/js'));
   });
 
-  gulp.task('build', ['minify-css', 'minify-js', 'copy-files', 'copy-files-js']);
+  gulp.task('build', ['minify-css', 'minify-js', 'copy-files', 'copy-files-js', 'copy-files-img']);

@@ -21,10 +21,13 @@ a { color: #0078D7; text-decoration: none; cursor: pointer; }
 i { font-style: italic; }
 hr { border-bottom: none !important; border: 1px solid #ccc; margin: 10px 0 15px; }
 li { margin: 3px 0; line-height: 20px }
-blockquote { background: #fff; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px; border-left: 3px solid #0078D7 }
+blockquote, .validation-summary-valid, .validation-summary-errors { background: #fff; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px; border-left: 3px solid #0078D7 }
 blockquote footer { font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
 blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
 small { font-size: 12px; line-height: 14px; }
+label { font-weight: 600; color: #555 }
+img { width: 100% }
+img.rounded { border-radius: 50% }
 
 /* Help classes */
 .link { cursor: pointer }
@@ -51,6 +54,7 @@ small { font-size: 12px; line-height: 14px; }
 .space-low { height: 15px }
 .space-medium { height: 30px }
 .space-long { height: 48px }
+.accent { color: #0078D7 !important}
 
 /* Buttons */
 .btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 40px; min-width: 140px; padding: 8px 15px 0; cursor: pointer; display: inline-block; text-align: center; }
@@ -59,7 +63,10 @@ small { font-size: 12px; line-height: 14px; }
 .btn i { font-size: 16px; margin-right: 3px }
 .btn-primary { background: #0078D7; border-color: #0078D7; color: #fff }
 .btn-lesser { background: none; border-color: #0078D7 }
-.btn-link { background: transparent; border-color: transparent; color: #0078D7 }
+.btn-danger { background: #cc240e; border-color: #cc240e; color: #fff }
+.btn-danger:hover { background: #d22; border-color: #f00 }
+.btn-link { background: transparent; border-color: transparent; color: #0078D7; padding-left: 0; }
+.card .left .btn-link { text-align: left }
 .btn-link i { margin-right: 8px }
 .btn-link:hover { background: transparent; color: #1d5bbc; border-color: transparent; }
 .btn-action { width: intrinsic; width: -moz-max-content; width: -webkit-max-content; }
@@ -72,7 +79,7 @@ small { font-size: 12px; line-height: 14px; }
 .btn-action .btn:last-of-type { margin-right: 0 }
 
 /* Inputs */
-select, textarea, input { border: 1px solid #bababa; background: #fff; margin: 4px 0; width: calc(100% - 20px); min-height: 40px; padding: 0 8px; }
+select, textarea, input { border: 1px solid #bababa; background: #fff; margin: 4px 0; width: 100%; min-height: 40px; padding: 0 8px; }
 textarea:focus, input:focus { border-color: #0078D7 }
 textarea:disabled, input:disabled { border-color: #ccc; background: #e3e3e3 }
 textarea { padding: 5px 8px }
@@ -92,6 +99,7 @@ input[type="checkbox"]:checked + label::before, input[type="radio"]:checked + la
 input[type="checkbox"] + label::after, input[type=radio] + label::after { -webkit-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
 input[type="checkbox"]:checked + label::after, input[type=radio]:checked + label::after { -webkit-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 
+.validator { border-top: 3px solid #0078D7; padding-top: 5px; display: block; width: calc(100% - 20px) }
 
 .ui-autocomplete-input { position: relative; z-index: 9 }
 .ui-autocomplete { position: absolute; z-index: 8; float: left; min-width: 160px; padding: 0; margin: -40px 0 0; list-style: none; background-color: #fcfcfc; }
@@ -124,7 +132,7 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .show-alert { opacity: 1; visibility: visible; transform: scale(1.0); transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5; }
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5; position: fixed }
 header .logo { float: left }
 header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer }
 header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
@@ -143,7 +151,7 @@ header .right ul li a:hover { border-bottom: none }
 header .search { height: 48px }
 header .search a { position: relative; z-index: 8; }
 header .search a.searchactived { text-align: right !important; width: auto !important; color: #2e2e2e !important; margin-left: 192px !important; }
-header .search a.searchactived:hover { background: none !important; transition: all .3s }
+header .search a.searchactived:hover { background: none !important; transition: all .3s; box-shadow: none !important }
 header .search input { display: none; height: 48px; position: relative; top: -52px; z-index: 7; min-width: 320px; border: none; background: #f4f4f4; }
 header .search input:hover { background: #fff !important; transition: all .3s }
 header #notifications i { position: relative; z-index: 7 }
@@ -151,16 +159,20 @@ header #notifications span { color: #000; position: relative; left: 7px; backgro
 header .menu { display: none; position: absolute; z-index: 5; width: 240px; right: 0 }
 header .menu li { float: none; }
 header .menu li a { height: 32px; width: 100% !important; text-align: left !important; padding: 0 !important }
+header .menu li a.active { border: 0 }
 header .right ul li:last-child .menu li i, header .menu li:last-child a i { margin-top: 8px }
 header .menu li a.no-icon { padding-left: 40px !important }
 header .menu .line { background: none }
-header .user-img { width: 32px; height: 32px; border-radius: 50%; background: #c3c3c3; margin: 8px 10px 0 -7px }
-header .user-img span { display: block; margin-top: -8px; font-style: italic; }
+header .user-img, .icon { width: 32px; height: 32px; border-radius: 50%; background: #c3c3c3; margin: 8px 10px 0 -7px; position: relative }
+header .user-img img { border-radius: 50% }
+header .user-img span, .icon span { display: block; margin-top: -8px; font-style: italic; color: #fff; }
+.icon span { text-align: center; line-height: 32px; font-weight: 600; }
 
 .card { background: #fff; padding: 20px; overflow: auto; overflow-x: hidden; width: 100% !important; margin: auto; margin-bottom: 20px }
 .card .taskbar { background: #e9e9e9; padding: 20px; margin: 20px -20px -20px; }
-.card hr { margin-left: -20px; margin-right: -20px; }
-.card hr:first-of-type { position: relative; top: 10px; margin-bottom: 20px; }
+.card .taskbar.right { float: none; text-align: right }
+.card .left h2 { margin-top: 5px; }
+.card hr:first-of-type { position: relative; top: 10px; margin-bottom: 20px; margin-left: -20px; margin-right: -20px; }
 .cards-steps .card { background: #e9e9e9; border-left: 5px solid #0078D7 }
 .cards-steps .view-done { border-color: #009a32 }
 .cards-steps .view-warning { border-color: #f9a40e }
@@ -186,7 +198,8 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav a { color: #fff; font-size: 14px; text-decoration: none; width: 100%; display: block; padding: 14px 20px; height: 48px }
 .nav a:hover { background: #555; transition: all .3s }
 .nav a i { width: 25px; text-align: center; font-size: 14px; margin-right: 5px; }
-.nav a.active { border-left: 3px solid #0078D7; background: #444 !important; padding-left: 17px }
+.nav a.active { border-left: 3px solid #0078D7; padding-left: 17px }
+.nav ul li ul a.active { background: #444 !important; }
 .nav ul, .nav ul li { list-style: none; padding: 0; margin: 0 }
 .nav ul li ul { display: none; overflow-x: auto }
 .nav ul li ul li a { background: #555; transition: all .3s; height: 40px; padding: 9px 20px; }
@@ -202,11 +215,12 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav.light { background: #ebebeb; border-right: 1px solid #ccc }
 .nav.light a { color: #111 }
 .nav.light a:hover, nav.light ul li ul li a { background: #d9d9d9; transition: all .3s }
-.nav.light a.active { background: #bcbcbc !important; }
+.nav.light ul li ul a.active { background: #bcbcbc !important; }
 .nav.light ul li ul li a:hover { background: #bcbcbc; transition: all 0.3s }
 .nav.light a.child:after, nav.light .nav-bottom-menus:before, nav.light .nav-top-menus:before { border-color: #bcbcbc; }
 .nav a.closed:after { display: none }
-.nav.light a:hover, .nav.light ul li ul li a {background: #d9d9d9; transition: all .3s;}
+.nav.light a:hover, .nav.light ul li ul li a { background: #d9d9d9; transition: all .3s; }
+.nav.light .nav-bottom-menus:before, .nav.light .nav-top-menus:before { border-color: #ccc }
 
 .treeview, .treeview ul { margin: 0; padding: 0; list-style: none; min-width: 200px; }
 .treeview ul ul { margin-left: .5em }
@@ -219,11 +233,29 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .treeview .fa-chevron-right { margin-left: 2px; margin-right: -15px; }
 
 /* TODO: Inserir na documentação */
-header + nav{height:calc(100% - 48px) !important;;margin-top: 0}
+header + nav { height: calc(100% - 48px) !important; margin-top: 48px }
+header ~ content .nav { height: calc(100% - 48px); }
+header ~ content { margin-top: 48px; }
+header ~ content content { margin-top: 0 }
 nav.main { height: 100%; float: left; }
 content { width: calc(100% - 250px); float: right; padding: 20px; }
-content content {width: calc(100% - 150px)}
+content content { width: calc(100% - 150px) }
 content.middle { width: calc(100% - 200px) }
+
+.account { background: url(../img/background.jpg) no-repeat; background-size: cover; }
+.account::after { content: " "; background: #000; opacity: 0.5; top: 0; left: 0; bottom: 0; right: 0; position: absolute; z-index: -1; }
+.account .card { width: 540px !important; margin: 0 auto; position: relative; }
+.account .card .logo { text-align: center }
+.account .card img { max-height: 75px; width: auto }
+.account .account-footer { width: 100%; height: 28px; background: #000; opacity: 0.6; position: fixed; bottom: 0; text-align: right }
+.account .account-footer ul { display: inline-block; margin: 0; padding: 0; list-style: none; margin-right: 10px }
+.account .account-footer ul li { float: left }
+.account .account-footer ul li, .account .account-footer ul li a { color: #fff; font-size: 12px; margin-left: 12px }
+
+.validation-summary-valid { display: none; }
+.validation-summary-errors { display: block; border-left-color: #cc240e }
+.validation-summary-errors ul { margin: 0; padding: 0 10px; }
+.validation-summary-errors ul li { color: #cc240e }
 
 /* Fluent Design Stuff */
 .acrylic, .menu, .menu ul, .alert, .cards-steps .card.opened, .cards.acrylic, .card.acrylic .taskbar,
@@ -236,8 +268,8 @@ header.acrylic, .menu.dark, .menu.dark ul { background: rgba(40,40,40,0.8); }
 .alert-modal { -webkit-backdrop-filter: blur(10px) saturate(125%); backdrop-filter: blur(10px) saturate(125%); background: rgba(40,40,40,0.5); }
 header.acrylic { background: rgba(40,40,40,0.85); }
 
-.shadow, .ui-autocomplete, .menu, .menu ul, .alert { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
-.shadow-middle, blockquote, .card { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
+.shadow, .ui-autocomplete, .menu, .menu ul, header .menu, .alert { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.shadow-middle, header ul li a:hover, blockquote, .card, .validation-summary-valid, .validation-summary-errors { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
 
 @media screen and (min-width: 768px) {
     .form-inline * { display: inline-block }
@@ -264,6 +296,9 @@ header.acrylic { background: rgba(40,40,40,0.85); }
 .row { width: 100% !important; padding: 0; }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { min-height: 1px; padding: 0 5px; }
+.card .col-xs-1, .card .col-sm-1, .card .col-md-1, .card .col-lg-1, .card .col-xs-2, .card .col-sm-2, .card .col-md-2, .card .col-lg-2, .card .col-xs-3, .card .col-sm-3, .card .col-md-3, .card .col-lg-3, .card .col-xs-4, .card .col-sm-4, .card .col-md-4, .card .col-lg-4, .card .col-xs-5, .card .col-sm-5, .card .col-md-5, .card .col-lg-5, .card .col-xs-6, .card .col-sm-6, .card .col-md-6, .card .col-lg-6, .card .col-xs-7, .card .col-sm-7, .card .col-md-7, .card .col-lg-7, .card .col-xs-8, .card .col-sm-8, .card .col-md-8, .card .col-lg-8, .card .col-xs-9, .card .col-sm-9, .card .col-md-9, .card .col-lg-9, .card .col-xs-10, .card .col-sm-10, .card .col-md-10, .card .col-lg-10, .card .col-xs-11, .card .col-sm-11, .card .col-md-11, .card .col-lg-11, .card .col-xs-12, .card .col-sm-12, .card .col-md-12, .card .col-lg-12 { padding: 0 5px }
+.col-xs-1:first-of-type, .col-sm-1:first-of-type, .col-md-1:first-of-type, .col-lg-1:first-of-type, .col-xs-2:first-of-type, .col-sm-2:first-of-type, .col-md-2:first-of-type, .col-lg-2:first-of-type, .col-xs-3:first-of-type, .col-sm-3:first-of-type, .col-md-3:first-of-type, .col-lg-3:first-of-type, .col-xs-4:first-of-type, .col-sm-4:first-of-type, .col-md-4:first-of-type, .col-lg-4:first-of-type, .col-xs-5:first-of-type, .col-sm-5:first-of-type, .col-md-5:first-of-type, .col-lg-5:first-of-type, .col-xs-6:first-of-type, .col-sm-6:first-of-type, .col-md-6:first-of-type, .col-lg-6:first-of-type, .col-xs-7:first-of-type, .col-sm-7:first-of-type, .col-md-7:first-of-type, .col-lg-7:first-of-type, .col-xs-8:first-of-type, .col-sm-8:first-of-type, .col-md-8:first-of-type, .col-lg-8:first-of-type, .col-xs-9:first-of-type, .col-sm-9:first-of-type, .col-md-9:first-of-type, .col-lg-9:first-of-type, .col-xs-10:first-of-type, .col-sm-10:first-of-type, .col-md-10:first-of-type, .col-lg-10:first-of-type, .col-xs-11:first-of-type, .col-sm-11:first-of-type, .col-md-11:first-of-type, .col-lg-11:first-of-type, .col-xs-12:first-of-type, .col-sm-12:first-of-type, .col-md-12:first-of-type, .col-lg-12:first-of-type { padding-left: 0px }
+.col-xs-1:last-of-type, .col-sm-1:last-of-type, .col-md-1:last-of-type, .col-lg-1:last-of-type, .col-xs-2:last-of-type, .col-sm-2:last-of-type, .col-md-2:last-of-type, .col-lg-2:last-of-type, .col-xs-3:last-of-type, .col-sm-3:last-of-type, .col-md-3:last-of-type, .col-lg-3:last-of-type, .col-xs-4:last-of-type, .col-sm-4:last-of-type, .col-md-4:last-of-type, .col-lg-4:last-of-type, .col-xs-5:last-of-type, .col-sm-5:last-of-type, .col-md-5:last-of-type, .col-lg-5:last-of-type, .col-xs-6:last-of-type, .col-sm-6:last-of-type, .col-md-6:last-of-type, .col-lg-6:last-of-type, .col-xs-7:last-of-type, .col-sm-7:last-of-type, .col-md-7:last-of-type, .col-lg-7:last-of-type, .col-xs-8:last-of-type, .col-sm-8:last-of-type, .col-md-8:last-of-type, .col-lg-8:last-of-type, .col-xs-9:last-of-type, .col-sm-9:last-of-type, .col-md-9:last-of-type, .col-lg-9:last-of-type, .col-xs-10:last-of-type, .col-sm-10:last-of-type, .col-md-10:last-of-type, .col-lg-10:last-of-type, .col-xs-11:last-of-type, .col-sm-11:last-of-type, .col-md-11:last-of-type, .col-lg-11:last-of-type, .col-xs-12:last-of-type, .col-sm-12:last-of-type, .col-md-12:last-of-type, .col-lg-12:last-of-type { padding-right: 0px }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left }
 .col-xs-12 { width: 100% }
 .col-xs-11 { width: 91.66666667% }
@@ -482,7 +517,6 @@ header.acrylic { background: rgba(40,40,40,0.85); }
     .col-lg-offset-0 { margin-left: 0 }
 }
 /* Telerik Fixes */
-.k-gantt-toolbar .k-state-default input, .k-grid .k-grouping-header input, .k-grid-header input, .k-grid-header-wrap input, .k-grouping-header .k-group-indicator input, .k-header input, .k-pager-wrap input, .k-pager-wrap .k-link input, .k-pager-wrap .k-textbox input { min-height: 0 !important; height: 30px !important }
 .k-calendar .k-content thead, .k-calendar .k-footer, .k-calendar .k-header, .k-gantt .k-grid-header, .k-grid .k-header, .k-scheduler-header .k-scheduler-table, .k-tabstrip-items { text-transform: none !important }
 .k-pager-sizes { display: inline-flex !important; padding-top: 0 !important; width: 23% !important }
 .k-pager-numbers .k-link { margin-top: -6px !important }
