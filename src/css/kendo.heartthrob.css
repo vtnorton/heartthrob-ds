@@ -467,8 +467,9 @@ form.k-filter-menu .k-textbox { width: 100%; margin-bottom: 3px }
 .k-grid .input-validation-error { border-style: ridge; border-color: red; background-color: #ffc0cb }
 .k-grid-toolbar .k-button { vertical-align: middle }
 .k-grid-actions { display: inline-block }
-.k-grid tbody .k-button { min-width: 64px }
-.k-grid tbody button.k-button { min-width: 78px }
+.k-grid tbody .btn{min-width:90px}
+.k-grid tbody .k-button { min-width: 120px; height: 40px }
+.k-grid tbody button.k-button { min-width: 78px;  }
 html body .k-grid tbody .k-button-icon { width: auto; min-width: 0 }
 .k-detail-row { position: relative }
 .k-grid .k-detail-cell { overflow: visible }

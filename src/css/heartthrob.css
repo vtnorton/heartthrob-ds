@@ -99,7 +99,8 @@ input[type="checkbox"]:checked + label::before, input[type="radio"]:checked + la
 input[type="checkbox"] + label::after, input[type=radio] + label::after { -webkit-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
 input[type="checkbox"]:checked + label::after, input[type=radio]:checked + label::after { -webkit-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 
-.validator { border-top: 3px solid #0078D7; padding-top: 5px; display: block; width: calc(100% - 20px) }
+.field-validation-error, .validator { border-top: 3px solid #0078D7; padding-top: 3px; display: block; width: 100%; font-size:14px; margin-bottom:8px }
+.field-validation-error{border-color:#cc240e}
 
 .ui-autocomplete-input { position: relative; z-index: 9 }
 .ui-autocomplete { position: absolute; z-index: 8; float: left; min-width: 160px; padding: 0; margin: -40px 0 0; list-style: none; background-color: #fcfcfc; }
