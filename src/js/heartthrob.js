@@ -350,9 +350,9 @@ function preencherdados(conteudo) {
         document.getElementById('bairro').value = conteudo.bairro;
         document.getElementById('cidade').value = conteudo.localidade;
 
-        var dropdownlist = $("#estado").data("kendoDropDownList");
+        var dropdownlist = $("#Estado").data("kendoDropDownList");
         dropdownlist.select(function (dataItem) {
-            return dataItem.sigla == conteudo.uf;
+            return dataItem == conteudo.uf;
         });
         dropdownlist.trigger("change");
     }
