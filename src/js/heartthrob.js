@@ -140,8 +140,8 @@ function closeMenus(menu) {
 }
 
 function getIntials(towork) {
-    towork = removeAcento(towork);
-    return towork.replace(/\W*(\w)\w*/g, '$1').toUpperCase()
+    towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase();
+    return towork[0] + towork[towork.length - 1];
 }
 
 function removeAcento(text) {
