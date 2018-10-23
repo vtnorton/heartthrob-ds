@@ -380,7 +380,7 @@ div.k-window-iframecontent { padding: 0; overflow: visible }
 .k-grid-header th > .k-link > .k-icon { vertical-align: text-top }
 .k-grid .k-state-hover { cursor: pointer }
 .k-grid-column-resizing, .k-grid-column-resizing .k-button, .k-grid-column-resizing .k-grid-filter, .k-grid-column-resizing .k-grid-toolbar, .k-grid-column-resizing .k-link { cursor: col-resize }
-.k-grid td { border-style: solid; border-width: 0 0 0 1px; padding: 6px 10px; overflow: hidden; line-height: 1.6em; vertical-align: middle; text-overflow: ellipsis }
+.k-grid td { border-style: solid; border-width: 0 0 0 1px; padding: 4px 10px; overflow: hidden; line-height: 1.6em; vertical-align: middle; text-overflow: ellipsis }
 .k-grid td:first-of-type { padding-left: 20px }
 .k-grid .k-grouping-row td, .k-grid .k-hierarchy-cell { overflow: visible }
 .k-grid-edit-row td { text-overflow: clip }
