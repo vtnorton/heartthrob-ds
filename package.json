@@ -1,6 +1,6 @@
 {
   "name": "heartthrob",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "Em breve uma descrição aqui",
   "main": "gulpfile.js",
   "dependencies": {
