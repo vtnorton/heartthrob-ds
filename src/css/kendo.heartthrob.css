@@ -3287,6 +3287,7 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-calendar .k-state-selected { background-color: #0078D7; }
 .k-calendar .k-state-selected.k-state-hover, .k-calendar td:active { background-color: #c2dbec }
 .k-calendar .k-nav-fast.k-state-hover, .k-calendar .k-nav-next.k-state-hover, .k-calendar .k-nav-prev.k-state-hover { background-color: #fff }
+.k-calendar .k-other-month.k-today .k-link { background: #0078D7 }
 .k-calendar .k-today { background-color: #0078D7 }
 .k-calendar .k-today .k-link { color: #fff }
 .k-calendar .k-today.k-state-hover { background-color: #1d5bbc }
@@ -3560,5 +3561,8 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-scheduler-agendaview .k-scheduler-table tr td { padding-top: 20px !important; padding-bottom: 20px !important; }
 .k-scheduler-workWeekview .k-scheduler-content td:first-child,
 .k-scheduler-dayview .k-scheduler-content td:first-child,
-.k-scheduler-weekview .k-scheduler-content td:first-child { padding: 0 }
+.k-scheduler-weekview .k-scheduler-content tr:first-child { padding: 0 }
+.k-scheduler-workWeekview .k-scheduler-header th:first-child,
+.k-scheduler-dayview .k-scheduler-header th:first-child,
+.k-scheduler-weekview .k-scheduler-header th:first-child { padding: 12px 0 }
 .k-scheduler-table .k-scheduler-times-all-day { height: 34px; display: block; }
