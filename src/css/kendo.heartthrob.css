@@ -2996,7 +2996,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-scheduler-monthview .k-today:before { content: ""; display: block; position: absolute; left: 0; top: 0; right: 0; border-top: 3px solid #0078D7 }
 .k-scheduler-now-arrow { border-left-color: #dbdbdb }
 .k-scheduler-now-line { background-color: #dbdbdb }
-.k-event, .k-task-complete { border-color: #56b7ff; background: #56b7ff 0 -257px none repeat-x; color: #333 }
+.k-event, .k-task-complete { border-color: #0078D7; background: #0078D7 0 -257px none repeat-x; color: #333 }
 .k-event-inverse { color: #333 }
 .k-scheduler-content .k-event.k-state-selected { background-position: 0 0; -webkit-box-shadow: 0 0 0 2px #333,inset 4px 0 0 0 rgba(255,255,255,.5); box-shadow: 0 0 0 2px #333,inset 4px 0 0 0 rgba(255,255,255,.5) }
 .k-event .k-resize-handle:after, .k-task-single .k-resize-handle:after { background-color: #fff }
@@ -3131,7 +3131,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-task-milestone, .k-task-summary-complete { border-color: #333; background: #333 }
 .k-state-selected.k-task-summary { border-color: #000; background: #000 }
 .k-state-selected .k-task-summary-complete, .k-state-selected.k-task-milestone { border-color: #cde6f7; background: #cde6f7 }
-.k-task-single { background-color: #7ac6ff; border-color: #56b7ff; color: #333 }
+.k-task-single { background-color: #7ac6ff; border-color: #0078D7; color: #333 }
 .k-state-selected.k-task-single { border-color: #cde6f7 }
 .k-line { background-color: #333; color: #333 }
 .k-state-selected.k-line { background-color: #cde6f7; color: #cde6f7 }
@@ -3561,3 +3561,4 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-scheduler-workWeekview .k-scheduler-content td:first-child,
 .k-scheduler-dayview .k-scheduler-content td:first-child,
 .k-scheduler-weekview .k-scheduler-content td:first-child { padding: 0 }
+.k-scheduler-table .k-scheduler-times-all-day { height: 34px; display: block; }
