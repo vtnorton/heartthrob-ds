@@ -3561,7 +3561,7 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-scheduler-agendaview .k-scheduler-table tr td { padding-top: 20px !important; padding-bottom: 20px !important; }
 .k-scheduler-workWeekview .k-scheduler-content td:first-child,
 .k-scheduler-dayview .k-scheduler-content td:first-child,
-.k-scheduler-weekview .k-scheduler-content tr:first-child { padding: 0 }
+.k-scheduler-weekview .k-scheduler-content td:first-child { padding: 0 }
 .k-scheduler-workWeekview .k-scheduler-header th:first-child,
 .k-scheduler-dayview .k-scheduler-header th:first-child,
 .k-scheduler-weekview .k-scheduler-header th:first-child { padding: 12px 0 }
