@@ -37,13 +37,15 @@
 
     var menustate = getCookie('hb-menustate');
     if (menustate) {
-        minNav();
+        minNav(true);
     }
 
+    if ($(window).width() < 1300) { minNav(false); } else { maxNav(false); }
+
     $('.nav-action').clickToggle(function () {
-        if (menustate) { maxNav(); } else { minNav(); }
+        if (menustate) { maxNav(true); } else { minNav(true); }
     }, function () {
-        if (menustate) { minNav(); } else { maxNav(); }
+        if (menustate) { minNav(true); } else { maxNav(true); }
     });
 
     $("header .search a").clickToggle(
@@ -64,7 +66,7 @@
             $(".user-img").append('<span>' + getIntials(nome) + '</span>');
         }
     });
-    
+
     $(".cards-actions .card.link").click(function () {
         $(".cards-actions .card.link").removeClass("opened", 300);
         $(this).addClass("opened", 300);
@@ -103,26 +105,32 @@
     }
 });
 
-function minNav() {
-    setCookie('hb-menustate', true);
+function minNav(cookie) {
+    if (cookie) {
+        setCookie('hb-menustate', true);
+    }
+
     $(".nav:not(.middle) a.child").addClass("closed");
     $(".nav:not(.middle) a").css("color", "transparent");
     $(".nav:not(.middle) a").css("overflow", "hidden");
     $(".nav:not(.middle) a i").css("color", "#fff");
-    $(".nav:not(.middle).light a i").css("color", "#666");
+    $(".nav:not(.middle).light a i").css("color", "#000");
     $(".nav:not(.middle)").animate({ "width": "65px" }, 300, function () {
         $("content").css("width", "calc(100% - 65px)");
         $("content content").css("width", "calc(100% - 150px)");
     });
 
 }
-function maxNav() {
-    setCookie('hb-menustate', false);
+function maxNav(cookie) {
+    if (cookie) {
+        setCookie('hb-menustate', false);
+    }
+
     var menu = $(".nav-action").parent().parent();
     $(".nav:not(.middle)").animate({ "width": "250px" }, 250, function () {
         $(".nav:not(.middle) a.child").removeClass("closed");
         $(".nav:not(.middle) a").css("color", "#fff");
-        $(".nav:not(.middle).light a").css("color", "#666");
+        $(".nav:not(.middle).light a").css("color", "#000");
         $(".nav:not(.middle) a").css("overflow", "auto");
         $(".nav:not(.middle) a.child:after").css("", "block");
         $("content").css("width", "calc(100% - 250px)");
@@ -140,7 +148,7 @@ function closeMenus(menu) {
 }
 
 function getIntials(towork) {
-    towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase();
+    towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase().trim();
     return towork[0] + towork[towork.length - 1];
 }
 

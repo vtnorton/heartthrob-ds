@@ -266,7 +266,7 @@ div.k-window-iframecontent { padding: 0; overflow: visible }
 .k-pager-numbers .k-state-selected { vertical-align: top }
 .k-pager-numbers .k-current-page { display: none }
 .k-pager-input, .k-pager-numbers li { float: left }
-.k-pager-info { float: right; padding: 0 1.333em }
+.k-pager-info { float: right; padding: 0 14px }
 .k-pager-numbers .k-link { text-decoration: none }
 .k-pager-numbers .k-link, .k-pager-numbers .k-state-selected, .k-pager-wrap > .k-link { min-width: 2em }
 .k-pager-wrap > .k-link { float: left; margin: 0 .08333em; height: 2em; line-height: 2em; border-radius: 1.0833em; cursor: pointer; text-align: center }
@@ -422,7 +422,7 @@ div.k-grid-footer, div.k-grid-header { padding-right: 17px; border-bottom-style:
 .k-grid-pager { border-width: 1px 0 0 }
 .k-grid .k-pager-numbers { float: left; cursor: default; display: inline-block; vertical-align: top; margin-right: 1px }
 .k-widget.k-grid .k-pager-numbers { position: relative }
-.k-header > .k-grid-filter, .k-header > .k-header-column-menu { float: right; margin: -11px 0 0; padding: 11px 8px 0; position: relative; z-index: 1; color: inherit }
+.k-header > .k-grid-filter, .k-header > .k-header-column-menu { float: right; margin: -6px 0 0; padding: 0 8px 0; position: relative; z-index: 1; color: inherit }
 .k-grid .k-animation-container { position: absolute }
 .k-filter-menu { padding: .5em }
 .k-list-filter { display: block }
@@ -3199,7 +3199,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-multiselect-wrap.k-state-focused, .k-state-focused > .k-multiselect-wrap { border-color: #0078D7; -webkit-box-shadow: none; box-shadow: none }
 .k-list-container { color: #333 }
 .k-nodata { color: #a5a5a5 }
-.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333; margin-top: 4px; }
+.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333; margin-top: 4px; font-weight: normal}
 .k-state-default > .k-select { border-color: #bababa }
 .k-state-hover > .k-select { border-color: #8b8b8b }
 .k-state-focused > .k-select { border-color: #0078D7 }
@@ -3566,3 +3566,4 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-scheduler-dayview .k-scheduler-header th:first-child,
 .k-scheduler-weekview .k-scheduler-header th:first-child { padding: 12px 0 }
 .k-scheduler-table .k-scheduler-times-all-day { height: 34px; display: block; }
+.k-nav-next, .k-nav-prev, .k-nav-today { display: none !important }
