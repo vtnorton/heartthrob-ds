@@ -1348,7 +1348,7 @@ div.k-scheduler-marquee:after { bottom: 0; right: 0; border-top-color: transpare
 .k-scheduler-pdf-export .k-scheduler-header { padding: 0 !important }
 .k-scheduler-pdf-export .k-scheduler-header-wrap { border-width: 0 !important }
 .k-scheduler-pdf-export .k-scheduler-content .k-scheduler-table, .k-scheduler-pdf-export .k-scheduler-header .k-scheduler-table { width: 100% !important }
-.k-tooltip { position: absolute; z-index: 12000; border-style: solid; border-width: 0; padding: 5px 5px 5px 6px; background-repeat: repeat-x; min-width: 20px; text-align: center }
+.k-tooltip { position: absolute; z-index: 12000; border-style: solid; border-width: 0; padding: 5px 5px 5px 6px; background-repeat: repeat-x; /*! min-width: 20px; */ text-align: center }
 .k-tooltip-button { text-align: right; height: 0 }
 .k-tooltip-content { height: 100% }
 .k-tooltip-closable .k-tooltip-content { padding-right: 20px }
@@ -1361,7 +1361,7 @@ span.k-tooltip { position: static; display: inline-block; border-width: 1px; pad
 .k-callout-e { top: 50%; right: -12px; margin-top: -6px; pointer-events: none }
 .k-slider-tooltip .k-callout-n, .k-slider-tooltip .k-callout-s { margin-left: -6px }
 .k-slider-tooltip .k-callout-e, .k-slider-tooltip .k-callout-w { margin-top: -6px }
-.k-tooltip-validation .k-i-warning { vertical-align: text-top; margin-right: 3px }
+.k-tooltip-validation .k-i-warning { vertical-align: text-top; margin-right: 3px; margin-top: 2px; }
 .k-tooltip-validation { z-index: 9999 }
 .k-toolbar { position: relative; display: block; vertical-align: middle; padding: .28571428em 0; overflow: hidden }
 .k-overflow-container .k-button .k-sprite, .k-toolbar .k-button .k-sprite { vertical-align: middle; margin-top: -7px; margin-bottom: -5px }
@@ -3065,7 +3065,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-slider-horizontal .k-tick { background-image: url(KendoImages/slider-h.gif) }
 .k-slider-vertical .k-tick { background-image: url(KendoImages/slider-v.gif) }
 .k-chart-crosshair-tooltip, .k-chart-shared-tooltip, .k-widget.k-tooltip { border-color: #ccc; background-color: #fff; color: #333 }
-.k-widget.k-tooltip-validation { color: #ff3f23; text-align: left; padding: 5px 0 8px !important }
+.k-widget.k-tooltip-validation { color: #ff3f23; text-align: left; padding: 5px 0 8px !important; border: none; background: none; min-width: 0;width: auto;}
 .input-append .k-tooltip-validation, .input-prepend .k-tooltip-validation { font-size: 12px; position: relative; top: 3px }
 .k-callout-n { border-bottom-color: #ccc }
 .k-callout-w { border-right-color: #ccc }
@@ -3199,7 +3199,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-multiselect-wrap.k-state-focused, .k-state-focused > .k-multiselect-wrap { border-color: #0078D7; -webkit-box-shadow: none; box-shadow: none }
 .k-list-container { color: #333 }
 .k-nodata { color: #a5a5a5 }
-.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333; margin-top: 4px; font-weight: normal}
+.k-dropdown .k-input, .k-dropdown .k-state-focused .k-input, .k-menu .k-popup { color: #333; margin-top: 4px; font-weight: normal }
 .k-state-default > .k-select { border-color: #bababa }
 .k-state-hover > .k-select { border-color: #8b8b8b }
 .k-state-focused > .k-select { border-color: #0078D7 }
