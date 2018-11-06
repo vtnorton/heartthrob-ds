@@ -71,11 +71,11 @@ img.rounded { border-radius: 50% }
 .btn-link i { margin-right: 8px }
 .btn-link:hover { background: transparent; color: #1d5bbc; border-color: transparent; }
 .btn-action { width: intrinsic !important; width: -moz-max-content !important; width: -webkit-max-content !important; }
-.btn-action .btn { padding-top: 14px !important; color: #000 !important; padding-left: 19px !important; min-width: 50px !important; max-width: 50px !important; height: 50px !important; border-radius: 50px !important; margin-right: 15px !important; box-shadow: 0 5px 7px rgba(0, 0, 0, 0.25); background: #fff !important; border: none !important; float: left !important; overflow: hidden !important; display: flex !important; white-space: pre !important; box-sizing: border-box !important; -webkit-box-sizing: border-box !important }
+.btn-action .btn { padding-top: 11px !important; color: #000 !important; padding-left: 16px !important; min-width: 45px !important; max-width: 45px !important; height: 45px !important; border-radius: 50px !important; margin-right: 10px !important; box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); background: #fff !important; border: none !important; float: left !important; overflow: hidden !important; display: flex !important; white-space: pre !important; box-sizing: border-box !important; -webkit-box-sizing: border-box !important; text-align: left;}
 .btn-action:hover .btn.btn-primary { min-width: 50px !important; max-width: 50px !important; transition: all .2s; }
 .btn-action .btn:hover { background: #0078D7 !important; color: #fff !important; box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45); transition: width .2s initial; min-width: 140px !important; }
 .btn-action .btn.btn-primary { background: #0078D7 !important; min-width: 140px !important; color: #fff !important; transition: all .35s; }
-.btn-action .btn i { font-size: 16px !important; margin-right: 18px !important; margin-top: 3px !important; }
+.btn-action .btn i { font-size: 16px !important; margin-right: 15px !important; margin-top: 3px !important; }
 .btn-action .btn.btn-primary i { color: #fff !important }
 .btn-action .btn:last-of-type { margin-right: 0 !important }
 
@@ -223,6 +223,13 @@ header .user-img span, .icon span { display: block; margin-top: -8px; font-style
 .nav a.closed:after { display: none }
 .nav.light a:hover, .nav.light ul li ul li a { background: #d9d9d9; transition: all .3s; }
 .nav.light .nav-bottom-menus:before, .nav.light .nav-top-menus:before { border-color: #ccc }
+
+.sidebar { width: 300px; background: #ebebeb; border-right: 1px solid #ccc; float: left; z-index: 9; position: fixed; height: 100%; overflow: hidden; margin: -20px }
+.sidebar .k-widget { box-shadow: none }
+.sidebar .sidebar-bottom-menus { margin-bottom: 55px; position: absolute; bottom: 0; width: 100%; list-style: none; padding: 0 }
+.sidebar .sidebar-bottom-menus:before { content: " "; border-top: 1px solid #ccc; display: block; margin: -2px 16px 7px; }
+.sidebar .sidebar-bottom-menus a { font-size: 14px; text-decoration: none; width: 100%; display: block; padding: 14px 20px; height: 48px }
+.sidebar .sidebar-bottom-menus a i { width: 25px; text-align: center; font-size: 14px; margin-right: 5px; }
 
 .treeview, .treeview ul { margin: 0; padding: 0; list-style: none; min-width: 200px; }
 .treeview ul ul { margin-left: .5em }
