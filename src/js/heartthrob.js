@@ -40,8 +40,6 @@
         minNav(true);
     }
 
-    if ($(window).width() < 1300) { minNav(false); } else { maxNav(false); }
-
     $('.nav-action').clickToggle(function () {
         if (menustate) { maxNav(true); } else { minNav(true); }
     }, function () {

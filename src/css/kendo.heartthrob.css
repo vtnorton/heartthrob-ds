@@ -72,7 +72,6 @@ html .k-error-colored { color: #7f5050; border-color: #dfd0d0; background-color:
 .k-current-time-arrow-down { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid red; border-left: 4px solid transparent; border-right: 4px solid transparent }
 .k-current-time-arrow-left { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid transparent; border-right: 4px solid red }
 .k-current-time-arrow-right { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid red; border-right: 4px solid transparent }
-.k-animation-container, .k-animation-container *, .k-animation-container :after, .k-block .k-header, .k-dialog .k-window-content, .k-list-container, .k-widget, .k-widget *, .k-widget :before { -webkit-box-sizing: content-box; box-sizing: content-box }
 .k-autocomplete, .k-block, .k-edit-cell .k-widget, .k-grid-edit-row .k-widget, .k-grid-edit-row .text-box, .k-tabstrip > .k-content > .km-scroll-container, .k-textbox, .km-actionsheet > li, .km-shim, div.k-window-content { -webkit-box-sizing: border-box; box-sizing: border-box }
 .input-group .form-control { -webkit-box-sizing: border-box; box-sizing: border-box }
 .form-control.k-widget { padding: 0 }
@@ -165,7 +164,7 @@ button.k-button-expand, input[type=submit].k-button-expand, input[type=button].k
 .k-edit-form-container .k-button { margin: 0 .16em }
 .k-edit-field > .k-button:first-child, .k-edit-field > input[type=radio]:first-child, .k-edit-field > input[type=checkbox]:first-child, .k-edit-field > label:first-child > input[type=checkbox] { margin-left: 0 }
 .k-edit-form-container .k-edit-buttons { clear: both; text-align: right; border-width: 1px 0 0; border-style: solid; position: relative; bottom: -1em; padding: .6em }
-div.k-window { display: inline-block; position: absolute; z-index: 10001; border-style: solid; border-width: 1px; padding-top: 2em }
+div.k-window { display: inline-block; position: absolute; z-index: 10001; border-style: solid; padding-top: 2em }
 .k-block > .k-header, .k-window-titlebar { width: 100%; border-bottom-style: solid; border-bottom-width: 1px; margin-top: -2em; padding: .4em 0; font-size: 1.2em; white-space: nowrap; min-height: 16px }
 .k-block > .k-header { position: relative; margin: -2px 0 10px -2px; padding: .3em 2px }
 .k-window-title { padding: 0 20px; overflow: hidden; cursor: default; text-overflow: ellipsis }
@@ -2602,7 +2601,7 @@ div.k-spreadsheet-window { padding: 1.167em .75em .75em }
 .k-dialog { min-width: 90px; min-height: 3em; max-width: 100%; max-height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box }
 .k-window.k-dialog { position: fixed; padding-top: 0 }
 .k-dialog .k-dialog-titlebar { position: relative; margin: 0; padding: .8em; width: auto }
-.k-dialog .k-dialog-titlebar .k-dialog-title { margin: 0; padding: 0; width: auto; max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.2em; line-height: 1.2em; vertical-align: top }
+.k-dialog .k-dialog-titlebar .k-dialog-title { margin: 0; padding: 0; width: auto; max-width: -webkit-calc(100% - 20px); max-width: calc(100% - 20px); display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; line-height: 23px; vertical-align: top }
 .k-dialog .k-content { margin: 0; padding: 1.8em 1em; height: auto }
 .k-dialog.k-dialog-titleless .k-content { padding: 2.4em }
 .k-dialog { overflow: hidden }
@@ -3065,7 +3064,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-slider-horizontal .k-tick { background-image: url(KendoImages/slider-h.gif) }
 .k-slider-vertical .k-tick { background-image: url(KendoImages/slider-v.gif) }
 .k-chart-crosshair-tooltip, .k-chart-shared-tooltip, .k-widget.k-tooltip { border-color: #ccc; background-color: #fff; color: #333 }
-.k-widget.k-tooltip-validation { color: #ff3f23; text-align: left; padding: 5px 0 8px !important; border: none; background: none; min-width: 0;width: auto;}
+.k-widget.k-tooltip-validation { color: #ff3f23; text-align: left; padding: 5px 0 8px !important; border: none; background: none; min-width: 0; width: auto; }
 .input-append .k-tooltip-validation, .input-prepend .k-tooltip-validation { font-size: 12px; position: relative; top: 3px }
 .k-callout-n { border-bottom-color: #ccc }
 .k-callout-w { border-right-color: #ccc }
@@ -3109,7 +3108,7 @@ div.k-spreadsheet-window { padding: 1em }
 .k-grid td.k-state-selected.k-state-focused { background-color: #daedf9 }
 .k-autocomplete.k-state-border-down, .k-autocomplete.k-state-border-up, .k-datepicker-calendar, .k-dropdown-wrap.k-state-active, .k-filebrowser .k-image, .k-grid .k-filter-options, .k-menu .k-menu-group, .k-multiselect-wrap.k-state-focused, .k-picker-wrap.k-state-active, .k-popup, .k-state-focused > .k-multiselect-wrap, .k-time-popup, .k-tooltip { -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.18); box-shadow: 0 2px 2px 0 rgba(0,0,0,.18) }
 .k-treemap-tile.k-state-hover { -webkit-box-shadow: inset 0 0 0 3px #ccc; box-shadow: inset 0 0 0 3px #ccc }
-.k-window { border-color: #ccc; background-color: #fff }
+.k-window { border-color: #ccc; background-color: #fff; }
 .k-window.k-state-focused { border-color: rgba(0,0,0,.18); -webkit-box-shadow: 1px 1px 7px 1px rgba(0,0,0,.18); box-shadow: 1px 1px 7px 1px rgba(0,0,0,.18) }
 .k-window-maximized .k-window-content, .k-window-maximized .k-window-titlebar, .k-window.k-window-maximized { border-radius: 0 }
 .k-shadow { -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.18); box-shadow: 0 1px 2px 0 rgba(0,0,0,.18) }
