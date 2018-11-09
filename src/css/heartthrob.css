@@ -5,7 +5,7 @@ blockquote, q { quotes: none; }
 img { -moz-user-select: none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 html, body { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; }
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; /* box-sizing: border-box */ }
 :before, :after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
 
 /* Basic and typographi */
@@ -57,7 +57,7 @@ img.rounded { border-radius: 50% }
 .accent { color: #0078D7 !important }
 
 /* Buttons */
-.btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 40px; min-width: 140px; padding: 9px 15px 0; cursor: pointer; display: inline-block; text-align: center; }
+.btn, button {border: 1px solid #ccc;background: #ccc;color: #000;min-height: 30px;min-width: 140px;padding: 10px 15px 0;cursor: pointer;display: inline-block;text-align: center;box-sizing: content-box;}
 .btn:hover, button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .btn:disabled, button:disabled { background: GrayText; border-color: GrayText; -moz-transition: all .3s; -o-transition: all .3s; -webkit-transition: all .3s; transition: all .3s; cursor: not-allowed }
 .btn i { font-size: 16px; margin-right: 3px }
@@ -71,7 +71,7 @@ img.rounded { border-radius: 50% }
 .btn-link i { margin-right: 8px }
 .btn-link:hover { background: transparent; color: #1d5bbc; border-color: transparent; }
 .btn-action { width: intrinsic !important; width: -moz-max-content !important; width: -webkit-max-content !important; }
-.btn-action .btn { padding-top: 11px !important; color: #000 !important; padding-left: 16px !important; min-width: 45px !important; max-width: 45px !important; height: 45px !important; border-radius: 50px !important; margin-right: 10px !important; box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); background: #fff !important; border: none !important; float: left !important; overflow: hidden !important; display: flex !important; white-space: pre !important; box-sizing: border-box !important; -webkit-box-sizing: border-box !important; text-align: left;}
+.btn-action .btn { padding-top: 11px !important; color: #000 !important; padding-left: 16px !important; min-width: 45px !important; max-width: 45px !important; height: 45px !important; border-radius: 50px !important; margin-right: 10px !important; box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); background: #fff !important; border: none !important; float: left !important; overflow: hidden !important; display: flex !important; white-space: pre !important; box-sizing: border-box !important; -webkit-box-sizing: border-box !important; text-align: left; }
 .btn-action:hover .btn.btn-primary { min-width: 50px !important; max-width: 50px !important; transition: all .2s; }
 .btn-action .btn:hover { background: #0078D7 !important; color: #fff !important; box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45); transition: width .2s initial; min-width: 140px !important; }
 .btn-action .btn.btn-primary { background: #0078D7 !important; min-width: 140px !important; color: #fff !important; transition: all .35s; }
@@ -135,6 +135,7 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 
 /* Header */
 header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5; position: fixed }
+header a{font-weight: normal}
 header .logo { float: left }
 header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer }
 header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
@@ -288,7 +289,7 @@ header.acrylic { background: rgba(40,40,40,0.85); }
     .nav:not(.middle) { width: 65px; transition: all .4s }
     content { width: calc(100% - 65px); transition: all .4s }
     content content { width: calc(100% - 150px); transition: all .4s }
-    .nav:not(.middle) a.child:after {border:none }
+    .nav:not(.middle) a.child:after { border: none }
 }
 
 @media screen and (min-width: 768px) {

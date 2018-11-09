@@ -72,7 +72,6 @@ html .k-error-colored { color: #7f5050; border-color: #dfd0d0; background-color:
 .k-current-time-arrow-down { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid red; border-left: 4px solid transparent; border-right: 4px solid transparent }
 .k-current-time-arrow-left { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid transparent; border-right: 4px solid red }
 .k-current-time-arrow-right { width: 0; height: 0; background: 0 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid red; border-right: 4px solid transparent }
-.k-autocomplete, .k-block, .k-edit-cell .k-widget, .k-grid-edit-row .k-widget, .k-grid-edit-row .text-box, .k-tabstrip > .k-content > .km-scroll-container, .k-textbox, .km-actionsheet > li, .km-shim, div.k-window-content { -webkit-box-sizing: border-box; box-sizing: border-box }
 .input-group .form-control { -webkit-box-sizing: border-box; box-sizing: border-box }
 .form-control.k-widget { padding: 0 }
 .km-widget, .km-widget * { -webkit-background-clip: border-box; background-clip: border-box }
@@ -3190,7 +3189,7 @@ div.k-spreadsheet-window { padding: 1em }
 .km-pane-wrapper .k-mobile-list .k-edit-field { -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc }
 .km-actionsheet .k-grid-delete, .km-actionsheet .k-scheduler-delete, .km-pane-wrapper .k-filter-menu .k-button[type=reset], .km-pane-wrapper .k-scheduler-delete { color: #fff; border-color: #dbdbdb; background-color: red; background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.3)),to(rgba(255,255,255,.15))); background-image: -webkit-linear-gradient(top,rgba(255,255,255,.3),rgba(255,255,255,.15)); background-image: linear-gradient(to bottom,rgba(255,255,255,.3),rgba(255,255,255,.15)) }
 .km-actionsheet .k-grid-delete:active, .km-actionsheet .k-scheduler-delete:active, .km-pane-wrapper .k-filter-menu .k-button[type=reset]:active, .km-pane-wrapper .k-scheduler-delete:active { background-color: #900 }
-.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default { background-position: 50% 50%; background-color: #fff; border-color: #bababa; margin-top: 2px; height: 38px }
+.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default {background-position: 50% 50%;background-color: #fff;border-color: #bababa;margin-top: 4px;height: 40px;}
 .k-autocomplete.k-state-hover, .k-dropdown-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-picker-wrap.k-state-hover { background-color: #eaeaea; background-image: none; background-position: 50% 50%; border-color: #8b8b8b }
 .k-multiselect-wrap { border-color: #bababa }
 .k-multiselect-wrap.k-state-hover, .k-state-hover > .k-multiselect-wrap { border-color: #8b8b8b; background: #fff; color: #333 }
@@ -3553,7 +3552,7 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-calendar .k-state-hover { background: #ebebeb; transition: all .3s }
 .k-calendar tr td:first-of-type { border-left: none }
 .k-grid .icon { border-radius: 50%; max-width: 30px; margin-top: 4px }
-.k-grid .btn { min-height: 32px; min-width: 110px; }
+.k-grid .btn { min-height: 30px; min-width: 110px; }
 .k-editor-toolbar .k-dropdown-wrap { margin-top: 0; min-width: 150px }
 .k-scheduler .k-header { background: #f8f8f8; }
 .k-scheduler-agendaview .k-scheduler-table tr { padding: 0 20px }
