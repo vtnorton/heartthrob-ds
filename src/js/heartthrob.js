@@ -116,6 +116,7 @@ function minNav(cookie) {
     $(".nav:not(.middle)").animate({ "width": "65px" }, 300, function () {
         $("content").css("width", "calc(100% - 65px)");
         $("content content").css("width", "calc(100% - 150px)");
+        $(".toolbar").css("width", "calc(100% - 65px)");
     });
 
 }
@@ -131,6 +132,7 @@ function maxNav(cookie) {
         $(".nav:not(.middle).light a").css("color", "#000");
         $(".nav:not(.middle) a").css("overflow", "auto");
         $(".nav:not(.middle) a.child:after").css("", "block");
+        $(".toolbar").css("width", "calc(100% - 250px)");
         $("content").css("width", "calc(100% - 250px)");
         $("content content").css("width", "calc(100% - 150px)");
     });
