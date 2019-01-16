@@ -366,6 +366,10 @@ function preencherdados(conteudo) {
             return dataItem == conteudo.uf;
         });
         dropdownlist.trigger("change");
-        dropdownlist.prop("disabled", false);
+        dropdownlist.prop("disabled", true);
     }
+}
+
+function CellCloseScript(e) {
+    this.saveChanges();
 }
