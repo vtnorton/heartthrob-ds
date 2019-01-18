@@ -359,14 +359,12 @@ function preencherdados(conteudo) {
         document.getElementById('rua').value = conteudo.logradouro;
         document.getElementById('bairro').value = conteudo.bairro;
         document.getElementById('cidade').value = conteudo.localidade;
-        document.getElementById('cidade').prop("disabled", false);
 
         var dropdownlist = $("#Estado").data("kendoDropDownList");
         dropdownlist.select(function (dataItem) {
             return dataItem == conteudo.uf;
         });
         dropdownlist.trigger("change");
-        dropdownlist.prop("disabled", true);
     }
 }
 
