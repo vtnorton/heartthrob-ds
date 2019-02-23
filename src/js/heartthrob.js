@@ -360,7 +360,7 @@ function preencherdados(conteudo) {
         document.getElementById('bairro').value = conteudo.bairro;
         document.getElementById('cidade').value = conteudo.localidade;
 
-        var dropdownlist = $("#Estado").data("kendoDropDownList");
+        var dropdownlist = $("#State").data("kendoDropDownList");
         dropdownlist.select(function (dataItem) {
             return dataItem == conteudo.uf;
         });
@@ -371,18 +371,3 @@ function preencherdados(conteudo) {
 function CellCloseScript(e) {
     this.saveChanges();
 }
-
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-};

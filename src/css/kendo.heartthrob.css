@@ -936,7 +936,7 @@ span.k-numerictextbox { background-color: transparent }
 .k-colorpalette .k-item { width: 14px; height: 14px; overflow: hidden; -ms-high-contrast-adjust: none }
 .k-colorpalette .k-item.k-state-selected, .k-colorpalette .k-item.k-state-selected:hover { z-index: 100; background: 0 0; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); position: relative }
 .k-colorpalette .k-item:hover { z-index: 101; position: relative; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3); box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3) }
-table.k-editor { width: 100%; height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
+table.k-editor { width: calc(100% - 2px); height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
 .k-editor-inline { padding: .3em .5em; word-wrap: break-word; overflow: auto; position: relative; -webkit-transition: border-color .5s; transition: border-color .5s }
 .k-editor-inline.k-editor { border: 1px solid transparent }
 .k-editortoolbar-dragHandle { cursor: move; padding-left: 0; padding-right: 3px; -webkit-box-shadow: none !important; box-shadow: none !important }
@@ -1293,8 +1293,8 @@ div.k-scheduler-marquee:after { bottom: 0; right: 0; border-top-color: transpare
 .k-scheduler-agendaweek { display: block; margin: .4em 0 0; font-size: 17px; font-style: normal }
 .k-scheduler-agendadate { font-size: 14px; }
 .k-scheduler-timecolumn { white-space: nowrap }
-.k-scheduler-edit-form .k-edit-form-container, .k-scheduler-timezones .k-edit-form-container { width: 520px }
-.k-scheduler-edit-form .k-edit-label { width: 17% }
+.k-scheduler-edit-form .k-edit-form-container, .k-scheduler-timezones .k-edit-form-container { width: 800px; }
+.k-scheduler-edit-form .k-edit-label { width: 18%; }
 .k-scheduler-edit-form .k-edit-field { width: 77% }
 .k-scheduler-edit-form .k-textbox[name=title], .k-scheduler-edit-form textarea.k-textbox { width: 100% }
 .k-scheduler-edit-form textarea.k-textbox { min-height: 4em; resize: vertical }
@@ -3189,7 +3189,7 @@ div.k-spreadsheet-window { padding: 1em }
 .km-pane-wrapper .k-mobile-list .k-edit-field { -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc }
 .km-actionsheet .k-grid-delete, .km-actionsheet .k-scheduler-delete, .km-pane-wrapper .k-filter-menu .k-button[type=reset], .km-pane-wrapper .k-scheduler-delete { color: #fff; border-color: #dbdbdb; background-color: red; background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.3)),to(rgba(255,255,255,.15))); background-image: -webkit-linear-gradient(top,rgba(255,255,255,.3),rgba(255,255,255,.15)); background-image: linear-gradient(to bottom,rgba(255,255,255,.3),rgba(255,255,255,.15)) }
 .km-actionsheet .k-grid-delete:active, .km-actionsheet .k-scheduler-delete:active, .km-pane-wrapper .k-filter-menu .k-button[type=reset]:active, .km-pane-wrapper .k-scheduler-delete:active { background-color: #900 }
-.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default { background-position: 50% 50%; background-color: #fff; border-color: #bababa; margin-top: 2px; height: 40px; }
+.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default {background-position: 50% 50%;background-color: #fff;border-color: #bababa;margin-top: 2px;height: 40px;}
 .k-autocomplete.k-state-hover, .k-dropdown-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-picker-wrap.k-state-hover { background-color: #eaeaea; background-image: none; background-position: 50% 50%; border-color: #8b8b8b }
 .k-multiselect-wrap { border-color: #bababa }
 .k-multiselect-wrap.k-state-hover, .k-state-hover > .k-multiselect-wrap { border-color: #8b8b8b; background: #fff; color: #333 }
