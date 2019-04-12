@@ -1,7 +1,7 @@
 {
   "name": "heartthrob",
-  "version": "0.2.27",
-  "description": "Em breve uma descrição aqui",
+  "version": "1.0.28",
+  "description": "A CSS and JS framework inspired by Fluent Design and Bootstrap for complex systems",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "3.9.1",
