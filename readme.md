@@ -1,5 +1,5 @@
 # Overview + contribute
-Heartthrob is a framework made to looks like the Windows design, that I'm building for at least 2 years, following the Microsoft Fluent Design, it was also inspired by Michel West - an incredible designer who will dominate the world with his ideas.
+Heartthrob is a framework made to looks like the Windows design, that I'm building for at least 2 years, following the Microsoft Fluent Design, it was also inspired by Michael West - an incredible designer who will dominate the world with his ideas.
 
 Build from scrath with bare CSS - and JavaScript, it uses the gris system for responsive websites based in Bootstrap 3, the idea is to have a start for when you need to develop a solution for your company or for yourself, it's clean, simple, easy and still small. One of the biggest features in heartthrob is the compatibility with Kendo UI.
 
