@@ -265,6 +265,12 @@ content.middle { width: calc(100% - 200px); transition: all .4s }
 .account .account-footer ul { display: inline-block; margin: 0; padding: 0; list-style: none; margin-right: 10px }
 .account .account-footer ul li { float: left }
 .account .account-footer ul li, .account .account-footer ul li a { color: #fff; font-size: 12px; margin-left: 12px }
+.account .card.maximum { width: 990px !important; height: 80% !important}
+.account .card.maximum .nav{height: calc(80% - 120px) !important; overflow:auto; margin-top: 100px !important}
+.account .card.maximum content{width: 740px !important}
+.account .card.maximum content div { max-width: 700px !important }
+.account .card.maximum .logo { padding: 20px 0; text-align: center; background: #ebebeb; width: 250px; margin: -20px 0 0 -20px; margin-bottom: 20px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; position:fixed }
+.account .card.maximum .logo img{min-height: 75px; max-height: 75px}
 
 .validation-summary-valid { display: none; }
 .validation-summary-errors { display: block; border-left-color: #cc240e }
