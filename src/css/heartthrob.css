@@ -57,6 +57,7 @@ img.rounded { border-radius: 50% }
 .accent { color: #0078D7 !important }
 
 /* Buttons */
+button{padding-top:5px !important; padding-bottom: 5px !important}
 .btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 30px; min-width: 110px; padding: 10px 15px 0; cursor: pointer; display: inline-block; text-align: center; box-sizing: content-box; }
 .btn:hover, button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .btn:disabled, button:disabled { background: GrayText; border-color: GrayText; -moz-transition: all .3s; -o-transition: all .3s; -webkit-transition: all .3s; transition: all .3s; cursor: not-allowed }
