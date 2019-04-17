@@ -34,3 +34,4 @@ gulp.task('copy-files', () => {
   });
 
   gulp.task('build', ['minify-css', 'minify-js', 'copy-files', 'copy-files-js', 'copy-files-img']);
+  gulp.task('default', ['build']);
