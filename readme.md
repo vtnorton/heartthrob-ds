@@ -7,6 +7,8 @@ I'm usign it in the solutions I build everyday, over the next months the idea is
 
 Click here to see the full [documentation](http://heartthrob.vtnorton.com/) 
 
+[![Build Status](https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob?branchName=master)](https://dev.azure.com/vtnorton/Heartthrob/_build/latest?definitionId=9&branchName=master)
+
 ## How to contribute
 Here is a quicky guide in how to contribute to the framework:
 
