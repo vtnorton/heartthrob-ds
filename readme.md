@@ -1,7 +1,3 @@
-[![Build Status](https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob?branchName=master)](https://dev.azure.com/vtnorton/Heartthrob/_build/latest?definitionId=9&branchName=master)
-
-[![npm version](https://badge.fury.io/js/heartthrob.svg)](https://badge.fury.io/js/heartthrob)
-
 # heartthrob: overview
 The heartthrob framework can add more elegancy to your project, to looks like the Microsoft Fluent Design design, it was also inspired by [Michael West](https://www.michaelwe.st/fluent-kit/) - an incredible designer who will dominate the world with his ideas.
 
@@ -11,15 +7,8 @@ The ideia behind this project is to make it as simple as possible for new develo
 
 Click here to see the full [documentation](http://heartthrob.vtnorton.com/) 
 
-<<<<<<< HEAD
 ### perfect for dashboards
 I built and use heartthrob in several dashboards and CMSs in several startups and corporate systems.
-=======
-[![Build Status](https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob?branchName=master)](https://dev.azure.com/vtnorton/Heartthrob/_build/latest?definitionId=9&branchName=master)
-
-## How to contribute
-Here is a quicky guide in how to contribute to the framework:
->>>>>>> 821c1f8ecccc9ac4240f42a71c534a495614d809
 
 More to share about this soon.
 
