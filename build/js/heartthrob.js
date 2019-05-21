@@ -65,8 +65,8 @@ $(document).ready(function () {
         }
     });
 
-    $(".cards-actions .card.link").click(function () {
-        $(".cards-actions .card.link").removeClass("opened", 300);
+    $(".cards-actions .card").click(function () {
+        $(".cards-actions .card").removeClass("opened", 300);
         $(this).addClass("opened", 300);
     });
 
