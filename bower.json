@@ -4,8 +4,6 @@
     "main": [
       "build/heartthrob.css",
       "build/heartthrob.min.css",
-      "build/uap.heartthrob.css",
-      "build/uap.heartthrob.min.css",
       "build/kendo.heartthrob.css",
       "build/kendo.heartthrob.min.css",
       "build/colors.heartthrob.css",
