@@ -3,7 +3,7 @@
         "browser": true,
         "es6": true
     },
-    "extends": "airbnb-base",
+    "extends": "standard",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -12,7 +12,5 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "indent":"off",
-        "linebreak-style":"off"
     }
 }
