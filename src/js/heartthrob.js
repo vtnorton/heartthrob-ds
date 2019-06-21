@@ -18,7 +18,7 @@ $(document).ready(function () {
 	var domainIndex = window.location.href.indexOf(domain)
 	var longAppName = window.location.href.slice(domainIndex + domain.length + 1)
 
-	$(`a[href='/${longAppName}']`).addClass('active')
+	$('a[href=' + longAppName + ']').addClass('active')
 
 	/* Menu event */
 	$(document).click(function () {
@@ -168,8 +168,8 @@ function removeAcento (text) {
 }
 
 function addNotification () {
-	const campo = '#notifications span'
-	let itens = 1
+	var campo = '#notifications span'
+	var itens = 1
 
 	if ($(campo).text()) {
 		itens = parseInt($(campo).text(), 10) + 1
@@ -360,7 +360,7 @@ function preencherdados (conteudo) {
 		document.getElementById('bairro').value = conteudo.bairro
 		document.getElementById('cidade').value = conteudo.localidade
 
-		const dropdownlist = $('#State').data('kendoDropDownList')
+		var dropdownlist = $('#State').data('kendoDropDownList')
 		dropdownlist.select(function (dataItem) {
 			return dataItem === conteudo.uf
 		})

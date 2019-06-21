@@ -106,7 +106,7 @@ input.k-checkbox + label { -webkit-user-select: none }
 .k-flip-h { -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1) }
 .k-flip-v { -webkit-transform: scaleY(-1); -ms-transform: scaleY(-1); transform: scaleY(-1) }
 .k-flip-h.k-flip-v { -webkit-transform: scale(-1,-1); -ms-transform: scale(-1,-1); transform: scale(-1,-1) }
-.k-button { margin: 0; padding: 0 15px 0; line-height: 1.72em; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; text-decoration: none; display: -webkit-inline-box; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; overflow: hidden; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; outline: 0; -webkit-appearance: none; min-height: 40px; border-color: #f4f4f4; color: #000; background-color: #ccc; border: 1px solid #ccc; }
+.k-button { margin:-2px 0; padding: 0 15px 0; line-height: 1.72em; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; text-decoration: none; display: -webkit-inline-box; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; overflow: hidden; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; outline: 0; -webkit-appearance: none; min-height: 40px; border-color: #f4f4f4; color: #000; background-color: #ccc; border: 1px solid #ccc; }
 .k-button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .k-no-flexbox .k-button { display: inline-block }
 .k-button::-moz-focus-inner { padding: 0; border: 0; outline: 0 }
@@ -936,7 +936,7 @@ span.k-numerictextbox { background-color: transparent }
 .k-colorpalette .k-item { width: 14px; height: 14px; overflow: hidden; -ms-high-contrast-adjust: none }
 .k-colorpalette .k-item.k-state-selected, .k-colorpalette .k-item.k-state-selected:hover { z-index: 100; background: 0 0; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); box-shadow: 0 1px 3px 1px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.45); position: relative }
 .k-colorpalette .k-item:hover { z-index: 101; position: relative; -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3); box-shadow: 0 1px 3px 1px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.3) }
-table.k-editor { width: calc(100% - 2px); height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
+table.k-editor { width: 100%; height: 250px; table-layout: fixed; border-style: solid; border-width: 1px; border-collapse: separate; border-spacing: 4px; font-size: 100%; vertical-align: top; position: relative }
 .k-editor-inline { padding: .3em .5em; word-wrap: break-word; overflow: auto; position: relative; -webkit-transition: border-color .5s; transition: border-color .5s }
 .k-editor-inline.k-editor { border: 1px solid transparent }
 .k-editortoolbar-dragHandle { cursor: move; padding-left: 0; padding-right: 3px; -webkit-box-shadow: none !important; box-shadow: none !important }
@@ -1635,7 +1635,7 @@ div.k-navigator .k-navigator-left, div.k-navigator .k-navigator-w { left: 2px; t
 .k-zoom-text { margin: 0; width: 4.3em; vertical-align: top }
 .k-rtl .k-buttons-horizontal :first-child { border-radius: 0 4px 4px 0 }
 .k-rtl .k-buttons-horizontal :first-child + .k-zoom-in { border-radius: 0; margin-left: 0; margin-right: -1px }
-.k-rtl .k-buttons-horizontal .k-zoom-out { border-radius: 4px 0 0 4px; margin-left: 0; margin-right: -1px }
+.k-rtl .k-buttons-horizontal .k-zoom-out { border-radius: 4px 0 0 4px; margin-left: 0; margin-right: -1px ; -webkit-border-radius:; -moz-border-radius:; -ms-border-radius:; -o-border-radius:; }
 .k-diagram { height: 600px }
 .k-diagram .km-scroll-wrapper { width: 100%; height: 100%; position: relative; width: 100%; height: 100%; position: relative }
 .k-canvas-container { width: 100%; height: 100% }
@@ -3565,3 +3565,4 @@ input.k-textbox:focus { border-color: #0078D7 }
 .k-scheduler-weekview .k-scheduler-header th:first-child { padding: 12px 0 }
 .k-scheduler-table .k-scheduler-times-all-day { height: 34px; display: block; }
 .k-nav-next, .k-nav-prev, .k-nav-today { display: none !important }
+.card .k-grid .k-grid { margin: -7px 0px -7px -20px }
