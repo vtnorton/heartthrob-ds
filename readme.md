@@ -7,7 +7,7 @@ The ideia behind this project is to make it as simple as possible for new develo
 
 Click here to see the full [documentation](http://heartthrob.vtnorton.com/) 
 
-A new component is ready to use, see [heartthrob-vision](http://heartthrob.vtnorton.com/vision.html) 
+A new component is ready to use, see [heartthrob-vision](http://heartthrob.vtnorton.com/vision.html)
 
 ### perfect for dashboards
 I've built and use Heartthrob in several dashboards and CMSs, on several startups and corporate systems.
