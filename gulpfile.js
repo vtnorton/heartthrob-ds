@@ -2,8 +2,8 @@ let gulp = require('gulp')
 let cleanCSS = require('gulp-clean-css')
 var concat = require('gulp-concat')
 var rename = require('gulp-rename')
-var uglify = require('gulp-uglify')
 var merge = require('merge-stream')
+var minifyjs = require('gulp-js-minify')
 
 var deps = {
 	'heartthrob-vision': {
@@ -15,10 +15,10 @@ gulp.task('restore', async () => {
 	var streams = []
 
 	for (var prop in deps) {
-		console.log('Restaurando scripts para: ' + prop)
+		console.log('Restoring scripts for: ' + prop)
 		for (var itemProp in deps[prop]) {
 			streams.push(gulp.src('node_modules/' + prop + '/' + itemProp)
-				.pipe(gulp.dest('src/js/' + deps[prop][itemProp])))
+				.pipe(gulp.dest('build/js/' + deps[prop][itemProp])))
 		}
 	}
 
@@ -36,7 +36,7 @@ gulp.task('minify-js', function () {
 	return gulp.src('src/js/*.js')
 		.pipe(concat('heartthrob.js'))
 		.pipe(rename('heartthrob.min.js'))
-		.pipe(uglify())
+		.pipe(minifyjs())
 		.pipe(gulp.dest('build/js'))
 })
 

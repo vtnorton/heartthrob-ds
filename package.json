@@ -19,7 +19,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-js-minify": "0.0.3"
   },
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1"
@@ -29,7 +29,10 @@
     "url": "git+https://github.com/vtnorton/Heartthrob.git"
   },
   "keywords": [
-    "heartthrob"
+    "heartthrob",
+    "accessibility",
+    "bootstrap",
+    "css framework"
   ],
   "files": [
     "build/",
