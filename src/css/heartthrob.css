@@ -8,30 +8,31 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahom
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; /* box-sizing: border-box */ }
 :before, :after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
 
-/* Basic and typographi */
+/* Basic and typography */
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; background: #f8f8f8; font-size: 15px; line-height: 20px; color: #666 }
-h1, h2, h3, h4, h5, h6 { color: #000; margin-bottom:15px }
+h1, h2, h3, h4, h5, h6 { color: #000; margin-bottom: 15px }
 h1 { font-size: 28px; line-height: 36px; font-weight: 400 }
 h2 { font-size: 24px; line-height: 32px; font-weight: 600 }
 h3 { font-size: 18px; line-height: 24px; font-weight: 600 }
 h4, b, strong, dl dt { font-size: 15px; line-height: 20px; font-weight: 600 }
 h5 { font-size: 16px; line-height: 20px; font-weight: 800 }
 h6 { font-size: 16px; line-height: 20px; font-weight: 400 }
-p{margin:5px 0 10px}
+p { margin: 5px 0 10px }
 a { color: #0078D7; text-decoration: none; cursor: pointer; }
 i { font-style: italic; }
 hr { border-bottom: none !important; border: 1px solid #ccc; margin: 10px 0 15px; }
 li { margin: 3px 0; line-height: 20px }
 blockquote, .validation-summary-valid, .validation-summary-errors { background: #fff; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px; border-left: 3px solid #0078D7 }
-blockquote footer {text-align:right; font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
+blockquote footer { text-align: right; font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
 blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
-.card blockquote{box-shadow:none; border:1px solid #ccc; margin: 8px 0 0}
+.card blockquote { box-shadow: none; border: 1px solid #ccc; margin: 8px 0 0 }
+blockquote.border { border-left: 5px solid #2572EB }
+blockquote.border.danger { border-left-color: #cc240e }
 small { font-size: 12px; line-height: 14px; }
-strong{color:#000 !important; font-weight: 700 }
 label { font-weight: 600; color: #555 }
 img { width: 100% }
 img.rounded { border-radius: 50% }
-code{font-family: 'Courier New', Courier, monospace}
+code { font-family: 'Courier New', Courier, monospace }
 
 /* Help classes */
 .link { cursor: pointer }
@@ -59,10 +60,9 @@ code{font-family: 'Courier New', Courier, monospace}
 .space-medium { height: 30px }
 .space-long { height: 48px }
 .accent { color: #0078D7 !important }
-code .tag{background:none; padding:0; border:none}
+code .tag { background: none; padding: 0; border: none }
 
 /* Buttons */
-button{padding-top:5px !important; padding-bottom: 5px !important}
 .btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 30px; min-width: 110px; padding: 10px 15px 0; cursor: pointer; display: inline-block; text-align: center; box-sizing: content-box; }
 .btn:hover, button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .btn:disabled, button:disabled { background: GrayText; border-color: GrayText; -moz-transition: all .3s; -o-transition: all .3s; -webkit-transition: all .3s; transition: all .3s; cursor: not-allowed }
@@ -140,18 +140,25 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .show-alert { opacity: 1; visibility: visible; transform: scale(1.0); transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 20; position: fixed }
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 15; position: fixed; }
 header a { font-weight: normal }
 header .logo { float: left }
-header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
+header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width: auto }
 header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
 header ul { list-style: none; margin: 0; padding: 0; }
-header ul li { float: left; margin: 0; margin-right: 16px; }
+header ul li { float: left; margin: 0; margin-right: 5px; }
 header ul li:last-child { margin-right: 0 }
-header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 8px }
+header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 10px; }
 header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }
-header ul li a i { font-size: 15px !important; margin-right: 5px }
+header ul li a i { font-size: 15px !important; margin-right: 5px; width: 18px; text-align: center }
 header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }
+header ul li a.child:after {content: ' ';width: 10px;height: 10px;display: inline-block;position: relative; margin-left:13px; top:-3px; border: solid rgba(255,255,255,0.5);border-width: 0 2px 2px 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+header ul li a.child:after { transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+header ul li ul { display: none; }
+header ul li:hover ul { display: block; }
+header ul li ul li { float: none; width: calc(100% + 50px); }
+header ul li ul li a { background: #6b6b6b; border-left: 3px solid transparent; padding: 0 10px 0 7px; }
+header ul li ul li a:hover { border-left: 3px solid #0078d7; background: #555; border-bottom: none }
 header .right ul li, header .right ul li a i { margin: 0; position: relative }
 header .right ul li a { color: #fff; width: 48px; text-align: center; padding: 0 15px }
 header .right ul li:last-child a { width: auto; display: inline-flex; }
@@ -185,7 +192,7 @@ header .user-img span, .icon span { display: block; margin-top: -8px; font-style
 .cards-steps .card { background: #e9e9e9; border-left: 5px solid #0078D7 }
 .cards-steps .view-done { border-color: #009a32 }
 .cards-steps .view-warning { border-color: #f9a40e }
-.cards-actions .card{cursor: pointer;}
+.cards-actions .card { cursor: pointer; }
 .cards-actions .card h4 ~ *, .cards-steps .card h4 ~ * { display: none }
 .cards-actions .card.opened, .cards-steps .card.opened { background: #fff }
 .cards-actions .card.opened h4 ~ *, .cards-steps .card.opened h4 ~ * { display: block; }
@@ -253,7 +260,7 @@ header .user-img span, .icon span { display: block; margin-top: -8px; font-style
 .treeview a.active { color: #000; border-left: 3px solid #0078D7; margin-left: 0; padding-left: 12px; }
 .treeview .fa-chevron-right { margin-left: 2px; margin-right: -15px; }
 
-/* TODO: Inserir na documentação */
+/* TODO: Inserir na documentaÃ§Ã£o */
 header + nav { height: calc(100% - 48px) !important; margin-top: 48px }
 header ~ content .nav { height: calc(100% - 48px); }
 header ~ content { margin-top: 48px; }
@@ -289,10 +296,10 @@ header.acrylic, .menu.dark, .menu.dark ul { background: rgba(40,40,40,0.8) !impo
 .alert-modal { -webkit-backdrop-filter: blur(10px) saturate(125%); backdrop-filter: blur(10px) saturate(125%); background: rgba(40,40,40,0.5); }
 header.acrylic { background: rgba(40,40,40,0.85) !important; }
 
-.no-shadow{border:1px solid #ccc}
-.shadow, .ui-autocomplete, .menu, .menu ul, header .menu{ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.no-shadow { border: 1px solid #ccc }
+.shadow, .ui-autocomplete, .menu, .menu ul, header .menu, header ul li ul { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
 .shadow-middle, header ul li a:hover, blockquote, .card, .validation-summary-valid, .validation-summary-errors { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
-.shadow-max, .alert  { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+.shadow-max, .alert { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
 
 @media screen and (max-width: 1300px) {
     .nav:not(.middle) a { color: transparent }
@@ -328,8 +335,8 @@ header.acrylic { background: rgba(40,40,40,0.85) !important; }
 
 .row:after, .clean, .btn-action:after { clear: both; }
 .row:after, .row:before, .btn-action:after { display: table; content: " "; }
-.row {padding: 0;margin: 0 -10px;}
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {min-height: 1px;padding: 0 10px;}
+.row { padding: 0; margin: 0 -10px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { min-height: 1px; padding: 0 10px; }
 .card .col-xs-1, .card .col-sm-1, .card .col-md-1, .card .col-lg-1, .card .col-xs-2, .card .col-sm-2, .card .col-md-2, .card .col-lg-2, .card .col-xs-3, .card .col-sm-3, .card .col-md-3, .card .col-lg-3, .card .col-xs-4, .card .col-sm-4, .card .col-md-4, .card .col-lg-4, .card .col-xs-5, .card .col-sm-5, .card .col-md-5, .card .col-lg-5, .card .col-xs-6, .card .col-sm-6, .card .col-md-6, .card .col-lg-6, .card .col-xs-7, .card .col-sm-7, .card .col-md-7, .card .col-lg-7, .card .col-xs-8, .card .col-sm-8, .card .col-md-8, .card .col-lg-8, .card .col-xs-9, .card .col-sm-9, .card .col-md-9, .card .col-lg-9, .card .col-xs-10, .card .col-sm-10, .card .col-md-10, .card .col-lg-10, .card .col-xs-11, .card .col-sm-11, .card .col-md-11, .card .col-lg-11, .card .col-xs-12, .card .col-sm-12, .card .col-md-12, .card .col-lg-12 { padding: 0 5px }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left }
 .col-xs-12 { width: 100% }
