@@ -1,4 +1,3 @@
-/* eslint-disable curly */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 $(document).ready(function () {
@@ -18,7 +17,7 @@ $(document).ready(function () {
 	var domainIndex = window.location.href.indexOf(domain)
 	var longAppName = window.location.href.slice(domainIndex + domain.length + 1)
 
-	$('a[href=' + longAppName + ']').addClass('active')
+	$(`a[href='/${longAppName}']`).addClass('active')
 
 	/* Menu event */
 	$(document).click(function () {
@@ -168,8 +167,8 @@ function removeAcento (text) {
 }
 
 function addNotification () {
-	var campo = '#notifications span'
-	var itens = 1
+	const campo = '#notifications span'
+	let itens = 1
 
 	if ($(campo).text()) {
 		itens = parseInt($(campo).text(), 10) + 1
@@ -323,14 +322,7 @@ function checkPasswordMatch (input, output) {
 	var password = $('#password').val()
 	var confirmPassword = $(input).val()
 
-	if (password !== confirmPassword)
-		$('#' + output).addClass('validator').html('As senhas estão diferentes, por favor, tente novamente')
-	else
-		$('#' + output).removeClass('validator').html('')
-}
-
-function noEdit (dataItem) {
-	return dataItem.Id === 0
+	if (password !== confirmPassword) { $('#' + output).addClass('validator').html('As senhas estão diferentes, por favor, tente novamente') } else { $('#' + output).removeClass('validator').html('') }
 }
 
 function allTheSame (array) {
@@ -360,7 +352,7 @@ function preencherdados (conteudo) {
 		document.getElementById('bairro').value = conteudo.bairro
 		document.getElementById('cidade').value = conteudo.localidade
 
-		var dropdownlist = $('#State').data('kendoDropDownList')
+		const dropdownlist = $('#State').data('kendoDropDownList')
 		dropdownlist.select(function (dataItem) {
 			return dataItem === conteudo.uf
 		})
@@ -368,6 +360,11 @@ function preencherdados (conteudo) {
 	}
 }
 
+/* kendo-ui functions */
 function CellCloseScript (e) {
 	this.saveChanges()
+}
+
+function noEdit (dataItem) {
+	return dataItem.Id === 0
 }

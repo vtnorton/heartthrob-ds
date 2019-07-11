@@ -50,10 +50,15 @@ gulp.task('copy-files-img', () => {
 		.pipe(gulp.dest('build/img'))
 })
 
+gulp.task('copy-files-css', () => {
+	return gulp.src('src/css/**')
+		.pipe(gulp.dest('src/css'))
+})
+
 gulp.task('copy-files-js', () => {
 	return gulp.src('src/js/**')
 		.pipe(gulp.dest('build/js'))
 })
 
-gulp.task('build', gulp.parallel('restore', 'minify-css', 'minify-js', 'copy-files-js', 'copy-files-img'))
+gulp.task('build', gulp.parallel('restore', 'copy-files-css', 'minify-css', 'minify-js', 'copy-files-js', 'copy-files-img'))
 gulp.task('default', gulp.parallel('build'))
