@@ -50,9 +50,9 @@ gulp.task('copy-files-img', () => {
 		.pipe(gulp.dest('build/img'))
 })
 
-gulp.task('copy-files-css', () => {
+gulp.task('copy-css', () => {
 	return gulp.src('src/css/**')
-		.pipe(gulp.dest('src/css'))
+		.pipe(gulp.dest('build/css'))
 })
 
 gulp.task('copy-files-js', () => {
