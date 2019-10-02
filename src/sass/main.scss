@@ -117,18 +117,25 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .show-alert { opacity: 1; visibility: visible; transform: scale(1.0); transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 20; position: fixed }
-header a { font-weight: normal }
-header .logo { float: left }
-header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
-header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
-header ul { list-style: none; margin: 0; padding: 0; }
-header ul li { float: left; margin: 0; margin-right: 16px; }
-header ul li:last-child { margin-right: 0 }
-header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 8px }
-header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }
-header ul li a i { font-size: 15px !important; margin-right: 5px }
-header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 15; position: fixed; }	header { width: 100%; background: #2e2e2e; height: 48px; z-index: 20; position: fixed }
+header a { font-weight: normal }	header a { font-weight: normal }
+header .logo { float: left }	header .logo { float: left }
+header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width: auto }	header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
+header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }	header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
+header ul { list-style: none; margin: 0; padding: 0; }	header ul { list-style: none; margin: 0; padding: 0; }
+header ul li { float: left; margin: 0; margin-right: 5px; }	header ul li { float: left; margin: 0; margin-right: 16px; }
+header ul li:last-child { margin-right: 0 }	header ul li:last-child { margin-right: 0 }
+header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 10px; }	header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 8px }
+header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }	header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }
+header ul li a i { font-size: 15px !important; margin-right: 5px; width: 18px; text-align: center }	header ul li a i { font-size: 15px !important; margin-right: 5px }
+header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }	header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }
+header ul li a.child:after {content: ' ';width: 10px;height: 10px;display: inline-block;position: relative; margin-left:13px; top:-3px; border: solid rgba(255,255,255,0.5);border-width: 0 2px 2px 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);}	
+header ul li a.child:after { transform: rotate(45deg); -webkit-transform: rotate(45deg); }	
+header ul li ul { display: none; }	
+header ul li:hover ul { display: block; }	
+header ul li ul li { float: none; width: calc(100% + 50px); }	
+header ul li ul li a { background: #6b6b6b; border-left: 3px solid transparent; padding: 0 10px 0 7px; }	
+header ul li ul li a:hover { border-left: 3px solid #0078d7; background: #555; border-bottom: none }
 header .right ul li, header .right ul li a i { margin: 0; position: relative }
 header .right ul li a { color: #fff; width: 48px; text-align: center; padding: 0 15px }
 header .right ul li:last-child a { width: auto; display: inline-flex; }
@@ -267,7 +274,7 @@ header.acrylic, .menu.dark, .menu.dark ul { background: rgba(40,40,40,0.8) !impo
 header.acrylic { background: rgba(40,40,40,0.85) !important; }
 
 .no-shadow{border:1px solid #ccc}
-.shadow, .ui-autocomplete, .menu, .menu ul, header .menu{ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.shadow, .ui-autocomplete, .menu, .menu ul, header .menu, header ul li ul{ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
 .shadow-middle, header ul li a:hover, blockquote, .card, .validation-summary-valid, .validation-summary-errors { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
 .shadow-max, .alert  { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
 
@@ -278,7 +285,7 @@ header.acrylic { background: rgba(40,40,40,0.85) !important; }
     .nav:not(.middle) a { overflow: hidden }
     .nav:not(.middle) { width: 65px; transition: all .4s }
     content { width: calc(100% - 65px); transition: all .4s }
-    content content { width: calc(100% - 150px); transition: all .4s }
+    content content { width: calc(100% - 150px); transition: all .4s ; -webkit-transition: all .4s ; -moz-transition: all .4s ; -ms-transition: all .4s ; -o-transition: all .4s ; }
     .nav:not(.middle) a.child:after { border: none }
     .toolbar { width: calc(100% - 65px); transition: all .4s }
 }
