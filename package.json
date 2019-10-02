@@ -24,7 +24,8 @@
     "gulp-watch": "^5.0.1"
   },
   "scripts": {
-    "test": "echo 'nothing here'"
+    "test": "echo 'nothing here'",
+    "build-sass": "npx gulp sass"
   },
   "repository": {
     "type": "git",

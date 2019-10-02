@@ -13,9 +13,9 @@ var deps = {
 }
 
 gulp.task('sass', function () {
-	return gulp.src('src/sass/*.scss')
+	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-		.pipe(gulp.dest('build/sass/'))
+		.pipe(gulp.dest('build/css/'))
 		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/css/'))
 })
 
