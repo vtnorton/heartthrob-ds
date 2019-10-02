@@ -1,37 +1,14 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-body { line-height: 1; }
-blockquote, q { quotes: none; }
-img { -moz-user-select: none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-html, body { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; }
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; /* box-sizing: border-box */ }
-:before, :after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+@import 'fundation/reset';
+@import 'fundation/typography';
+@import 'fundation/helpers';
+@import 'fundation/buttons';
+@import 'fundation/inputs';
+@import 'fundation/fluent';
 
-/* Basic and typographi */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; background: #f8f8f8; font-size: 15px; line-height: 20px; color: #666 }
-h1, h2, h3, h4, h5, h6 { color: #000; margin-bottom:15px }
-h1 { font-size: 28px; line-height: 36px; font-weight: 400 }
-h2 { font-size: 24px; line-height: 32px; font-weight: 600 }
-h3 { font-size: 18px; line-height: 24px; font-weight: 600 }
-h4, b, strong, dl dt { font-size: 15px; line-height: 20px; font-weight: 600 }
-h5 { font-size: 16px; line-height: 20px; font-weight: 800 }
-h6 { font-size: 16px; line-height: 20px; font-weight: 400 }
-p{margin:5px 0 10px}
-a { color: #0078D7; text-decoration: none; cursor: pointer; }
-i { font-style: italic; }
-hr { border-bottom: none !important; border: 1px solid #ccc; margin: 10px 0 15px; }
-li { margin: 3px 0; line-height: 20px }
-blockquote, .validation-summary-valid, .validation-summary-errors { background: #fff; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px; border-left: 3px solid #0078D7 }
-blockquote footer {text-align:right; font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
-blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
-.card blockquote{box-shadow:none; border:1px solid #ccc; margin: 8px 0 0}
-small { font-size: 12px; line-height: 14px; }
-strong{color:#000 !important; font-weight: 700 }
-label { font-weight: 600; color: #555 }
-img { width: 100% }
-img.rounded { border-radius: 50% }
-code{font-family: 'Courier New', Courier, monospace}
+@import 'components/header';
+@import 'components/menu';
+@import 'components/cards';
+@import 'components/navigation';
 
 /* Help classes */
 .link { cursor: pointer }
@@ -92,7 +69,7 @@ textarea:disabled, input:disabled { border-color: #ccc; background: #e3e3e3 }
 textarea { padding: 5px 8px }
 select { border: 3px solid #E6E6E6; border-radius: 0; font-weight: 400; color: inherit; padding: 11px 15px; line-height: normal; transition: border-color 0.2s ease, outline 0.2s ease; }
 select:focus { box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset; outline: 3px solid #005BA6; outline-offset: -3px; }
-elect[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
+select[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
 select:invalid { color: #C7C7C7; }
 input[type="checkbox"], input[type="radio"] { position: absolute; opacity: 0; z-index: -1; }
 input[type="checkbox"] + label, input[type="radio"] + label { position: relative; padding: 0 0 0 30px; line-height: 32px; cursor: pointer; }
