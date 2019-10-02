@@ -26,7 +26,7 @@
   },
   "scripts": {
     "test": "echo 'nothing here'",
-    "build-sass": "npx node-sass src/css/heartthrob.scss > build/css/heartthrob.css"
+    "build-sass": "npx gulp sass"
   },
   "repository": {
     "type": "git",
