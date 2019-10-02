@@ -1,5 +1,14 @@
 @import 'fundation/reset';
 @import 'fundation/typography';
+@import 'fundation/helpers';
+@import 'fundation/buttons';
+@import 'fundation/inputs';
+@import 'fundation/fluent';
+
+@import 'components/header';
+@import 'components/menu';
+@import 'components/cards';
+@import 'components/navigation';
 
 /* Help classes */
 .link { cursor: pointer }
@@ -59,7 +68,7 @@ textarea:disabled, input:disabled { border-color: #ccc; background: #e3e3e3 }
 textarea { padding: 5px 8px }
 select { border: 3px solid #E6E6E6; border-radius: 0; font-weight: 400; color: inherit; padding: 11px 15px; line-height: normal; transition: border-color 0.2s ease, outline 0.2s ease; }
 select:focus { box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset; outline: 3px solid #005BA6; outline-offset: -3px; }
-elect[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
+select[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
 select:invalid { color: #C7C7C7; }
 input[type="checkbox"], input[type="radio"] { position: absolute; opacity: 0; z-index: -1; }
 input[type="checkbox"] + label, input[type="radio"] + label { position: relative; padding: 0 0 0 30px; line-height: 32px; cursor: pointer; }
