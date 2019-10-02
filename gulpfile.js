@@ -4,12 +4,24 @@ var concat = require('gulp-concat')
 var rename = require('gulp-rename')
 var merge = require('merge-stream')
 var minifyjs = require('gulp-js-minify')
+var sass = require('gulp-sass')
 
 var deps = {
 	'heartthrob-vision': {
 		'build/js/**': ''
 	}
 }
+
+gulp.task('sass', function () {
+	return gulp.src('src/sass/*.scss')
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+		.pipe(gulp.dest('build/sass/'))
+		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/css/'))
+})
+
+gulp.task('watch', function () {
+	gulp.watch('src/scss/*.scss', gulp.series('sass'))
+})
 
 gulp.task('restore', async () => {
 	var streams = []
