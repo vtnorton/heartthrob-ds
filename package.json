@@ -21,7 +21,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "gulp-js-minify": "0.0.3",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
     "test": "echo 'nothing here'",

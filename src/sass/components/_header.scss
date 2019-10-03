@@ -2,7 +2,7 @@ header { width: 100%; background: #2e2e2e; height: 48px; z-index: 15; position: 
 header a { font-weight: normal }	header a { font-weight: normal }
 header .logo { float: left }	header .logo { float: left }
 header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width: auto }	header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
-header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }	header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
+header .line {float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }	header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
 header ul { list-style: none; margin: 0; padding: 0; }	header ul { list-style: none; margin: 0; padding: 0; }
 header ul li { float: left; margin: 0; margin-right: 5px; }	header ul li { float: left; margin: 0; margin-right: 16px; }
 header ul li:last-child { margin-right: 0 }	header ul li:last-child { margin-right: 0 }
