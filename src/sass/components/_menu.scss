@@ -1,0 +1,15 @@
+.menu, .menu ul, .menu li:hover ul li ul { list-style: none; margin: 0; padding: 2px 0; width: 240px; height: auto; display: none }
+.menu ul { position: absolute; z-index: 500; top: auto; display: none; }
+.menu li ul li:hover ul, .menu li:hover ul { display: block; position: relative; left: 240px; margin-top: -32px }
+.menu li a:hover { background: rgba(255,255,255,0.4); transition: all .3s }
+.menu li { height: 32px; }
+.menu a { color: #000; font-size: 15px; height: 32px; width: 100%; display: block; line-height: 32px }
+.menu .no-icon { padding-left: 40px }
+.menu i { width: 40px; font-size: 16px; padding-left: 14px }
+.menu .line { width: 216px; margin: 0 auto; border-bottom: 1px solid #ccc; height: 2px }
+.menu .more:after { content: ' '; width: 10px; height: 10px; display: inline-grid; top: 10px; position: relative; margin-top: 2px; float: right; border: solid #999; border-width: 0 2px 2px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); margin-right: 13px }
+.menu-open { display: block }
+.menu.right { float: none }
+.menu.right li ul li:hover ul, .menu.right li:hover ul { left: -235px }
+.menu.dark a { color: #f8f8f8 }
+.menu.dark .line { border-bottom: 1px solid #999 }

@@ -1,0 +1,43 @@
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 15; position: fixed; }	header { width: 100%; background: #2e2e2e; height: 48px; z-index: 20; position: fixed }
+header a { font-weight: normal }	header a { font-weight: normal }
+header .logo { float: left }	header .logo { float: left }
+header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width: auto }	header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
+header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }	header .line { float: left; height: 32px; width: 1px; background: #c3c3c3; margin: 8px 24px }
+header ul { list-style: none; margin: 0; padding: 0; }	header ul { list-style: none; margin: 0; padding: 0; }
+header ul li { float: left; margin: 0; margin-right: 5px; }	header ul li { float: left; margin: 0; margin-right: 16px; }
+header ul li:last-child { margin-right: 0 }	header ul li:last-child { margin-right: 0 }
+header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 10px; }	header ul li a { display: block; height: 48px; font-size: 15px; color: #c3c3c3; line-height: 48px; font-weight: 600; padding: 0 8px }
+header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }	header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }
+header ul li a i { font-size: 15px !important; margin-right: 5px; width: 18px; text-align: center }	header ul li a i { font-size: 15px !important; margin-right: 5px }
+header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }	header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }
+header ul li a.child:after {content: ' ';width: 10px;height: 10px;display: inline-block;position: relative; margin-left:13px; top:-3px; border: solid rgba(255,255,255,0.5);border-width: 0 2px 2px 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);}	
+header ul li a.child:after { transform: rotate(45deg); -webkit-transform: rotate(45deg); }	
+header ul li ul { display: none; }	
+header ul li:hover ul { display: block; }	
+header ul li ul li { float: none; width: calc(100% + 50px); }	
+header ul li ul li a { background: #6b6b6b; border-left: 3px solid transparent; padding: 0 10px 0 7px; }	
+header ul li ul li a:hover { border-left: 3px solid #0078d7; background: #555; border-bottom: none }
+header .right ul li, header .right ul li a i { margin: 0; position: relative }
+header .right ul li a { color: #fff; width: 48px; text-align: center; padding: 0 15px }
+header .right ul li:last-child a { width: auto; display: inline-flex; }
+header .right ul li:hover { background: #3a3a3a; transition: all .3s }
+header .right ul li a:hover { border-bottom: none }
+header .search { height: 48px }
+header .search a { position: relative; z-index: 8; }
+header .search a.searchactived { text-align: right !important; width: auto !important; color: #2e2e2e !important; margin-left: 192px !important; }
+header .search a.searchactived:hover { background: none !important; transition: all .3s; box-shadow: none !important }
+header .search input { display: none; height: 48px; position: relative; top: -52px; z-index: 7; min-width: 320px; border: none; background: #f4f4f4; }
+header .search input:hover { background: #fff !important; transition: all .3s }
+header #notifications i { position: relative; z-index: 7 }
+header #notifications span { color: #000; position: relative; left: 7px; background: #f4f4f4; width: 17px; height: 17px; display: block; border-radius: 50%; z-index: 6; line-height: 16px; font-size: 11px; margin-top: -23px; opacity: 0.75 }
+header .menu { display: none; position: absolute; z-index: 5; width: 240px; right: 0 }
+header .menu li { float: none; }
+header .menu li a { height: 32px; width: 100% !important; text-align: left !important; padding: 0 !important }
+header .menu li a.active { border: 0 }
+header .right ul li:last-child .menu li i, header .menu li:last-child a i { margin-top: 8px }
+header .menu li a.no-icon { padding-left: 40px !important }
+header .menu .line { background: none }
+header .user-img, .icon { width: 32px; height: 32px; border-radius: 50%; background: #c3c3c3; margin: 8px 10px 0 -7px; position: relative }
+header .user-img img { border-radius: 50% }
+header .user-img span, .icon span { display: block; margin-top: -8px; font-style: italic; color: #fff; }
+.icon span { text-align: center; line-height: 32px; font-weight: 600; }

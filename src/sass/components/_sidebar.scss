@@ -1,0 +1,7 @@
+.sidebar { width: 300px; background: #ebebeb; border-right: 1px solid #ccc; float: left; z-index: 9; position: fixed; height: 100%; overflow: hidden; margin: -20px }
+.sidebar .k-widget { box-shadow: none }
+.sidebar .sidebar-bottom-menus { margin-bottom: 55px; position: absolute; bottom: 0; width: 100%; list-style: none; padding: 0 }
+.sidebar .sidebar-bottom-menus:before { content: " "; border-top: 1px solid #ccc; display: block; margin: -2px 16px 7px; }
+.sidebar .sidebar-bottom-menus a { font-size: 14px; text-decoration: none; width: 100%; display: block; padding: 14px 20px; height: 48px }
+.sidebar .sidebar-bottom-menus a i { width: 25px; text-align: center; font-size: 14px; margin-right: 5px; }
+

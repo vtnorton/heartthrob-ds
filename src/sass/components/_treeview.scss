@@ -1,0 +1,9 @@
+.treeview, .treeview ul { margin: 0; padding: 0; list-style: none; min-width: 200px; }
+.treeview ul ul { margin-left: .5em }
+.treeview ul li { margin: 0; padding: 0 5px; line-height: 2em; font-weight: 700; position: relative; }
+.treeview ul li i { font-size: 10px; margin-right: -13px; width: 10px }
+.treeview ul li a { text-decoration: none; color: #333; cursor: pointer; font-weight: 400 }
+.treeview ul li a:not(i) { margin-left: 15px }
+.treeview ul li a:hover { color: #000; transition: all .3s }
+.treeview a.active { color: #000; border-left: 3px solid #0078D7; margin-left: 0; padding-left: 12px; }
+.treeview .fa-chevron-right { margin-left: 2px; margin-right: -15px; }

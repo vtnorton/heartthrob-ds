@@ -1,0 +1,11 @@
+@import 'account';
+
+/* TODO: Inserir na documentação */
+header + nav { height: calc(100% - 48px) !important; margin-top: 48px }
+header ~ content .nav { height: calc(100% - 48px); }
+header ~ content { margin-top: 48px; }
+header ~ content content { margin-top: 0 }
+nav.main { height: 100%; float: left; }
+content { width: calc(100% - 250px); float: right; padding: 20px; transition: all .4s }
+content content { width: calc(100% - 150px); transition: all .4s ; -webkit-transition: all .4s ; -moz-transition: all .4s ; -ms-transition: all .4s ; -o-transition: all .4s ; }
+content.middle { width: calc(100% - 200px); transition: all .4s }

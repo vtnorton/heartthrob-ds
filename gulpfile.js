@@ -17,6 +17,7 @@ gulp.task('sass', function () {
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(gulp.dest('build/css/'))
 		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/css/'))
+		// using this last gulp.dest() to test on the docs while it's beeing develop, a better solution will be provided.
 })
 
 gulp.task('watch', function () {
