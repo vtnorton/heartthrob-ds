@@ -1,18 +1,56 @@
-
 @media screen and (max-width: 1300px) {
-    .nav:not(.middle) a { color: transparent }
-    .nav:not(.middle) a i { color: #fff }
-    .nav:not(.middle).light a i { color: #000 }
-    .nav:not(.middle) a { overflow: hidden }
-    .nav:not(.middle) { width: 65px; transition: all .4s }
-    content { width: calc(100% - 65px); transition: all .4s }
-    content content { width: calc(100% - 150px); transition: all .4s ; -webkit-transition: all .4s ; -moz-transition: all .4s ; -ms-transition: all .4s ; -o-transition: all .4s ; }
-    .nav:not(.middle) a.child:after { border: none }
-    .toolbar { width: calc(100% - 65px); transition: all .4s }
+	.nav:not(.middle) a {
+		color: transparent;
+	}
+	.nav:not(.middle) a i {
+		color: #fff;
+	}
+	.nav:not(.middle).light a i {
+		color: #000;
+	}
+	.nav:not(.middle) a {
+		overflow: hidden;
+	}
+	.nav:not(.middle) {
+		width: 65px;
+		transition: all 0.4s;
+	}
+	content {
+		width: calc(100% - 65px);
+		transition: all 0.4s;
+	}
+	content content {
+		width: calc(100% - 150px);
+		transition: all 0.4s;
+		-webkit-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		-ms-transition: all 0.4s;
+		-o-transition: all 0.4s;
+	}
+	.nav:not(.middle) a.child:after {
+		border: none;
+	}
+	.toolbar {
+		width: calc(100% - 65px);
+		transition: all 0.4s;
+	}
 }
 
 @media screen and (min-width: 768px) {
-    .form-inline * { display: inline-block }
-    .form-inline textarea, .form-inline input[type=text], .form-inline input[type=password], .form-inline input[type=date], .form-inline input[type=datetime], .form-inline input[type=datetime-local], .form-inline input[type=email], .form-inline input[type=number], .form-inline input[type=tel], .form-inline input[type=url],
-    .form-inline input[type=search] { width: auto }
+	.form-inline * {
+		display: inline-block;
+	}
+	.form-inline textarea,
+	.form-inline input[type="text"],
+	.form-inline input[type="password"],
+	.form-inline input[type="date"],
+	.form-inline input[type="datetime"],
+	.form-inline input[type="datetime-local"],
+	.form-inline input[type="email"],
+	.form-inline input[type="number"],
+	.form-inline input[type="tel"],
+	.form-inline input[type="url"],
+	.form-inline input[type="search"] {
+		width: auto;
+	}
 }

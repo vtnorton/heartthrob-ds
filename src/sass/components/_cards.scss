@@ -1,25 +1,98 @@
-.card { background: #fff; padding: 20px; overflow: auto; overflow-x: hidden; width: 100% !important; margin: auto; margin-bottom: 20px }
-.card .taskbar { background: #e9e9e9; padding: 20px; margin: 20px -20px -20px; }
-.card .taskbar.right { float: none; text-align: right }
-.card .left h2 { margin-top: 5px; }
-.card hr:first-of-type { position: relative; top: 10px; margin-bottom: 20px; margin-left: -20px; margin-right: -20px; }
-.cards-steps .card { background: #e9e9e9; border-left: 5px solid #0078D7 }
-.cards-steps .view-done { border-color: #009a32 }
-.cards-steps .view-warning { border-color: #f9a40e }
-.cards-actions .card{cursor: pointer;}
-.cards-actions .card h4 ~ *, .cards-steps .card h4 ~ * { display: none }
-.cards-actions .card.opened, .cards-steps .card.opened { background: #fff }
-.cards-actions .card.opened h4 ~ *, .cards-steps .card.opened h4 ~ * { display: block; }
+.card {
+	background: #fff;
+	padding: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+	width: 100% !important;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.card .taskbar {
+	background: #e9e9e9;
+	padding: 20px;
+	margin: 20px -20px -20px;
+}
+.card .taskbar.right {
+	float: none;
+	text-align: right;
+}
+.card .left h2 {
+	margin-top: 5px;
+}
+.card hr:first-of-type {
+	position: relative;
+	top: 10px;
+	margin-bottom: 20px;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.cards-steps .card {
+	background: #e9e9e9;
+	border-left: 5px solid #0078d7;
+}
+.cards-steps .view-done {
+	border-color: #009a32;
+}
+.cards-steps .view-warning {
+	border-color: #f9a40e;
+}
+.cards-actions .card {
+	cursor: pointer;
+}
+.cards-actions .card h4 ~ *,
+.cards-steps .card h4 ~ * {
+	display: none;
+}
+.cards-actions .card.opened,
+.cards-steps .card.opened {
+	background: #fff;
+}
+.cards-actions .card.opened h4 ~ *,
+.cards-steps .card.opened h4 ~ * {
+	display: block;
+}
 
-.view-box { padding: 0; margin-right: 15px }
-.view-box-title { border-bottom: 1px solid #ddd; padding: 15px 20px }
-.view-box-title h3 { font-size: 20px; color: #1b1b1b }
-.view-box-title h3 i { margin-right: 15px }
-.view-box-title:hover { background: rgba(82,101,140,0.2); transition: all .3s }
-.view-box-content ul { list-style: none; margin: 0; padding: 0 }
-.view-box-content ul li { margin: 0 }
-.view-box-content ul li a { color: #3b3b3b; padding: 15px 20px; display: block; }
-.view-box-content ul li a:hover { background: rgba(100,100,100,0.18) }
-.view-box-content ul li a i { margin-right: 15px; width: 20px; text-align: center }
-.view-map { height: 360px; margin: 20px -25px -11px; }
-
+.view-box {
+	padding: 0;
+	margin-right: 15px;
+}
+.view-box-title {
+	border-bottom: 1px solid #ddd;
+	padding: 15px 20px;
+}
+.view-box-title h3 {
+	font-size: 20px;
+	color: #1b1b1b;
+}
+.view-box-title h3 i {
+	margin-right: 15px;
+}
+.view-box-title:hover {
+	background: rgba(82, 101, 140, 0.2);
+	transition: all 0.3s;
+}
+.view-box-content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.view-box-content ul li {
+	margin: 0;
+}
+.view-box-content ul li a {
+	color: #3b3b3b;
+	padding: 15px 20px;
+	display: block;
+}
+.view-box-content ul li a:hover {
+	background: rgba(100, 100, 100, 0.18);
+}
+.view-box-content ul li a i {
+	margin-right: 15px;
+	width: 20px;
+	text-align: center;
+}
+.view-map {
+	height: 360px;
+	margin: 20px -25px -11px;
+}
