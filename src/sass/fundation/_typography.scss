@@ -2,10 +2,11 @@ body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	overflow-x: hidden;
 	background: #f8f8f8;
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 1em;
+	line-height: 150%;
 	color: #666;
 }
+
 h1,
 h2,
 h3,
@@ -48,6 +49,7 @@ h6 {
 	line-height: 20px;
 	font-weight: 400;
 }
+
 p {
 	margin: 5px 0 10px;
 }
@@ -68,6 +70,7 @@ li {
 	margin: 3px 0;
 	line-height: 20px;
 }
+
 blockquote,
 .validation-summary-valid,
 .validation-summary-errors {
@@ -105,6 +108,7 @@ blockquote.border {
 blockquote.border.danger {
 	border-left-color: #cc240e;
 }
+
 small {
 	font-size: 12px;
 	line-height: 14px;
