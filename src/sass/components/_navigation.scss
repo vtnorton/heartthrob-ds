@@ -45,7 +45,7 @@
 	margin-right: 5px;
 }
 .nav a.active {
-	border-left: 3px solid #0078d7;
+	border-left: 3px solid $accent-color;
 	padding-left: 17px;
 }
 .nav ul li ul a.active {

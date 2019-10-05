@@ -1,3 +1,15 @@
+$light-color: #ffffff;
+$dark-color: #222222;
+$grey-color: #888888;
+$light-grey-color: #b6b6b6;
+$soft-grey-color: #545454;
+$super-grey-color: #eeeeee;
+$mood-grey-color: #848484;
+
+$accent-color: #0078d7;
+$accent-color-hover: #1d5bbc; 
+$accent-color-visited: #005ba6; 
+
 @import 'fundation/reset';
 @import 'fundation/grid';
 @import 'fundation/typography';
@@ -5,7 +17,7 @@
 @import 'fundation/buttons';
 @import 'fundation/inputs';
 
-@import "./tables";
+@import "components/tables";
 @import 'components/alert';
 @import 'components/cards';
 @import 'components/header';

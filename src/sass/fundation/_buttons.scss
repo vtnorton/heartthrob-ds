@@ -17,8 +17,8 @@ button {
 }
 .btn:hover,
 button:hover {
-	border-color: #1d5bbc;
-	background: #1d5bbc;
+	border-color: $accent-color-hover;
+	background: $accent-color-hover;
 	color: #fff;
 	-moz-transition: all 0.29s;
 	-o-transition: all 0.29s;
@@ -40,13 +40,13 @@ button:disabled {
 	margin-right: 3px;
 }
 .btn-primary {
-	background: #0078d7;
-	border-color: #0078d7;
+	background: $accent-color;
+	border-color: $accent-color;
 	color: #fff;
 }
 .btn-lesser {
 	background: none;
-	border-color: #0078d7;
+	border-color: $accent-color;
 }
 .btn-danger {
 	background: #cc240e;
@@ -60,7 +60,7 @@ button:disabled {
 .btn-link {
 	background: transparent;
 	border-color: transparent;
-	color: #0078d7;
+	color: $accent-color;
 	padding-left: 0;
 }
 .card .left .btn-link {
@@ -74,7 +74,7 @@ button:disabled {
 }
 .btn-link:hover {
 	background: transparent;
-	color: #1d5bbc;
+	color: $accent-color-hover;
 	border-color: transparent;
 }
 .btn-action {
@@ -108,14 +108,14 @@ button:disabled {
 	transition: all 0.2s;
 }
 .btn-action .btn:hover {
-	background: #0078d7 !important;
+	background: $accent-color !important;
 	color: #fff !important;
 	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45);
 	transition: width 0.2s initial;
 	min-width: 140px !important;
 }
 .btn-action .btn.btn-primary {
-	background: #0078d7 !important;
+	background: $accent-color !important;
 	min-width: 140px !important;
 	color: #fff !important;
 	transition: all 0.35s;

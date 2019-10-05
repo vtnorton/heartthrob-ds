@@ -1,10 +1,14 @@
+html {
+	font-size: 62.5%;
+}
+
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	overflow-x: hidden;
 	background: #f8f8f8;
-	font-size: 1em;
-	line-height: 150%;
-	color: #666;
+	font-size: 1.5em;
+	line-height: 140%;
+	color: #665;
 }
 
 h1,
@@ -50,14 +54,37 @@ h6 {
 	font-weight: 400;
 }
 
+.card h4 {
+	margin-bottom: 10px;
+}
+
 p {
 	margin: 5px 0 10px;
 }
 a {
-	color: #0078d7;
+	color: $accent-color;
 	text-decoration: none;
 	cursor: pointer;
+
+	&:hover {
+		color: #2572eb;
+		transition: 0.3s all;
+		-webkit-transition: 0.3s all;
+		-moz-transition: 0.3s all;
+		-ms-transition: 0.3s all;
+		-o-transition: 0.3s all;
+	}
+
+	&:visited {
+		color: #005ba6;
+		transition: 0.3s all;
+		-webkit-transition: 0.3s all;
+		-moz-transition: 0.3s all;
+		-ms-transition: 0.3s all;
+		-o-transition: 0.3s all;
+	}
 }
+
 i {
 	font-style: italic;
 }
@@ -79,7 +106,7 @@ blockquote,
 	border: 1px solid #e5e5e5;
 	margin: 30px 0;
 	margin-top: 12px;
-	border-left: 3px solid #0078d7;
+	border-left: 3px solid $accent-color;
 }
 blockquote footer {
 	text-align: right;

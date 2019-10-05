@@ -61,7 +61,7 @@
 	display: none !important;
 }
 .tag {
-	border: 1px solid #0078d7;
+	border: 1px solid $accent-color;
 	padding: 0 5px;
 	background: rgba(0, 120, 215, 0.3);
 }
@@ -75,7 +75,7 @@
 	height: 48px;
 }
 .accent {
-	color: #0078d7 !important;
+	color: $accent-color !important;
 }
 code .tag {
 	background: none;
