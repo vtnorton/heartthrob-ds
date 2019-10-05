@@ -2,11 +2,12 @@ button {
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
 }
+
 .btn,
 button {
-	border: 1px solid #ccc;
-	background: #ccc;
-	color: #000;
+	border: 1px solid $super-grey-color;
+	background: $super-grey-color;
+	color: $black-color;
 	min-height: 30px;
 	min-width: 110px;
 	padding: 10px 15px 0;
@@ -14,69 +15,78 @@ button {
 	display: inline-block;
 	text-align: center;
 	box-sizing: content-box;
+
+	&:hover{
+		border-color: $accent-color-hover;
+		background: $accent-color-hover;
+		color: $light-color;
+		-moz-transition: all 0.29s;
+		-o-transition: all 0.29s;
+		-webkit-transition: all 0.29s;
+		transition: all 0.29s;
+	}
+
+	&:disabled{
+		background: $grey-color;
+		border-color: $grey-color;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		cursor: not-allowed;
+	}
+
+	i {
+		font-size: 16px;
+		margin-right: 3px;
+	}
 }
-.btn:hover,
-button:hover {
-	border-color: $accent-color-hover;
-	background: $accent-color-hover;
-	color: #fff;
-	-moz-transition: all 0.29s;
-	-o-transition: all 0.29s;
-	-webkit-transition: all 0.29s;
-	transition: all 0.29s;
-}
-.btn:disabled,
-button:disabled {
-	background: GrayText;
-	border-color: GrayText;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	cursor: not-allowed;
-}
-.btn i {
-	font-size: 16px;
-	margin-right: 3px;
-}
+
 .btn-primary {
 	background: $accent-color;
 	border-color: $accent-color;
-	color: #fff;
+	color: $light-color;
 }
 .btn-lesser {
 	background: none;
 	border-color: $accent-color;
 }
 .btn-danger {
-	background: #cc240e;
-	border-color: #cc240e;
-	color: #fff;
+	background: $red-color;
+	border-color: $red-color;
+	color: $light-color;
 }
 .btn-danger:hover {
-	background: #d22;
-	border-color: #f00;
+	background: $red-color-hover;
+	border-color: $red-color-hover;
 }
 .btn-link {
 	background: transparent;
 	border-color: transparent;
 	color: $accent-color;
 	padding-left: 0;
+
+	&:hover {
+		background: transparent;
+		color: $accent-color-hover;
+		border-color: transparent;
+	}
+
+	i {
+		margin-right: 8px;
+	}
 }
-.card .left .btn-link {
-	text-align: left;
+
+.card{
+	.left .btn-link {
+		text-align: left;
+	}
+
+	.right .btn-link {
+		padding-right: 0;
+	}	
 }
-.card .right .btn-link {
-	padding-right: 0;
-}
-.btn-link i {
-	margin-right: 8px;
-}
-.btn-link:hover {
-	background: transparent;
-	color: $accent-color-hover;
-	border-color: transparent;
-}
+
 .btn-action {
 	width: intrinsic !important;
 	width: -moz-max-content !important;
