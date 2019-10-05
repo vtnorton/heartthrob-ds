@@ -1,14 +1,10 @@
-html {
-	font-size: 62.5%;
-}
-
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	overflow-x: hidden;
-	background: #f8f8f8;
-	font-size: 1.5em;
+	background: $light-grey-background-color;
+	font-size: 0.9375em;
 	line-height: 140%;
-	color: #665;
+	color: $soft-grey-color;
 }
 
 h1,
@@ -17,45 +13,44 @@ h3,
 h4,
 h5,
 h6 {
-	color: #000;
+	color: $black-color;
 	margin-bottom: 15px;
 }
 h1 {
-	font-size: 28px;
-	line-height: 36px;
+	font-size: 1.87em;
+	line-height: 2.3em;
 	font-weight: 400;
 }
 h2 {
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 1.6em;
+	line-height: 2.13em;
 	font-weight: 600;
 }
 h3 {
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 1.2em;
+	line-height: 1.6em;
 	font-weight: 600;
 }
 h4,
 b,
 strong,
 dl dt {
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 1em;
+	line-height: 1.35em;
 	font-weight: 600;
 }
-h5 {
-	font-size: 16px;
-	line-height: 20px;
+h5,
+h6 {
+	font-size: 1.06em;
+	line-height: 1.33em;
 	font-weight: 800;
 }
 h6 {
-	font-size: 16px;
-	line-height: 20px;
 	font-weight: 400;
 }
 
 .card h4 {
-	margin-bottom: 10px;
+	margin-bottom: 0.665em;
 }
 
 p {

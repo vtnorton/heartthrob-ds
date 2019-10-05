@@ -32,13 +32,13 @@
 	font-weight: 900;
 }
 .text-white {
-	color: #fff;
+	color: $light-color;
 }
 .text-mid-black {
-	color: #666666;
+	color: $grey-color;
 }
 .text-black {
-	color: #000;
+	color: $black-color;
 }
 .left {
 	float: left;
@@ -66,13 +66,13 @@
 	background: rgba(0, 120, 215, 0.3);
 }
 .space-low {
-	height: 15px;
+	height: 20px;
 }
 .space-medium {
-	height: 30px;
+	height: 35px;
 }
 .space-long {
-	height: 48px;
+	height: 50px;
 }
 .accent {
 	color: $accent-color !important;
