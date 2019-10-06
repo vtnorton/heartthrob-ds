@@ -55,10 +55,11 @@ button {
 	background: $red-color;
 	border-color: $red-color;
 	color: $light-color;
-}
-.btn-danger:hover {
-	background: $red-color-hover;
-	border-color: $red-color-hover;
+
+	&:hover {
+		background: $red-color-hover;
+		border-color: $red-color-hover;
+	}
 }
 .btn-link {
 	background: transparent;

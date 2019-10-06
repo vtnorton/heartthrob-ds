@@ -31,10 +31,10 @@
 	border-left: 5px solid $accent-color;
 }
 .cards-steps .view-done {
-	border-color: #009a32;
+	border-color: $green-color;
 }
 .cards-steps .view-warning {
-	border-color: #f9a40e;
+	border-color: $yellow-color;
 }
 .cards-actions .card {
 	cursor: pointer;
