@@ -7,40 +7,47 @@ input {
 	width: 100%;
 	min-height: 40px;
 	padding: 0 8px;
+	border-radius: 0;
 }
+
 textarea:focus,
 input:focus {
 	border-color: $accent-color;
 }
+
 textarea:disabled,
 input:disabled {
-	border-color: #ccc;
-	background: #e3e3e3;
+	border-color: $super-grey-color;
+	background: $light-grey-color;
 }
+
 textarea {
 	padding: 5px 8px;
 }
+
 select {
-	border: 3px solid #e6e6e6;
+	border: 3px solid $light-grey-color;
 	border-radius: 0;
 	font-weight: 400;
 	color: inherit;
 	padding: 11px 15px;
 	line-height: normal;
 	transition: border-color 0.2s ease, outline 0.2s ease;
-}
-select:focus {
-	box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset;
-	outline: 3px solid #005ba6;
-	outline-offset: -3px;
-}
-select[disabled],
-[include*="form-input-select()"] select:disabled {
-	opacity: 0.4;
-	cursor: not-allowed;
-}
-select:invalid {
-	color: #c7c7c7;
+
+	&:focus {
+		box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset;
+		outline: 3px solid $accent-color-visited;
+		outline-offset: -3px;
+	}
+
+	&[disabled],
+	[include*="form-input-select()"] &:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+	&:invalid {
+		color: $super-grey-color;
+	}
 }
 
 input[type="radio"],
@@ -62,7 +69,7 @@ input[type="checkbox"] {
 		vertical-align: text-top;
 		width: 20px;
 		height: 20px;
-		background: white;
+		background: $light-color;
 		border: 1px solid $accent-color;
 	}
 
@@ -86,7 +93,7 @@ input[type="checkbox"] {
 	&:disabled + label:before {
 		box-shadow: none;
 		background: #ddd;
-		border: 1px solid #ccc;
+		border: 1px solid $super-grey-color;
 	}
 
 	&:checked + label:after {
@@ -169,7 +176,7 @@ option,
 }
 
 .ui-menu-item-wrapper:hover {
-	background: #f8f8f8;
+	background: $light-grey-background-color;
 }
 .ui-helper-hidden-accessible {
 	display: none;
