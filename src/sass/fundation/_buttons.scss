@@ -45,7 +45,7 @@ button {
 .btn-primary {
 	background: $accent-color;
 	border-color: $accent-color;
-	color: $light-color;
+	color: $light-color !important;
 }
 .btn-lesser {
 	background: none;
@@ -54,7 +54,7 @@ button {
 .btn-danger {
 	background: $red-color;
 	border-color: $red-color;
-	color: $light-color;
+	color: $light-color !important;
 
 	&:hover {
 		background: $red-color-hover;
