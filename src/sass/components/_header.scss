@@ -157,56 +157,91 @@
 			}
 		}
 	}
-}
 
-.header #notifications i {
-	position: relative;
-	z-index: 7;
-}
-.header #notifications span {
-	color: #000;
-	position: relative;
-	left: 7px;
-	background: #f4f4f4;
-	width: 17px;
-	height: 17px;
-	display: block;
-	border-radius: 50%;
-	z-index: 6;
-	line-height: 16px;
-	font-size: 11px;
-	margin-top: -23px;
-	opacity: 0.75;
-}
-.header .menu {
-	display: none;
-	position: absolute;
-	z-index: 5;
-	width: 240px;
-	right: 0;
-}
-.header .menu li {
-	float: none;
-}
-.header .menu li a {
-	height: 32px;
-	width: 100% !important;
-	text-align: left !important;
-	padding: 0 !important;
-}
-.header .menu li a.active {
-	border: 0;
+	.menu {
+		display: none;
+		position: absolute;
+		z-index: 5;
+		width: 240px;
+		right: 0;
+
+		li {
+			float: none;
+			width: auto;
+
+			a {
+				height: 35px;
+				width: 100% !important;
+				text-align: left !important;
+				padding: 0 !important;
+				line-height: 35px;
+				border: none !important;
+				font-weight: 400;
+
+				&.active {
+					border: 0;
+				}
+
+				&.no-icon {
+					padding-left: 40px !important;
+				}
+
+				i {
+					padding: 0;
+
+				}
+			}
+
+			ul{
+				display: none !important;
+				padding: 0;
+			}
+
+			&:hover ul{
+				display: block !important;
+			}
+			&.line {
+				background: none;
+			}
+		}
+
+		&.dark ul{
+			background: transparent !important;
+		}
+
+		.more:after{
+			position: absolute;
+			right: 0;
+		}
+	}
+	#notifications {
+		span {
+			color: #000;
+			position: relative;
+			left: 7px;
+			background: #f4f4f4;
+			width: 17px;
+			height: 17px;
+			display: block;
+			border-radius: 50%;
+			z-index: 6;
+			line-height: 16px;
+			font-size: 11px;
+			margin-top: -23px;
+			opacity: 0.75;
+		}
+		i {
+			position: relative;
+			z-index: 7;
+		}
+	}
+
 }
 .header .right ul li:last-child .menu li i,
 .header .menu li:last-child a i {
 	margin-top: 8px;
 }
-.header .menu li a.no-icon {
-	padding-left: 40px !important;
-}
-.header .menu .line {
-	background: none;
-}
+
 .header .user-img,
 .icon {
 	width: 32px;
