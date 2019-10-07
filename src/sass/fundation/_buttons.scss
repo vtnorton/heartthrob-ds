@@ -1,32 +1,38 @@
 button {
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
+	position: relative;
+    top: -1px;
 }
 
 .btn,
 button {
 	border: 1px solid $super-grey-color;
+	font-family: $default-font;
+	line-height: 140%;
+	font-size: 1em;
 	background: $super-grey-color;
-	color: $black-color;
+	color: $black-color !important;
 	min-height: 30px;
 	min-width: 110px;
 	padding: 10px 15px 0;
 	cursor: pointer;
+	border-radius: 0px;
 	display: inline-block;
 	text-align: center;
 	box-sizing: content-box;
 
-	&:hover{
+	&:hover {
 		border-color: $accent-color-hover;
 		background: $accent-color-hover;
-		color: $light-color;
+		color: $light-color !important;
 		-moz-transition: all 0.29s;
 		-o-transition: all 0.29s;
 		-webkit-transition: all 0.29s;
 		transition: all 0.29s;
 	}
 
-	&:disabled{
+	&:disabled {
 		background: $grey-color;
 		border-color: $grey-color;
 		-moz-transition: all 0.3s;
@@ -78,14 +84,14 @@ button {
 	}
 }
 
-.card{
+.card {
 	.left .btn-link {
 		text-align: left;
 	}
 
 	.right .btn-link {
 		padding-right: 0;
-	}	
+	}
 }
 
 /* to fix issues into this it will need to go to the 

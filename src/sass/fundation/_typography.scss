@@ -1,5 +1,7 @@
+$default-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 body {
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: $default-font;
 	overflow-x: hidden;
 	background: $light-grey-background-color;
 	font-size: 0.9375em;
