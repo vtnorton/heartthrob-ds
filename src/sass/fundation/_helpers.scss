@@ -61,18 +61,18 @@
 	display: none !important;
 }
 .tag {
-	border: 1px solid $accent-color;
-	padding: 0 5px;
+	border: 0.067em solid $accent-color;
+	padding: 0 0.333em;
 	background: rgba(0, 120, 215, 0.3);
 }
 .space-low {
-	height: 20px;
+	height: 1.333em;
 }
 .space-medium {
-	height: 35px;
+	height: 2.333em;
 }
 .space-long {
-	height: 50px;
+	height: 3.333em;
 }
 .accent {
 	color: $accent-color !important;

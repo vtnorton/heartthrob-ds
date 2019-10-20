@@ -1,5 +1,5 @@
 .nav {
-	width: 250px;
+	width: 16.667em;
 	background: #666;
 	float: left;
 	z-index: 9;
@@ -9,44 +9,44 @@
 }
 .nav a.child:after {
 	content: " ";
-	width: 10px;
-	height: 10px;
+	width: 0.667em;
+	height: 0.667em;
 	display: block;
 	position: absolute;
-	right: 20px;
-	margin-top: -15px;
+	right: 1.333em;
+	margin-top: -1.000em;
 	border: solid rgba(255, 255, 255, 0.5);
-	border-width: 0 2px 2px 0;
+	border-width: 0 0.133em 0.133em 0;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 }
 .nav .nav-bottom-menus a.child:after {
 	transform: rotate(225deg);
 	-webkit-transform: rotate(225deg);
-	margin-top: -12px;
+	margin-top: -0.800em;
 }
 .nav a {
 	color: #fff;
-	font-size: 14px;
+	font-size: 0.933em;
 	text-decoration: none;
 	width: 100%;
 	display: block;
-	padding: 14px 20px;
-	height: 48px;
+	padding: 0.933em 1.333em;
+	height: 3.200em;
 }
 .nav a:hover {
 	background: #555;
 	transition: all 0.3s;
 }
 .nav a i {
-	width: 25px;
+	width: 1.667em;
 	text-align: center;
-	font-size: 14px;
-	margin-right: 5px;
+	font-size: 0.933em;
+	margin-right: 0.333em;
 }
 .nav a.active {
-	border-left: 3px solid $accent-color;
-	padding-left: 17px;
+	border-left: 0.200em solid $accent-color;
+	padding-left: 1.133em;
 }
 .nav ul li ul a.active {
 	background: #444 !important;
@@ -64,22 +64,22 @@
 .nav ul li ul li a {
 	background: #555;
 	transition: all 0.3s;
-	height: 40px;
-	padding: 9px 20px;
+	height: 2.667em;
+	padding: 0.600em 1.333em;
 }
 .nav ul li ul li a:hover {
 	background: #444;
 	transition: all 0.3s;
 }
 .nav .nav-bottom-menus {
-	margin-bottom: 10px;
+	margin-bottom: 0.667em;
 }
 .nav .nav-bottom-menus:before,
 .nav-top-menus:before {
 	content: " ";
-	border-top: 1px solid rgba(255, 255, 255, 0.4);
+	border-top: 0.067em solid rgba(255, 255, 255, 0.4);
 	display: block;
-	margin: -2px 16px 7px;
+	margin: -0.133em 1.067em 0.467em;
 }
 .nav .nav-bottom-menus {
 	position: absolute;
@@ -87,24 +87,24 @@
 	width: 100%;
 }
 .nav.middle {
-	width: 200px;
+	width: 13.333em;
 }
 .nav.middle a {
-	padding: 14px 10px;
+	padding: 0.933em 0.667em;
 }
 .nav.middle a.active {
-	padding-left: 7px;
+	padding-left: 0.467em;
 }
 .nav.middle ul li ul li a {
-	padding: 9px 10px;
+	padding: 0.600em 0.667em;
 }
 .nav.middle .nav-bottom-menus:before,
 nav.middle .nav-top-menus:before {
-	margin: -2px 10px 7px;
+	margin: -0.133em 0.667em 0.467em;
 }
 .nav.light {
 	background: #ebebeb;
-	border-right: 1px solid #ccc;
+	border-right: 0.067em solid #ccc;
 }
 .nav.light a {
 	color: #111;

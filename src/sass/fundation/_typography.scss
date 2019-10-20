@@ -56,7 +56,7 @@ h6 {
 }
 
 p {
-	margin: 0.3em 0 0.6em;
+	margin: 0.3em 0 0;
 }
 a {
 	color: $accent-color;
@@ -87,7 +87,7 @@ i {
 }
 hr {
 	border-bottom: none !important;
-	border: 1px solid #ccc;
+	border: 0.067em solid #ccc;
 	margin: .6em 0 1em;
 }
 li {
@@ -99,16 +99,16 @@ blockquote,
 .validation-summary-valid,
 .validation-summary-errors {
 	background: #ffffff;
-	padding: 1em 20px;
-	border: 1px solid $light-grey-color;
+	padding: 1em 1.333em;
+	border: 0.067em solid $light-grey-color;
 	margin: 2em 0;
-	margin-top: 12px;
-	border-left: 3px solid $accent-color;
+	margin-top: 0.800em;
+	border-left: 0.200em solid $accent-color;
 }
 
 .card blockquote {
 	box-shadow: none;
-	border: 1px solid $super-grey-color;
+	border: 0.067em solid $super-grey-color;
 	margin: .53em 0 0;
 }
 
@@ -142,11 +142,11 @@ blockquote{
 		&:before {
 			content: " ";
 			width: 1em;
-			border-bottom: 2px solid $grey-color;
+			border-bottom: 0.133em solid $grey-color;
 			display: inline-block;
 			position: relative;
-			top: -3px;
-			margin-right: 6px;
+			top: -0.200em;
+			margin-right: 0.400em;
 		}
 	}
 }

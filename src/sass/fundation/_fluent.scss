@@ -9,8 +9,8 @@
 header.acrylic,
 .menu.dark,
 .menu.dark ul {
-	-webkit-backdrop-filter: blur(15px) saturate(125%) !important;
-	backdrop-filter: blur(15px) saturate(125%) !important;
+	-webkit-backdrop-filter: blur(1.000em) saturate(125%) !important;
+	backdrop-filter: blur(1.000em) saturate(125%) !important;
 }
 .acrylic,
 .menu,
@@ -35,8 +35,8 @@ header.acrylic,
 	background: rgba(40, 40, 40, 0.8) !important;
 }
 .alert-modal {
-	-webkit-backdrop-filter: blur(10px) saturate(125%);
-	backdrop-filter: blur(10px) saturate(125%);
+	-webkit-backdrop-filter: blur(0.667em) saturate(125%);
+	backdrop-filter: blur(0.667em) saturate(125%);
 	background: rgba(40, 40, 40, 0.5);
 }
 header.acrylic {
@@ -44,7 +44,7 @@ header.acrylic {
 }
 
 .no-shadow {
-	border: 1px solid $super-grey-color;
+	border: 0.067em solid $super-grey-color;
 }
 .shadow,
 .ui-autocomplete,
@@ -52,7 +52,7 @@ header.acrylic {
 .menu ul,
 header .menu,
 header ul li ul {
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0.267em 2.000em rgba(0, 0, 0, 0.25);
 }
 .shadow-middle,
 header ul li a:hover,
@@ -60,9 +60,9 @@ blockquote,
 .card,
 .validation-summary-valid,
 .validation-summary-errors {
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0.267em 0.667em rgba(0, 0, 0, 0.25);
 }
 .shadow-max,
 .alert {
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.267em 1.333em rgba(0, 0, 0, 0.4);
 }

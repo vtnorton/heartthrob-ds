@@ -1,23 +1,23 @@
 button {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
+	padding-top: 0.333em !important;
+	padding-bottom: 0.333em !important;
 	position: relative;
-    top: -1px;
+    top: -0.067em;
 }
 
 .btn,
 button {
-	border: 1px solid $super-grey-color;
+	border: 0.067em solid $super-grey-color;
 	font-family: $default-font;
 	line-height: 140%;
 	font-size: 1em;
 	background: $super-grey-color;
 	color: $black-color !important;
-	min-height: 30px;
-	min-width: 110px;
-	padding: 10px 15px 0;
+	min-height: 2.000em;
+	min-width: 7.333em;
+	padding: 0.667em 1.000em 0;
 	cursor: pointer;
-	border-radius: 0px;
+	border-radius: 0;
 	display: inline-block;
 	text-align: center;
 	box-sizing: content-box;
@@ -43,8 +43,8 @@ button {
 	}
 
 	i {
-		font-size: 16px;
-		margin-right: 3px;
+		font-size: 1.067em;
+		margin-right: 0.200em;
 	}
 }
 
@@ -70,17 +70,17 @@ button {
 .btn-link {
 	background: transparent;
 	border-color: transparent;
-	color: $accent-color;
+	color: $accent-color !important;
 	padding-left: 0;
 
 	&:hover {
 		background: transparent;
-		color: $accent-color-hover;
+		color: $accent-color-hover !important;
 		border-color: transparent;
 	}
 
 	i {
-		margin-right: 8px;
+		margin-right: 0.533em;
 	}
 }
 
@@ -102,15 +102,15 @@ button {
 	width: -webkit-max-content !important;
 }
 .btn-action .btn {
-	padding-top: 11px !important;
+	padding-top: 0.733em !important;
 	color: #000 !important;
-	padding-left: 16px !important;
-	min-width: 45px !important;
-	max-width: 45px !important;
-	height: 45px !important;
-	border-radius: 50px !important;
-	margin-right: 10px !important;
-	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+	padding-left: 1.067em !important;
+	min-width: 3.000em !important;
+	max-width: 3.000em !important;
+	height: 3.000em !important;
+	border-radius: 3.333em !important;
+	margin-right: 0.667em !important;
+	box-shadow: 0 0.133em 0.467em rgba(0, 0, 0, 0.25);
 	background: #fff !important;
 	border: none !important;
 	float: left !important;
@@ -122,27 +122,27 @@ button {
 	text-align: left;
 }
 .btn-action:hover .btn.btn-primary {
-	min-width: 50px !important;
-	max-width: 50px !important;
+	min-width: 3.333em !important;
+	max-width: 3.333em !important;
 	transition: all 0.2s;
 }
 .btn-action .btn:hover {
 	background: $accent-color !important;
 	color: #fff !important;
-	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45);
+	box-shadow: 0 0.333em 0.933em rgba(0, 0, 0, 0.45);
 	transition: width 0.2s initial;
-	min-width: 140px !important;
+	min-width: 9.333em !important;
 }
 .btn-action .btn.btn-primary {
 	background: $accent-color !important;
-	min-width: 140px !important;
+	min-width: 9.333em !important;
 	color: #fff !important;
 	transition: all 0.35s;
 }
 .btn-action .btn i {
-	font-size: 16px !important;
-	margin-right: 15px !important;
-	margin-top: 3px !important;
+	font-size: 1.067em !important;
+	margin-right: 1.000em !important;
+	margin-top: 0.200em !important;
 }
 .btn-action .btn.btn-primary i {
 	color: #fff !important;

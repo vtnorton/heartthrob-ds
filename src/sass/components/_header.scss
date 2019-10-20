@@ -1,7 +1,7 @@
 .header {
 	width: 100%;
 	background: #2e2e2e;
-	height: 48px;
+	height: 3.200em;
 	z-index: 20;
 	position: fixed;
 	a {
@@ -10,18 +10,18 @@
 	.logo {
 		float: left;
 		img {
-			max-height: 25px;
-			margin: 12px 0 0 12px;
+			max-height: 1.667em;
+			margin: 0.800em 0 0 0.800em;
 			cursor: pointer;
 			width: auto;
 		}
 	}
 	.line {
 		float: left;
-		height: 32px;
-		width: 1px;
+		height: 2.133em;
+		width: 0.067em;
 		background: #c3c3c3;
-		margin: 8px 24px;
+		margin: 0.533em 1.600em;
 	}
 	ul {
 		list-style: none;
@@ -30,44 +30,44 @@
 		li {
 			float: left;
 			margin: 0;
-			margin-right: 16px;
+			margin-right: 1.067em;
 			&:last-child {
 				margin-right: 0;
 			}
 			a {
 				display: block;
-				height: 48px;
-				font-size: 15px;
+				height: 3.200em;
+				font-size: 1.000em;
 				color: #c3c3c3;
-				line-height: 48px;
+				line-height: 3.200em;
 				font-weight: 600;
-				padding: 0 8px;
+				padding: 0 0.533em;
 				&:hover {
 					color: #fff;
-					border-bottom: 2px solid $accent-color;
+					border-bottom: 0.133em solid $accent-color;
 					background: #3a3a3a;
 					transition: all 0.3s;
 				}
 				&.active {
-					border-bottom: 2px solid $accent-color;
+					border-bottom: 0.133em solid $accent-color;
 					color: #fff;
 				}
 				i {
-					font-size: 15px !important;
-					margin-right: 5px;
-					width: 18px;
+					font-size: 1.000em !important;
+					margin-right: 0.333em;
+					width: 1.200em;
 					text-align: center;
 				}
 				&.child:after {
 					content: " ";
-					width: 10px;
-					height: 10px;
+					width: 0.667em;
+					height: 0.667em;
 					display: inline-block;
 					position: relative;
-					margin-left: 13px;
-					top: -3px;
+					margin-left: 0.867em;
+					top: -0.200em;
 					border: solid rgba(255, 255, 255, 0.5);
-					border-width: 0 2px 2px 0;
+					border-width: 0 0.133em 0.133em 0;
 					transform: rotate(45deg);
 					-webkit-transform: rotate(45deg);
 				}
@@ -76,13 +76,13 @@
 				display: none;
 				li {
 					float: none;
-					width: calc(100% + 50px);
+					width: calc(100% + 3.333em);
 					a {
 						background: #6b6b6b;
-						border-left: 3px solid transparent;
-						padding: 0 10px 0 7px;
+						border-left: 0.200em solid transparent;
+						padding: 0 0.667em 0 0.467em;
 						&:hover {
-							border-left: 3px solid $accent-color;
+							border-left: 0.200em solid $accent-color;
 							background: #555;
 							border-bottom: none;
 						}
@@ -103,9 +103,9 @@
 		position: relative;
 		a {
 			color: #fff;
-			width: 48px;
+			width: 3.200em;
 			text-align: center;
-			padding: 0 15px;
+			padding: 0 1.000em;
 			i {
 				margin: 0;
 				position: relative;
@@ -126,7 +126,7 @@
 	}
 
 	.search {
-		height: 48px;
+		height: 3.200em;
 		a {
 			position: relative;
 			z-index: 8;
@@ -134,7 +134,7 @@
 				text-align: right !important;
 				width: auto !important;
 				color: #2e2e2e !important;
-				margin-left: 192px !important;
+				margin-left: 12.800em !important;
 				&:hover {
 					background: none !important;
 					transition: all 0.3s;
@@ -144,13 +144,14 @@
 		}
 		input {
 			display: none;
-			height: 48px;
+			height: 3.534em;
 			position: relative;
-			top: -52px;
+			top: -3.467em;
 			z-index: 7;
-			min-width: 320px;
+			min-width: 21.333em;
 			border: none;
 			background: #f4f4f4;
+			margin-top: -1px;
 			&:hover {
 				background: #fff !important;
 				transition: all 0.3s;
@@ -162,7 +163,7 @@
 		display: none;
 		position: absolute;
 		z-index: 5;
-		width: 240px;
+		width: 16.000em;
 		right: 0;
 
 		li {
@@ -170,11 +171,11 @@
 			width: auto;
 
 			a {
-				height: 35px;
+				height: 2.333em;
 				width: 100% !important;
 				text-align: left !important;
 				padding: 0 !important;
-				line-height: 35px;
+				line-height: 2.333em;
 				border: none !important;
 				font-weight: 400;
 
@@ -183,7 +184,7 @@
 				}
 
 				&.no-icon {
-					padding-left: 40px !important;
+					padding-left: 2.667em !important;
 				}
 
 				i {
@@ -218,16 +219,16 @@
 		span {
 			color: #000;
 			position: relative;
-			left: 7px;
+			left: 0.467em;
 			background: #f4f4f4;
-			width: 17px;
-			height: 17px;
+			width: 1.133em;
+			height: 1.133em;
 			display: block;
 			border-radius: 50%;
 			z-index: 6;
-			line-height: 16px;
-			font-size: 11px;
-			margin-top: -23px;
+			line-height: 1.067em;
+			font-size: 0.733em;
+			margin-top: -20.200em;
 			opacity: 0.75;
 		}
 		i {
@@ -239,16 +240,16 @@
 }
 .header .right ul li:last-child .menu li i,
 .header .menu li:last-child a i {
-	margin-top: 8px;
+	margin-top: 0.533em;
 }
 
 .header .user-img,
 .icon {
-	width: 32px;
-	height: 32px;
+	width: 2.133em;
+	height: 2.133em;
 	border-radius: 50%;
 	background: #c3c3c3;
-	margin: 8px 10px 0 -7px;
+	margin: 0.533em 0.667em 0 -0.467em;
 	position: relative;
 }
 .header .user-img img {
@@ -257,12 +258,12 @@
 .header .user-img span,
 .icon span {
 	display: block;
-	margin-top: -8px;
+	margin-top: -0.533em;
 	font-style: italic;
 	color: #fff;
 }
 .icon span {
 	text-align: center;
-	line-height: 32px;
+	line-height: 2.133em;
 	font-weight: 600;
 }

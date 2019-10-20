@@ -2,17 +2,17 @@
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    margin-top: 10px;
-    border: 1px solid #ccc;
+    margin-top: 0.667em;
+    border: 0.067em solid #ccc;
 
     & tr {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 0.067em solid #ccc;
     }
 
     & > thead {
         border-top: none !important;
         font-weight: 600;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.133em;
 
         &:hover {
             background: none;
@@ -20,7 +20,7 @@
     }
 
     & tr td {
-        padding: 9px 3px 8px 11px;
+        padding: 0.600em 0.200em 0.533em 0.733em;
 
         &:last-of-type {
             padding-right: 0 !important;
@@ -29,7 +29,7 @@
 }
 
 .table-condensed tr td {
-    padding: 3px 1px 4px 5px;
+    padding: 0.200em 0.067em 0.267em 0.333em;
 }
 
 .table-striped > tbody > tr {
@@ -47,5 +47,5 @@
 }
 
 .table-bordered, .table-bordered tr td {
-    border: 1px solid #ccc;
+    border: 0.067em solid #ccc;
 }

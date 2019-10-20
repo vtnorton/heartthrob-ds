@@ -1,12 +1,12 @@
 select,
 textarea,
 input {
-	border: 1px solid #bababa;
+	border: 0.067em solid #bababa;
 	background: #fff;
-	margin: 4px 0;
+	margin: 0.267em 0;
 	width: 100%;
-	min-height: 40px;
-	padding: 0 8px;
+	min-height: 2.667em;
+	padding: 0 0.533em;
 	border-radius: 0;
 }
 
@@ -22,22 +22,22 @@ input:disabled {
 }
 
 textarea {
-	padding: 5px 8px;
+	padding: 0.333em 0.533em;
 }
 
 select {
-	border: 3px solid $light-grey-color;
+	border: 0.200em solid $light-grey-color;
 	border-radius: 0;
 	font-weight: 400;
 	color: inherit;
-	padding: 11px 15px;
+	padding: 0.733em 1.000em;
 	line-height: normal;
 	transition: border-color 0.2s ease, outline 0.2s ease;
 
 	&:focus {
-		box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset;
-		outline: 3px solid $accent-color-visited;
-		outline-offset: -3px;
+		box-shadow: 0 0.200em 0.267em rgba(0, 91, 166, 0.3) inset;
+		outline: 0.200em solid $accent-color-visited;
+		outline-offset: -0.200em;
 	}
 
 	&[disabled],
@@ -63,14 +63,14 @@ input[type="checkbox"] {
 
 	& + label:before {
 		content: "";
-		margin-bottom: 5px;
-		margin-right: 10px;
+		margin-bottom: 0.333em;
+		margin-right: 0.667em;
 		display: inline-block;
 		vertical-align: text-top;
-		width: 20px;
-		height: 20px;
+		width: 1.333em;
+		height: 1.333em;
 		background: $light-color;
-		border: 1px solid $accent-color;
+		border: 0.067em solid $accent-color;
 	}
 
 	&:hover + label:before {
@@ -78,7 +78,7 @@ input[type="checkbox"] {
 	}
 
 	&:focus + label:before {
-		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 0 0 0.200em rgba(0, 0, 0, 0.12);
 	}
 
 	&:checked + label:before {
@@ -93,41 +93,41 @@ input[type="checkbox"] {
 	&:disabled + label:before {
 		box-shadow: none;
 		background: #ddd;
-		border: 1px solid $super-grey-color;
+		border: 0.067em solid $super-grey-color;
 	}
 
 	&:checked + label:after {
 		content: "";
 		position: absolute;
-		left: 5px;
-		top: 9px;
+		left: 0.333em;
+		top: 0.600em;
 		background: white;
-		width: 2px;
-		height: 2px;
-		box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
-			4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+		width: 0.133em;
+		height: 0.133em;
+		box-shadow: 0.133em 0 0 white, 0.267em 0 0 white, 0.267em -0.133em 0 white,
+			0.267em -0.267em 0 white, 0.267em -0.400em 0 white, 0.267em -0.533em 0 white;
 		transform: rotate(45deg);
 	}
 }
 
 input[type="radio"] {
 	& + label:before {
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-ms-border-radius: 20px;
-		-o-border-radius: 20px;
+		border-radius: 1.333em;
+		-webkit-border-radius: 1.333em;
+		-moz-border-radius: 1.333em;
+		-ms-border-radius: 1.333em;
+		-o-border-radius: 1.333em;
 	}
 }
 
 .field-validation-error,
 .validator {
-	border-top: 3px solid $accent-color;
-	padding-top: 3px;
+	border-top: 0.200em solid $accent-color;
+	padding-top: 0.200em;
 	display: block;
 	width: 100%;
-	font-size: 14px;
-	margin-bottom: 8px;
+	font-size: 0.933em;
+	margin-bottom: 0.533em;
 }
 
 .field-validation-error {
@@ -143,7 +143,7 @@ input[type="radio"] {
 	border-left-color: $red-color;
 	ul {
 		margin: 0;
-		padding: 0 10px;
+		padding: 0 0.667em;
 
 		li {
 			color: $red-color;
@@ -160,19 +160,19 @@ input[type="radio"] {
 	position: absolute;
 	z-index: 8;
 	float: left;
-	min-width: 160px;
+	min-width: 10.667em;
 	padding: 0;
-	margin: -40px 0 0;
+	margin: -2.667em 0 0;
 	list-style: none;
 	background-color: #fcfcfc;
 }
 
 option,
 .ui-menu-item-wrapper {
-	font-size: 15px;
-	height: 40px;
-	padding-left: 12px;
-	padding-top: 8px;
+	font-size: 1.000em;
+	height: 2.667em;
+	padding-left: 0.800em;
+	padding-top: 0.533em;
 }
 
 .ui-menu-item-wrapper:hover {
