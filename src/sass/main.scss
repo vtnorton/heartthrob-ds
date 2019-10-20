@@ -21,19 +21,3 @@
    classes get on the end of the file*/
 @import 'fundation/fluent';
 @import 'fundation/media';
-
-
-/* Telerik Fixes */
-/* this needs to be merged into the kendo.heartthrob.css */
-.k-calendar .k-content thead, .k-calendar .k-footer, .k-calendar .k-header, .k-gantt .k-grid-header, .k-grid .k-header, .k-scheduler-header .k-scheduler-table, .k-tabstrip-items { text-transform: none !important }
-.k-pager-sizes { display: inline-flex !important; padding-top: 0 !important; width: 23% !important }
-.k-pager-numbers .k-link { margin-top: -0.400em !important }
-.k-grid-header .k-link .k-icon.k-i-sort-asc-sm, .k-grid-header .k-link .k-icon.k-i-sort-desc-sm, .k-grid-header .k-link .k-sort-order { margin-top: 0.400em !important; margin-left: 0.067em !important; }
-.k-grid .k-grouping-row td, .k-grid .k-hierarchy-cell { padding: 0 0 0 0.933em !important }
-.k-tabstrip.k-header { background: transparent !important }
-.k-tabstrip .k-content.k-state-active { background-color: #fff !important; border: 0.067em solid #ccc !important; margin-bottom: 1.000em !important; padding: 0 !important }
-.k-tabstrip .k-item.k-state-active { border-color: none !important; border-bottom: 0.133em solid #2572EB !important; background-color: transparent !important; margin-bottom: 0 !important }
-.k-tabstrip .k-item { background-color: transparent !important; border-color: transparent !important; margin-right: 0.467em !important }
-.k-tabstrip-items .k-link { font-size: 1.067em !important; padding: 0.467em 0 !important; }
-.k-tabstrip .k-content.k-state-active .k-grid { border: none !important }
-.k-detail-cell .k-command-cell .k-button .k-icon { margin-top: 0.133em !important }

@@ -71,11 +71,7 @@ $(document).ready(function () {
 		$('.cards-actions .card').removeClass('opened', 300)
 		$(this).addClass('opened', 300)
 	})
-
-	// if ($(".treeview ul li ul li a").hasClass("active")) {
-	//    $(".treeview a.active").parent().parent().show();
-	// };
-
+	
 	if ($('.nav ul li ul li a').hasClass('active')) {
 		$('.nav a.active').parent().parent().parent().css('background', '#555')
 		$('.nav.light a.active').parent().parent().parent().css('background', '#d9d9d9')
@@ -237,54 +233,6 @@ function getCookie (name) {
 	return null
 }
 
-$.fn.extend({
-	treeview: function () {
-		return this.each(function () {
-			var tree = $(this)
-
-			tree.addClass('treeview-tree')
-			tree.find('li').has('ul').each(function () {
-				var branch = $(this) // li with children ul
-
-				branch.prepend("<i class='tree-indicator fa fa-chevron-right'></i>")
-				branch.addClass('tree-branch')
-				branch.on('click', function (e) {
-					if (this === e.target) {
-						var icon = $(this).children('i:first')
-						icon.toggleClass('fa-chevron-down fa-chevron-right')
-						$(this).children().children().toggle()
-					}
-				})
-				branch.children().children().toggle()
-
-				/**
-				 *	The following snippet of code enables the treeview to
-				 *	function when a button, indicator or anchor is clicked.
-				 *
-				 *	It also prevents the default function of an anchor and
-				 *	a button from firing.
-				 */
-				branch.children('.tree-indicator, button, a').click(function (e) {
-					branch.click()
-					$('.tree-branch .active').parent().show()
-				})
-			})
-			$('.tree-branch .active').parent().show()
-		})
-	}
-})
-
-/**
- *	The following snippet of code automatically converst
- *	any '.treeview' DOM elements into a treeview component.
- */
-$(window).on('load', function () {
-	$('.treeview').each(function () {
-		var tree = $(this)
-		tree.treeview()
-	})
-})
-
 function checkStrength (password, output) {
 	var strength = 0
 
@@ -358,13 +306,4 @@ function preencherdados (conteudo) {
 		})
 		dropdownlist.trigger('change')
 	}
-}
-
-/* kendo-ui functions */
-function CellCloseScript (e) {
-	this.saveChanges()
-}
-
-function noEdit (dataItem) {
-	return dataItem.Id === 0
 }
