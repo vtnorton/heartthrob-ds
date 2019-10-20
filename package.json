@@ -8,8 +8,8 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "1.4.0",
-    "merge-stream": "^2.0.0",
-    "heartthrob-vision": "^1.1.4"
+    "heartthrob-vision": "^1.1.4",
+    "merge-stream": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -20,14 +20,14 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "gulp-js-minify": "0.0.3",
+    "gulp-remove-empty-lines": "^0.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
-    "test": "echo 'nothing here'",
-    "build-sass": "npx gulp sass"
+    "build": "nxp gulp build",
+    "build-dev": "nxp gulp build-dev"
   },
   "repository": {
     "type": "git",
