@@ -289,7 +289,7 @@ function pesquisarCep (value) {
 			script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados'
 			document.body.appendChild(script)
 		} else {
-			alert('Formato de CEP inválido.')
+			console.error('Formato de CEP inválido: ' + cep)
 		}
 	}
 };
