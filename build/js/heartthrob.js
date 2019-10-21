@@ -71,7 +71,7 @@ $(document).ready(function () {
 		$('.cards-actions .card').removeClass('opened', 300)
 		$(this).addClass('opened', 300)
 	})
-	
+
 	if ($('.nav ul li ul li a').hasClass('active')) {
 		$('.nav a.active').parent().parent().parent().css('background', '#555')
 		$('.nav.light a.active').parent().parent().parent().css('background', '#d9d9d9')

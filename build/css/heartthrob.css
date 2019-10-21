@@ -232,7 +232,7 @@ h6 { font-weight: 400; }
 .card h4 { margin-bottom: 0.665em; }
 p { margin: 0.3em 0 0; }
 a { color: #0078d7; text-decoration: none; cursor: pointer; }
-a:hover { color: #2572eb; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
+a:hover { color: #2572eb !important; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
 a:visited { color: #005ba6; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
 i { font-style: italic; }
 hr { border-bottom: none !important; border: 0.067em solid #ccc; margin: .6em 0 1em; }

@@ -71,7 +71,7 @@ $(document).ready(function () {
 		$('.cards-actions .card').removeClass('opened', 300)
 		$(this).addClass('opened', 300)
 	})
-	
+
 	if ($('.nav ul li ul li a').hasClass('active')) {
 		$('.nav a.active').parent().parent().parent().css('background', '#555')
 		$('.nav.light a.active').parent().parent().parent().css('background', '#d9d9d9')
@@ -163,28 +163,28 @@ function removeAcento (text) {
 }
 
 function addNotification () {
-	const campo = '#notifications span'
+	const placeholder = '#notifications span'
 	let itens = 1
 
-	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + 1
+	if ($(placeholder).text()) {
+		itens = parseInt($(placeholder).text(), 10) + 1
 	} else {
 		$('#notifications').append('<span></span>')
 	}
 
 	if (itens < 10) {
-		$(campo).html('').append(itens)
+		$(placeholder).html('').append(itens)
 	} else {
-		$(campo).html('').append('9+')
+		$(placeholder).html('').append('9+')
 	}
 }
 
-function addNotificationNum (quantidade) {
+function addNotificationNum (number) {
 	campo = '#notifications span'
-	itens = quantidade
+	itens = number
 
 	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + quantidade
+		itens = parseInt($(campo).text(), 10) + number
 	} else {
 		$('#notifications').append('<span></span>')
 	}
@@ -200,17 +200,17 @@ function clearNotification () {
 	$('#notifications span').remove('')
 }
 
-function goToStep (destino, mensageiro) {
-	$('#' + mensageiro).removeClass('opened', 650)
-	$('#' + destino).addClass('opened', 650)
+function goToStep (destiny, origin) {
+	$('#' + origin).removeClass('opened', 650)
+	$('#' + destiny).addClass('opened', 650)
 }
 
-function setDone (destino) {
-	$('#' + destino).addClass('view-done', 100)
+function setDone (destiny) {
+	$('#' + destiny).addClass('view-done', 100)
 }
 
-function setWarning (destino) {
-	$('#' + destino).addClass('view-warning', 650)
+function setWarning (destiny) {
+	$('#' + destiny).addClass('view-warning', 650)
 }
 
 function setCookie (name, value, days) {
@@ -280,8 +280,8 @@ function allTheSame (array) {
 	})
 }
 
-function pesquisarCep (valor) {
-	var cep = valor.replace(/\D/g, '')
+function pesquisarCep (value) {
+	var cep = value.replace(/\D/g, '')
 	if (cep !== '') {
 		var validacep = /^[0-9]{8}$/
 		if (validacep.test(cep)) {
@@ -294,16 +294,10 @@ function pesquisarCep (valor) {
 	}
 };
 
-function preencherdados (conteudo) {
-	if (!('erro' in conteudo)) {
-		document.getElementById('rua').value = conteudo.logradouro
-		document.getElementById('bairro').value = conteudo.bairro
-		document.getElementById('cidade').value = conteudo.localidade
-
-		const dropdownlist = $('#State').data('kendoDropDownList')
-		dropdownlist.select(function (dataItem) {
-			return dataItem === conteudo.uf
-		})
-		dropdownlist.trigger('change')
+function preencherdados (content) {
+	if (!('erro' in content)) {
+		document.getElementById('rua').value = content.logradouro
+		document.getElementById('bairro').value = content.bairro
+		document.getElementById('cidade').value = content.localidade
 	}
 }
