@@ -1,0 +1,23 @@
+@import 'fundation/reset';
+@import 'fundation/colors';
+@import 'fundation/grid';
+@import 'fundation/typography';
+@import 'fundation/helpers';
+@import 'fundation/buttons';
+@import 'fundation/inputs';
+
+@import "components/tables";
+@import 'components/alert';
+@import 'components/cards';
+@import 'components/header';
+@import 'components/menu';
+@import 'components/navigation';
+@import 'components/sidebar';
+@import 'components/toolbar';
+
+@import 'pages/pages';
+
+/* added to the bottom to make sure that the 
+   classes get on the end of the file*/
+@import 'fundation/fluent';
+@import 'fundation/media';

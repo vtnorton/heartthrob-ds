@@ -1,0 +1,152 @@
+button {
+	padding-top: 0.333em !important;
+	padding-bottom: 0.333em !important;
+	position: relative;
+    top: -0.067em;
+}
+
+.btn,
+button {
+	border: 0.067em solid $super-grey-color;
+	font-family: $default-font;
+	line-height: 140%;
+	font-size: 1em;
+	background: $super-grey-color;
+	color: $black-color !important;
+	min-height: 2.000em;
+	min-width: 7.333em;
+	padding: 0.667em 1.000em 0;
+	cursor: pointer;
+	border-radius: 0;
+	display: inline-block;
+	text-align: center;
+	box-sizing: content-box;
+
+	&:hover {
+		border-color: $accent-color-hover;
+		background: $accent-color-hover;
+		color: $light-color !important;
+		-moz-transition: all 0.29s;
+		-o-transition: all 0.29s;
+		-webkit-transition: all 0.29s;
+		transition: all 0.29s;
+	}
+
+	&:disabled {
+		background: $grey-color;
+		border-color: $grey-color;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		cursor: not-allowed;
+	}
+
+	i {
+		font-size: 1.067em;
+		margin-right: 0.200em;
+	}
+}
+
+.btn-primary {
+	background: $accent-color;
+	border-color: $accent-color;
+	color: $light-color !important;
+}
+.btn-lesser {
+	background: none;
+	border-color: $accent-color;
+}
+.btn-danger {
+	background: $red-color;
+	border-color: $red-color;
+	color: $light-color !important;
+
+	&:hover {
+		background: $red-color-hover;
+		border-color: $red-color-hover;
+	}
+}
+.btn-link {
+	background: transparent;
+	border-color: transparent;
+	color: $accent-color !important;
+	padding-left: 0;
+
+	&:hover {
+		background: transparent;
+		color: $accent-color-hover !important;
+		border-color: transparent;
+	}
+
+	i {
+		margin-right: 0.533em;
+	}
+}
+
+.card {
+	.left .btn-link {
+		text-align: left;
+	}
+
+	.right .btn-link {
+		padding-right: 0;
+	}
+}
+
+/* to fix issues into this it will need to go to the 
+   react components */
+.btn-action {
+	width: intrinsic !important;
+	width: -moz-max-content !important;
+	width: -webkit-max-content !important;
+}
+.btn-action .btn {
+	padding-top: 0.733em !important;
+	color: #000 !important;
+	padding-left: 1.067em !important;
+	min-width: 3.000em !important;
+	max-width: 3.000em !important;
+	height: 3.000em !important;
+	border-radius: 3.333em !important;
+	margin-right: 0.667em !important;
+	box-shadow: 0 0.133em 0.467em rgba(0, 0, 0, 0.25);
+	background: #fff !important;
+	border: none !important;
+	float: left !important;
+	overflow: hidden !important;
+	display: flex !important;
+	white-space: pre !important;
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	text-align: left;
+}
+.btn-action:hover .btn.btn-primary {
+	min-width: 3.333em !important;
+	max-width: 3.333em !important;
+	transition: all 0.2s;
+}
+.btn-action .btn:hover {
+	background: $accent-color !important;
+	color: #fff !important;
+	box-shadow: 0 0.333em 0.933em rgba(0, 0, 0, 0.45);
+	transition: width 0.2s initial;
+	min-width: 9.333em !important;
+}
+.btn-action .btn.btn-primary {
+	background: $accent-color !important;
+	min-width: 9.333em !important;
+	color: #fff !important;
+	transition: all 0.35s;
+}
+.btn-action .btn i {
+	font-size: 1.067em !important;
+	margin-right: 1.000em !important;
+	margin-top: 0.200em !important;
+}
+.btn-action .btn.btn-primary i {
+	color: #fff !important;
+}
+.btn-action .btn:last-of-type {
+	margin-right: 0 !important;
+}

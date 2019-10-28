@@ -1,0 +1,84 @@
+.link {
+	cursor: pointer;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-justify {
+	text-align: justify;
+}
+.text-lowercase {
+	text-transform: lowercase;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+.text-light {
+	font-weight: 300;
+}
+.text-bold {
+	font-weight: 600;
+}
+.text-extra-bold {
+	font-weight: 900;
+}
+.text-white {
+	color: $light-color;
+}
+.text-mid-black {
+	color: $grey-color;
+}
+.text-black {
+	color: $black-color;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.show {
+	display: block !important;
+}
+.hide {
+	display: none !important;
+}
+.tag {
+	border: 0.067em solid $accent-color;
+	padding: 0 0.333em;
+	background: rgba(0, 120, 215, 0.3);
+}
+.space-low {
+	height: 1.333em;
+}
+.space-medium {
+	height: 2.333em;
+}
+.space-long {
+	height: 3.333em;
+}
+.accent {
+	color: $accent-color !important;
+}
+code .tag {
+	background: none;
+	padding: 0;
+	border: none;
+}

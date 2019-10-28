@@ -1,0 +1,38 @@
+@import "account";
+
+/* TODO: Inserir na documentação */
+header + nav {
+	height: calc(100% - 3.200em) !important;
+	margin-top: 3.200em;
+}
+header ~ content .nav {
+	height: calc(100% - 3.200em);
+}
+header ~ content {
+	margin-top: 3.200em;
+}
+header ~ content content {
+	margin-top: 0;
+}
+nav.main {
+	height: 100%;
+	float: left;
+}
+content {
+	width: calc(100% - 16.667em);
+	float: right;
+	padding: 1.333em;
+	transition: all 0.4s;
+}
+content content {
+	width: calc(100% - 10.000em);
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+content.middle {
+	width: calc(100% - 13.333em);
+	transition: all 0.4s;
+}

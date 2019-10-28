@@ -72,10 +72,6 @@ $(document).ready(function () {
 		$(this).addClass('opened', 300)
 	})
 
-	// if ($(".treeview ul li ul li a").hasClass("active")) {
-	//    $(".treeview a.active").parent().parent().show();
-	// };
-
 	if ($('.nav ul li ul li a').hasClass('active')) {
 		$('.nav a.active').parent().parent().parent().css('background', '#555')
 		$('.nav.light a.active').parent().parent().parent().css('background', '#d9d9d9')
@@ -167,28 +163,28 @@ function removeAcento (text) {
 }
 
 function addNotification () {
-	const campo = '#notifications span'
+	const placeholder = '#notifications span'
 	let itens = 1
 
-	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + 1
+	if ($(placeholder).text()) {
+		itens = parseInt($(placeholder).text(), 10) + 1
 	} else {
 		$('#notifications').append('<span></span>')
 	}
 
 	if (itens < 10) {
-		$(campo).html('').append(itens)
+		$(placeholder).html('').append(itens)
 	} else {
-		$(campo).html('').append('9+')
+		$(placeholder).html('').append('9+')
 	}
 }
 
-function addNotificationNum (quantidade) {
+function addNotificationNum (number) {
 	campo = '#notifications span'
-	itens = quantidade
+	itens = number
 
 	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + quantidade
+		itens = parseInt($(campo).text(), 10) + number
 	} else {
 		$('#notifications').append('<span></span>')
 	}
@@ -204,17 +200,17 @@ function clearNotification () {
 	$('#notifications span').remove('')
 }
 
-function goToStep (destino, mensageiro) {
-	$('#' + mensageiro).removeClass('opened', 650)
-	$('#' + destino).addClass('opened', 650)
+function goToStep (destiny, origin) {
+	$('#' + origin).removeClass('opened', 650)
+	$('#' + destiny).addClass('opened', 650)
 }
 
-function setDone (destino) {
-	$('#' + destino).addClass('view-done', 100)
+function setDone (destiny) {
+	$('#' + destiny).addClass('view-done', 100)
 }
 
-function setWarning (destino) {
-	$('#' + destino).addClass('view-warning', 650)
+function setWarning (destiny) {
+	$('#' + destiny).addClass('view-warning', 650)
 }
 
 function setCookie (name, value, days) {
@@ -236,54 +232,6 @@ function getCookie (name) {
 	}
 	return null
 }
-
-$.fn.extend({
-	treeview: function () {
-		return this.each(function () {
-			var tree = $(this)
-
-			tree.addClass('treeview-tree')
-			tree.find('li').has('ul').each(function () {
-				var branch = $(this) // li with children ul
-
-				branch.prepend("<i class='tree-indicator fa fa-chevron-right'></i>")
-				branch.addClass('tree-branch')
-				branch.on('click', function (e) {
-					if (this === e.target) {
-						var icon = $(this).children('i:first')
-						icon.toggleClass('fa-chevron-down fa-chevron-right')
-						$(this).children().children().toggle()
-					}
-				})
-				branch.children().children().toggle()
-
-				/**
-				 *	The following snippet of code enables the treeview to
-				 *	function when a button, indicator or anchor is clicked.
-				 *
-				 *	It also prevents the default function of an anchor and
-				 *	a button from firing.
-				 */
-				branch.children('.tree-indicator, button, a').click(function (e) {
-					branch.click()
-					$('.tree-branch .active').parent().show()
-				})
-			})
-			$('.tree-branch .active').parent().show()
-		})
-	}
-})
-
-/**
- *	The following snippet of code automatically converst
- *	any '.treeview' DOM elements into a treeview component.
- */
-$(window).on('load', function () {
-	$('.treeview').each(function () {
-		var tree = $(this)
-		tree.treeview()
-	})
-})
 
 function checkStrength (password, output) {
 	var strength = 0
@@ -332,8 +280,8 @@ function allTheSame (array) {
 	})
 }
 
-function pesquisarCep (valor) {
-	var cep = valor.replace(/\D/g, '')
+function pesquisarCep (value) {
+	var cep = value.replace(/\D/g, '')
 	if (cep !== '') {
 		var validacep = /^[0-9]{8}$/
 		if (validacep.test(cep)) {
@@ -341,30 +289,15 @@ function pesquisarCep (valor) {
 			script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados'
 			document.body.appendChild(script)
 		} else {
-			alert('Formato de CEP inválido.')
+			console.error('Formato de CEP inválido: ' + cep)
 		}
 	}
 };
 
-function preencherdados (conteudo) {
-	if (!('erro' in conteudo)) {
-		document.getElementById('rua').value = conteudo.logradouro
-		document.getElementById('bairro').value = conteudo.bairro
-		document.getElementById('cidade').value = conteudo.localidade
-
-		const dropdownlist = $('#State').data('kendoDropDownList')
-		dropdownlist.select(function (dataItem) {
-			return dataItem === conteudo.uf
-		})
-		dropdownlist.trigger('change')
+function preencherdados (content) {
+	if (!('erro' in content)) {
+		document.getElementById('rua').value = content.logradouro
+		document.getElementById('bairro').value = content.bairro
+		document.getElementById('cidade').value = content.localidade
 	}
-}
-
-/* kendo-ui functions */
-function CellCloseScript (e) {
-	this.saveChanges()
-}
-
-function noEdit (dataItem) {
-	return dataItem.Id === 0
 }

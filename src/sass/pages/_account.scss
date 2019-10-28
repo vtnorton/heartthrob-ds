@@ -1,0 +1,52 @@
+.account {
+	background: url(../img/background.jpg) no-repeat;
+	background-size: cover;
+}
+.account::after {
+	content: " ";
+	background: #000;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+.account .card {
+	width: 36.000em !important;
+	margin: 0 auto;
+	position: relative;
+}
+.account .card .logo {
+	text-align: center;
+}
+.account .card img {
+	max-height: 5.000em;
+	width: auto;
+}
+.account .account-footer {
+	width: 100%;
+	height: 1.867em;
+	background: #000;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 0;
+	text-align: right;
+}
+.account .account-footer ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-right: 0.667em;
+}
+.account .account-footer ul li {
+	float: left;
+}
+.account .account-footer ul li,
+.account .account-footer ul li a {
+	color: #fff;
+	font-size: 0.800em;
+	margin-left: 0.800em;
+}

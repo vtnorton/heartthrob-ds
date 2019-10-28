@@ -1,0 +1,172 @@
+$default-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+	font-family: $default-font;
+	overflow-x: hidden;
+	background: $light-grey-background-color;
+	font-size: 0.9375em;
+	line-height: 140%;
+	color: $soft-grey-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $black-color;
+	margin-bottom: 1em;
+}
+h1 {
+	font-size: 1.87em;
+	line-height: 2.3em;
+	font-weight: 400;
+}
+h2 {
+	font-size: 1.6em;
+	line-height: 2.13em;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	font-weight: 600;
+}
+h4,
+b,
+strong,
+dl dt {
+	font-size: 1em;
+	line-height: 1.35em;
+	font-weight: 600;
+}
+h5,
+h6 {
+	font-size: 1.06em;
+	line-height: 1.33em;
+	font-weight: 800;
+}
+h6 {
+	font-weight: 400;
+}
+
+.card h4 {
+	margin-bottom: 0.665em;
+}
+
+p {
+	margin: 0.3em 0 0;
+}
+a {
+	color: $accent-color;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		color: #2572eb !important;
+		transition: 0.3s all;
+		-webkit-transition: 0.3s all;
+		-moz-transition: 0.3s all;
+		-ms-transition: 0.3s all;
+		-o-transition: 0.3s all;
+	}
+
+	&:visited {
+		color: #005ba6;
+		transition: 0.3s all;
+		-webkit-transition: 0.3s all;
+		-moz-transition: 0.3s all;
+		-ms-transition: 0.3s all;
+		-o-transition: 0.3s all;
+	}
+}
+
+i {
+	font-style: italic;
+}
+hr {
+	border-bottom: none !important;
+	border: 0.067em solid #ccc;
+	margin: .6em 0 1em;
+}
+li {
+	margin: .2em 0;
+	line-height: 135%;
+}
+
+blockquote,
+.validation-summary-valid,
+.validation-summary-errors {
+	background: #ffffff;
+	padding: 1em 1.333em;
+	border: 0.067em solid $light-grey-color;
+	margin: 2em 0;
+	margin-top: 0.800em;
+	border-left: 0.200em solid $accent-color;
+}
+
+.card blockquote {
+	box-shadow: none;
+	border: 0.067em solid $super-grey-color;
+	margin: .53em 0 0;
+}
+
+blockquote{
+	&.border,
+	&.danger,
+	&.success,
+	&.atention {
+		border-left: .3em solid $accent-color;
+	}
+	
+	&.danger {
+		border-left-color: $red-color;
+	}
+
+	&.success {
+		border-left-color: $green-color;
+	}
+
+	&.atention {
+		border-left-color: $yellow-color;
+	}
+
+	footer {
+		text-align: right;
+		font-style: italic;
+		color: $grey-color;
+		font-size: .9em;
+		margin-top: 1em;
+	
+		&:before {
+			content: " ";
+			width: 1em;
+			border-bottom: 0.133em solid $grey-color;
+			display: inline-block;
+			position: relative;
+			top: -0.200em;
+			margin-right: 0.400em;
+		}
+	}
+}
+
+small {
+	font-size: .8em;
+	line-height: 110%;
+}
+label {
+	font-weight: 600;
+	color: $dark-color;
+}
+img {
+	width: 100%;
+	height: auto;
+	&.rounded {
+		border-radius: 50%;
+	}
+}
+
+code {
+	font-family: Consolas, "Courier New", Courier, monospace;
+}

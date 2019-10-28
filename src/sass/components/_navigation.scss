@@ -1,0 +1,140 @@
+.nav {
+	width: 16.667em;
+	background: #666;
+	float: left;
+	z-index: 9;
+	position: fixed;
+	height: 100%;
+	overflow: hidden;
+}
+.nav a.child:after {
+	content: " ";
+	width: 0.667em;
+	height: 0.667em;
+	display: block;
+	position: absolute;
+	right: 1.333em;
+	margin-top: -1.000em;
+	border: solid rgba(255, 255, 255, 0.5);
+	border-width: 0 0.133em 0.133em 0;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+.nav .nav-bottom-menus a.child:after {
+	transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+	margin-top: -0.800em;
+}
+.nav a {
+	color: #fff;
+	font-size: 0.933em;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	padding: 0.933em 1.333em;
+	height: 3.200em;
+}
+.nav a:hover {
+	background: #555;
+	transition: all 0.3s;
+}
+.nav a i {
+	width: 1.667em;
+	text-align: center;
+	font-size: 0.933em;
+	margin-right: 0.333em;
+}
+.nav a.active {
+	border-left: 0.200em solid $accent-color;
+	padding-left: 1.133em;
+}
+.nav ul li ul a.active {
+	background: #444 !important;
+}
+.nav ul,
+.nav ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.nav ul li ul {
+	display: none;
+	overflow-x: auto;
+}
+.nav ul li ul li a {
+	background: #555;
+	transition: all 0.3s;
+	height: 2.667em;
+	padding: 0.600em 1.333em;
+}
+.nav ul li ul li a:hover {
+	background: #444;
+	transition: all 0.3s;
+}
+.nav .nav-bottom-menus {
+	margin-bottom: 0.667em;
+}
+.nav .nav-bottom-menus:before,
+.nav-top-menus:before {
+	content: " ";
+	border-top: 0.067em solid rgba(255, 255, 255, 0.4);
+	display: block;
+	margin: -0.133em 1.067em 0.467em;
+}
+.nav .nav-bottom-menus {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.nav.middle {
+	width: 13.333em;
+}
+.nav.middle a {
+	padding: 0.933em 0.667em;
+}
+.nav.middle a.active {
+	padding-left: 0.467em;
+}
+.nav.middle ul li ul li a {
+	padding: 0.600em 0.667em;
+}
+.nav.middle .nav-bottom-menus:before,
+nav.middle .nav-top-menus:before {
+	margin: -0.133em 0.667em 0.467em;
+}
+.nav.light {
+	background: #ebebeb;
+	border-right: 0.067em solid #ccc;
+}
+.nav.light a {
+	color: #111;
+}
+.nav.light a:hover,
+nav.light ul li ul li a {
+	background: #d9d9d9;
+	transition: all 0.3s;
+}
+.nav.light ul li ul a.active {
+	background: #bcbcbc !important;
+}
+.nav.light ul li ul li a:hover {
+	background: #bcbcbc;
+	transition: all 0.3s;
+}
+.nav.light a.child:after,
+nav.light .nav-bottom-menus:before,
+nav.light .nav-top-menus:before {
+	border-color: #bcbcbc;
+}
+.nav a.closed:after {
+	display: none;
+}
+.nav.light a:hover,
+.nav.light ul li ul li a {
+	background: #d9d9d9;
+	transition: all 0.3s;
+}
+.nav.light .nav-bottom-menus:before,
+.nav.light .nav-top-menus:before {
+	border-color: #ccc;
+}

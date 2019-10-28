@@ -1,0 +1,47 @@
+.sidebar {
+	width: 20.000em;
+	background: #ebebeb;
+	border-right: 0.067em solid $super-grey-color;
+	float: left;
+	z-index: 9;
+	position: fixed;
+	height: 100%;
+	overflow: hidden;
+	margin: -1.333em;
+  
+	.k-widget {
+	  box-shadow: none;
+	}
+  
+	.sidebar-bottom-menus {
+	  margin-bottom: 50.333em;
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  list-style: none;
+	  padding: 0;
+  
+	  &:before {
+		content: " ";
+		border-top: 0.067em solid $super-grey-color;
+		display: block;
+		margin: -0.133em 1.067em 0.467em;
+	  }
+  
+	  a {
+		font-size: 0.933em;
+		text-decoration: none;
+		width: 100%;
+		display: block;
+		padding: 0.933em 1.333em;
+		height: 3.200em;
+  
+		i {
+		  width: 1.667em;
+		  text-align: center;
+		  font-size: 0.933em;
+		  margin-right: 0.333em;
+		}
+	  }
+	}
+  }

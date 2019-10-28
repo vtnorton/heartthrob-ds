@@ -1,0 +1,21 @@
+.toolbar {
+	border-bottom: 0.067em solid $super-grey-color;
+	margin: -1.333em -1.333em 1.333em;
+	padding: 0 1.333em 0;
+	height: 3.200em;
+	position: fixed;
+	background: $light-grey-background-color;
+	width: calc(100% - 16.667em);
+	z-index: 9;
+  
+	+ * {
+	  margin-top: 3.200em !important;
+	}
+  
+	.btn-link {
+	  min-width: 0;
+	  margin-top: 0.267em;
+	  padding-right: 0;
+	  margin-right: -0.400em;
+	}
+}
