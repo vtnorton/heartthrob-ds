@@ -2,7 +2,7 @@
   "name": "heartthrob",
   "version": "1.0.28",
   "description": "A CSS and JS framework inspired by Fluent Design and Bootstrap for complex systems",
-  "main": "gulpfile.js",
+  "main": "src/index.js",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
