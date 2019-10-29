@@ -1,8 +1,8 @@
 const css = require('../build/css/heartthrob.css')
 
-const default = { css }
+const main = { css }
 
 module.exports = {
-    ...default,
-    default
+	...main,
+	default: main
 }
