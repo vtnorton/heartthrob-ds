@@ -43,14 +43,14 @@
 				font-weight: 600;
 				padding: 0 0.533em;
 				&:hover {
-					color: #fff;
+					color: #fff !important;
 					border-bottom: 0.133em solid $accent-color;
 					background: #3a3a3a;
 					transition: all 0.3s;
 				}
 				&.active {
 					border-bottom: 0.133em solid $accent-color;
-					color: #fff;
+					color: #fff !important;
 				}
 				i {
 					font-size: 1.000em !important;
