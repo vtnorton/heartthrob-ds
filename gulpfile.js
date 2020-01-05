@@ -84,5 +84,5 @@ gulp.task('build-img', gulp.parallel('copy-files-img'))
 gulp.task('build-sass', gulp.parallel('build-sass-normal', 'build-sass-min'))
 
 gulp.task('build', gulp.parallel('build-img', 'build-js', 'build-sass'))
-gulp.task('build-dev', gulp.parallel('build', 'build-sass-dev', 'copy=files-js-dev'))
+gulp.task('build-dev', gulp.parallel('build', 'build-sass-dev', 'copy-files-js-dev'))
 gulp.task('default', gulp.parallel('build'))

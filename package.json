@@ -28,8 +28,8 @@
   "scripts": {
     "prepare": "npm i || npx gulp build",
     "postinstall": "npm update",
-    "build": "nxp gulp build",
-    "build-dev": "nxp gulp build-dev"
+    "build": "gulp build",
+    "build-dev": "gulp build-dev"
   },
   "repository": {
     "type": "git",

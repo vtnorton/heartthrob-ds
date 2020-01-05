@@ -232,7 +232,7 @@ h6 { font-weight: 400; }
 .card h4 { margin-bottom: 0.665em; }
 p { margin: 0.3em 0 0; }
 a { color: #0078d7; text-decoration: none; cursor: pointer; }
-a:hover { color: #2572eb !important; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
+a:hover { color: #2572eb; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
 a:visited { color: #005ba6; transition: 0.3s all; -webkit-transition: 0.3s all; -moz-transition: 0.3s all; -ms-transition: 0.3s all; -o-transition: 0.3s all; }
 i { font-style: italic; }
 hr { border-bottom: none !important; border: 0.067em solid #ccc; margin: .6em 0 1em; }
@@ -364,8 +364,8 @@ option, .ui-menu-item-wrapper { font-size: 1.000em; height: 2.667em; padding-lef
 .header ul { list-style: none; margin: 0; padding: 0; }
 .header ul li { float: left; margin: 0; margin-right: 1.067em; }
 .header ul li:last-child { margin-right: 0; }
-.header ul li a { display: block; height: 3.200em; font-size: 1.000em; color: #c3c3c3; line-height: 3.200em; font-weight: 600; padding: 0 0.533em; }
-.header ul li a:hover { color: #fff; border-bottom: 0.133em solid #0078d7; background: #3a3a3a; transition: all 0.3s; }
+.header ul li a { display: block; height: 3.200em; font-size: 1.000em; color: #c3c3c3; line-height: 3.200em; padding: 0 0.533em; }
+.header ul li a:hover { color: #fff !important; border-bottom: 0.133em solid #0078d7; background: #3a3a3a; transition: all 0.3s; }
 .header ul li a.active { border-bottom: 0.133em solid #0078d7; color: #fff; }
 .header ul li a i { font-size: 1.000em !important; margin-right: 0.333em; width: 1.200em; text-align: center; }
 .header ul li a.child:after { content: " "; width: 0.667em; height: 0.667em; display: inline-block; position: relative; margin-left: 0.867em; top: -0.200em; border: solid rgba(255, 255, 255, 0.5); border-width: 0 0.133em 0.133em 0; transform: rotate(45deg); -webkit-transform: rotate(45deg); }
@@ -398,7 +398,7 @@ option, .ui-menu-item-wrapper { font-size: 1.000em; height: 2.667em; padding-lef
 .header .menu li.line { background: none; }
 .header .menu.dark ul { background: transparent !important; }
 .header .menu .more:after { position: absolute; right: 0; }
-.header #notifications span { color: #000; position: relative; left: 0.467em; background: #f4f4f4; width: 1.133em; height: 1.133em; display: block; border-radius: 50%; z-index: 6; line-height: 1.067em; font-size: 0.733em; margin-top: -20.200em; opacity: 0.75; }
+.header #notifications span { color: #000; position: relative; left: 14px; background: #f4f4f4; width: 1.133em; height: 1.133em; display: block; border-radius: 50%; z-index: 6; line-height: 1.067em; font-size: 0.733em; margin-top: -23px; opacity: 0.95; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; }
 .header #notifications i { position: relative; z-index: 7; }
 .header .right ul li:last-child .menu li i, .header .menu li:last-child a i { margin-top: 0.533em; }
 .header .user-img, .icon { width: 2.133em; height: 2.133em; border-radius: 50%; background: #c3c3c3; margin: 0.533em 0.667em 0 -0.467em; position: relative; }

@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-$(document).ready(function () {
-	$.fn.clickToggle = function (func1, func2) {
+$(document).ready(function() {
+	$.fn.clickToggle = function(func1, func2) {
 		var funcs = [func1, func2]
 		this.data('toggleclicked', 0)
-		this.click(function () {
+		this.click(function() {
 			var data = $(this).data()
 			var tc = data.toggleclicked
 			$.proxy(funcs[tc], this)()
@@ -20,20 +20,20 @@ $(document).ready(function () {
 	$(`a[href='/${longAppName}']`).addClass('active')
 
 	/* Menu event */
-	$(document).click(function () {
+	$(document).click(function() {
 		$('.menu').slideUp('fast')
 	})
 
-	openMenu = function (env, menu) {
+	openMenu = function(env, menu) {
 		env.stopPropagation()
 		$(menu).next('.menu').slideToggle('fast')
 	}
 
-	$('.nav-top-menus a.child').click(function () {
+	$('.nav-top-menus a.child').click(function() {
 		closeMenus(this)
 	})
 
-	$('.nav-bottom-menus a.child').click(function () {
+	$('.nav-bottom-menus a.child').click(function() {
 		closeMenus(this)
 	})
 
@@ -42,32 +42,32 @@ $(document).ready(function () {
 		minNav(true)
 	}
 
-	$('.nav-action').clickToggle(function () {
+	$('.nav-action').clickToggle(function() {
 		if (menustate) { maxNav(true) } else { minNav(true) }
-	}, function () {
+	}, function() {
 		if (menustate) { minNav(true) } else { maxNav(true) }
 	})
 
 	$('header .search a').clickToggle(
-		function () {
-			$('header .search a').addClass('searchactived', function () {
+		function() {
+			$('header .search a').addClass('searchactived', function() {
 				$('header .search input').effect('slide', { direction: 'right', mode: 'show' }, 300).focus()
 			})
-		}, function () {
-			$('header .search input').effect('slide', { direction: 'right', mode: 'hide' }, 300, function () {
+		}, function() {
+			$('header .search input').effect('slide', { direction: 'right', mode: 'hide' }, 300, function() {
 				$('header .search a').removeClass('searchactived')
 			})
 		}
 	)
 
-	$('.user-img').each(function () {
+	$('.user-img').each(function() {
 		if (!this.firstElementChild) {
 			var nome = this.nextSibling.nodeValue.trim()
 			$('.user-img').append('<span>' + getIntials(nome) + '</span>')
 		}
 	})
 
-	$('.cards-actions .card').click(function () {
+	$('.cards-actions .card').click(function() {
 		$('.cards-actions .card').removeClass('opened', 300)
 		$(this).addClass('opened', 300)
 	})
@@ -78,7 +78,7 @@ $(document).ready(function () {
 		$('.nav a.active').parent().parent().show()
 	};
 
-	dialog = function (env) {
+	dialog = function(env) {
 		if (!env.cancel) {
 			env.cancel = 'Cancel'
 		}
@@ -95,12 +95,12 @@ $(document).ready(function () {
 		$('html').append(html)
 		$('.alert-modal').addClass('show-alert')
 	}
-	closeDialog = function () {
+	closeDialog = function() {
 		$('.alert-modal').removeClass('show-alert')
 	}
 })
 
-function minNav (cookie) {
+function minNav(cookie) {
 	if (cookie) {
 		setCookie('hb-menustate', true)
 	}
@@ -110,7 +110,7 @@ function minNav (cookie) {
 	$('.nav:not(.middle) a').css('overflow', 'hidden')
 	$('.nav:not(.middle) a i').css('color', '#fff')
 	$('.nav:not(.middle).light a i').css('color', '#000')
-	$('.nav:not(.middle)').animate({ 'width': '65px' }, 300, function () {
+	$('.nav:not(.middle)').animate({ 'width': '65px' }, 300, function() {
 		$('content').css('width', 'calc(100% - 65px)')
 		$('content content').css('width', 'calc(100% - 150px)')
 		$('content .left + content').css('width', 'calc(100% - 260px)')
@@ -118,13 +118,13 @@ function minNav (cookie) {
 	})
 }
 
-function maxNav (cookie) {
+function maxNav(cookie) {
 	if (cookie) {
 		setCookie('hb-menustate', false)
 	}
 
 	var menu = $('.nav-action').parent().parent()
-	$('.nav:not(.middle)').animate({ 'width': '250px' }, 250, function () {
+	$('.nav:not(.middle)').animate({ 'width': '250px' }, 250, function() {
 		$('.nav:not(.middle) a.child').removeClass('closed')
 		$('.nav:not(.middle) a').css('color', '#fff')
 		$('.nav:not(.middle).light a').css('color', '#000')
@@ -137,7 +137,7 @@ function maxNav (cookie) {
 	})
 }
 
-function closeMenus (menu) {
+function closeMenus(menu) {
 	$('.nav-top-menus li ul').slideUp('fast')
 	$('.nav-bottom-menus li ul').slideUp('fast')
 
@@ -146,12 +146,12 @@ function closeMenus (menu) {
 	};
 }
 
-function getIntials (towork) {
+function getIntials(towork) {
 	towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase().trim()
 	return towork[0] + towork[towork.length - 1]
 }
 
-function removeAcento (text) {
+function removeAcento(text) {
 	text = text.toLowerCase()
 	text = text.replace(new RegExp('[ÁÀÂÃ]', 'gi'), 'a')
 	text = text.replace(new RegExp('[ÉÈÊ]', 'gi'), 'e')
@@ -162,29 +162,29 @@ function removeAcento (text) {
 	return text
 }
 
-function addNotification () {
-	const campo = '#notifications span'
+function addNotification() {
+	const placeholder = '#notifications span'
 	let itens = 1
 
-	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + 1
+	if ($(placeholder).text()) {
+		itens = parseInt($(placeholder).text(), 10) + 1
 	} else {
 		$('#notifications').append('<span></span>')
 	}
 
 	if (itens < 10) {
-		$(campo).html('').append(itens)
+		$(placeholder).html('').append(itens)
 	} else {
-		$(campo).html('').append('9+')
+		$(placeholder).html('').append('9+')
 	}
 }
 
-function addNotificationNum (quantidade) {
+function addNotificationNum(number) {
 	campo = '#notifications span'
-	itens = quantidade
+	itens = number
 
 	if ($(campo).text()) {
-		itens = parseInt($(campo).text(), 10) + quantidade
+		itens = parseInt($(campo).text(), 10) + number
 	} else {
 		$('#notifications').append('<span></span>')
 	}
@@ -196,24 +196,24 @@ function addNotificationNum (quantidade) {
 	}
 }
 
-function clearNotification () {
+function clearNotification() {
 	$('#notifications span').remove('')
 }
 
-function goToStep (destino, mensageiro) {
-	$('#' + mensageiro).removeClass('opened', 650)
-	$('#' + destino).addClass('opened', 650)
+function goToStep(destiny, origin) {
+	$('#' + origin).removeClass('opened', 650)
+	$('#' + destiny).addClass('opened', 650)
 }
 
-function setDone (destino) {
-	$('#' + destino).addClass('view-done', 100)
+function setDone(destiny) {
+	$('#' + destiny).addClass('view-done', 100)
 }
 
-function setWarning (destino) {
-	$('#' + destino).addClass('view-warning', 650)
+function setWarning(destiny) {
+	$('#' + destiny).addClass('view-warning', 650)
 }
 
-function setCookie (name, value, days) {
+function setCookie(name, value, days) {
 	var expires = ''
 	if (days) {
 		var date = new Date()
@@ -222,7 +222,7 @@ function setCookie (name, value, days) {
 	}
 	document.cookie = name + '=' + (value || '') + expires + '; path=/'
 }
-function getCookie (name) {
+function getCookie(name) {
 	var nameEQ = name + '='
 	var ca = document.cookie.split(';')
 	for (var i = 0; i < ca.length; i++) {
@@ -233,7 +233,7 @@ function getCookie (name) {
 	return null
 }
 
-function checkStrength (password, output) {
+function checkStrength(password, output) {
 	var strength = 0
 
 	if (password.length < 6) {
@@ -266,22 +266,22 @@ function checkStrength (password, output) {
 	}
 }
 
-function checkPasswordMatch (input, output) {
+function checkPasswordMatch(input, output) {
 	var password = $('#password').val()
 	var confirmPassword = $(input).val()
 
 	if (password !== confirmPassword) { $('#' + output).addClass('validator').html('As senhas estão diferentes, por favor, tente novamente') } else { $('#' + output).removeClass('validator').html('') }
 }
 
-function allTheSame (array) {
+function allTheSame(array) {
 	var first = array[0]
-	return array.every(function (element) {
+	return array.every(function(element) {
 		return element === first
 	})
 }
 
-function pesquisarCep (valor) {
-	var cep = valor.replace(/\D/g, '')
+function pesquisarCep(value) {
+	var cep = value.replace(/\D/g, '')
 	if (cep !== '') {
 		var validacep = /^[0-9]{8}$/
 		if (validacep.test(cep)) {
@@ -289,21 +289,15 @@ function pesquisarCep (valor) {
 			script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados'
 			document.body.appendChild(script)
 		} else {
-			alert('Formato de CEP inválido.')
+			console.error('Formato de CEP inválido: ' + cep)
 		}
 	}
 };
 
-function preencherdados (conteudo) {
-	if (!('erro' in conteudo)) {
-		document.getElementById('rua').value = conteudo.logradouro
-		document.getElementById('bairro').value = conteudo.bairro
-		document.getElementById('cidade').value = conteudo.localidade
-
-		const dropdownlist = $('#State').data('kendoDropDownList')
-		dropdownlist.select(function (dataItem) {
-			return dataItem === conteudo.uf
-		})
-		dropdownlist.trigger('change')
+function preencherdados(content) {
+	if (!('erro' in content)) {
+		document.getElementById('rua').value = content.logradouro
+		document.getElementById('bairro').value = content.bairro
+		document.getElementById('cidade').value = content.localidade
 	}
 }

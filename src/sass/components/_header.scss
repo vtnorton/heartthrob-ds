@@ -40,7 +40,6 @@
 				font-size: 1.000em;
 				color: #c3c3c3;
 				line-height: 3.200em;
-				font-weight: 600;
 				padding: 0 0.533em;
 				&:hover {
 					color: #fff !important;
@@ -50,7 +49,7 @@
 				}
 				&.active {
 					border-bottom: 0.133em solid $accent-color;
-					color: #fff !important;
+					color: #fff;
 				}
 				i {
 					font-size: 1.000em !important;
@@ -219,7 +218,7 @@
 		span {
 			color: #000;
 			position: relative;
-			left: 0.467em;
+			left: 14px;
 			background: #f4f4f4;
 			width: 1.133em;
 			height: 1.133em;
@@ -228,9 +227,13 @@
 			z-index: 6;
 			line-height: 1.067em;
 			font-size: 0.733em;
-			margin-top: -20.200em;
-			opacity: 0.75;
-		}
+			margin-top: -23px;
+			opacity: 0.95;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+}
 		i {
 			position: relative;
 			z-index: 7;
