@@ -8,25 +8,24 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "1.4.0",
-    "heartthrob-vision": "^1.1.4",
+    "heartthrob-vision": "^1.1.6",
     "merge-stream": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "gulp-js-minify": "0.0.3",
     "gulp-remove-empty-lines": "^0.1.0",
     "gulp-sass": "^4.0.2",
-    "stylelint": "^11.0.0",
+    "stylelint": "^11.1.1",
     "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
-    "prepare": "npm i || npx gulp build",
     "postinstall": "npm update",
     "build": "gulp build",
     "build-dev": "gulp build-dev"
