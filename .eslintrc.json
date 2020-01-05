@@ -13,6 +13,7 @@
     },
     "rules": {
         "indent": ["error", "tab"],
+        "space-before-function-paren": ["error", "never"],
         "no-tabs": 0
     }
 }

@@ -12,7 +12,7 @@ var deps = {
 	}
 }
 
-gulp.task('restore', async () => {
+gulp.task('restore', async() => {
 	var streams = []
 
 	for (var prop in deps) {
@@ -27,7 +27,7 @@ gulp.task('restore', async () => {
 })
 
 /* building sass */
-gulp.task('build-sass-normal', function () {
+gulp.task('build-sass-normal', function() {
 	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
 		.pipe(removeEmptyLines({ removeComments: true }))
@@ -35,23 +35,23 @@ gulp.task('build-sass-normal', function () {
 		.pipe(gulp.dest('build/css/'))
 })
 
-gulp.task('build-sass-min', function () {
+gulp.task('build-sass-min', function() {
 	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(rename('heartthrob.min.css'))
 		.pipe(gulp.dest('build/css/'))
 })
 
-gulp.task('build-sass-dev', function () {
+gulp.task('build-sass-dev', function() {
 	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(removeEmptyLines({ removeComments: true }))
 		.pipe(rename('heartthrob.css'))
-		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/css/'))
+		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/lib/heartthrob/css'))
 		// using this last gulp.dest() to test on the docs while it's beeing develop, a better solution will be provided.
 })
 
-gulp.task('minify-js', function () {
+gulp.task('minify-js', function() {
 	return gulp.src('src/js/*.js')
 		.pipe(concat('heartthrob.js'))
 		.pipe(rename('heartthrob.min.js'))
@@ -74,10 +74,15 @@ gulp.task('copy-files-js', () => {
 		.pipe(gulp.dest('build/js'))
 })
 
+gulp.task('copy-files-js-dev', () => {
+	return gulp.src('src/js/**')
+		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/lib/heartthrob/js'))
+})
+
 gulp.task('build-js', gulp.parallel('restore', 'minify-js', 'copy-files-js'))
 gulp.task('build-img', gulp.parallel('copy-files-img'))
 gulp.task('build-sass', gulp.parallel('build-sass-normal', 'build-sass-min'))
 
 gulp.task('build', gulp.parallel('build-img', 'build-js', 'build-sass'))
-gulp.task('build-dev', gulp.parallel('build', 'build-sass-dev'))
+gulp.task('build-dev', gulp.parallel('build', 'build-sass-dev', 'copy=files-js-dev'))
 gulp.task('default', gulp.parallel('build'))
