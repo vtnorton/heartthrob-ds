@@ -51,7 +51,8 @@
 					border-bottom: 0.133em solid $accent-color;
 					color: #fff;
 				}
-				i {
+				i,
+				svg {
 					font-size: 1.000em !important;
 					margin-right: 0.333em;
 					width: 1.200em;
@@ -105,7 +106,8 @@
 			width: 3.200em;
 			text-align: center;
 			padding: 0 1.000em;
-			i {
+			i,
+			svg {
 				margin: 0;
 				position: relative;
 			}
@@ -186,7 +188,8 @@
 					padding-left: 2.667em !important;
 				}
 
-				i {
+				i,
+				svg {
 					padding: 0;
 
 				}
@@ -234,15 +237,18 @@
 			-ms-border-radius: 50%;
 			-o-border-radius: 50%;
 }
-		i {
+		i,
+		svg {
 			position: relative;
 			z-index: 7;
 		}
 	}
 
 }
+.header .right ul li:last-child .menu li svg,
 .header .right ul li:last-child .menu li i,
-.header .menu li:last-child a i {
+.header .menu li:last-child a i,
+.header .menu li:last-child a svg {
 	margin-top: 0.533em;
 }
 

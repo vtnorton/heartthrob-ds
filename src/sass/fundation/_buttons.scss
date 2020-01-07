@@ -42,7 +42,8 @@ button {
 		cursor: not-allowed;
 	}
 
-	i {
+	i,
+	svg {
 		font-size: 1.067em;
 		margin-right: 0.200em;
 	}
@@ -79,7 +80,8 @@ button {
 		border-color: transparent;
 	}
 
-	i {
+	i,
+	svg {
 		margin-right: 0.533em;
 	}
 }
@@ -139,7 +141,8 @@ button {
 	color: #fff !important;
 	transition: all 0.35s;
 }
-.btn-action .btn i {
+.btn-action .btn i,
+.btn-action .btn svg {
 	font-size: 1.067em !important;
 	margin-right: 1.000em !important;
 	margin-top: 0.200em !important;

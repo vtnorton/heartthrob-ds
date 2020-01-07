@@ -2,10 +2,12 @@
 	.nav:not(.middle) a {
 		color: transparent;
 	}
-	.nav:not(.middle) a i {
+	.nav:not(.middle) a i,
+	.nav:not(.middle) a svg {
 		color: #fff;
 	}
-	.nav:not(.middle).light a i {
+	.nav:not(.middle).light a i,
+	.nav:not(.middle).light a svg {
 		color: #000;
 	}
 	.nav:not(.middle) a {
