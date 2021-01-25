@@ -12,17 +12,17 @@
     "merge-stream": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-node": "^9.2.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "gulp-js-minify": "0.0.3",
+    "eslint-plugin-standard": "^5.0.0",
+    "gulp-js-minify": "^0.0.3",
     "gulp-remove-empty-lines": "^0.1.0",
-    "gulp-sass": "^4.0.2",
-    "stylelint": "^11.1.1",
+    "gulp-sass": "^4.1.0",
+    "stylelint": "^13.9.0",
     "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
