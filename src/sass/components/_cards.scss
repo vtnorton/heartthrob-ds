@@ -25,32 +25,32 @@
     margin: 1.333em -1.333em -1.333em;
     display: flex;
 
-    &.button,
-    &button {
+    .button,
+    button {
       margin-right: 5px;
     }
 
-    &.ms-Button--command {
+    .ms-Button--command {
       height: auto;
       margin-left: -8px;
     }
 
-    &.right {
+    .right {
       float: none;
       text-align: right;
 
-      &.button,
-      &button {
+      .button,
+      button {
         margin-right: 0;
         margin-left: 5px;
       }
     }
 
-    &.to-the-right {
+    .to-the-right {
       margin-left: auto;
 
-      &.button,
-      &button {
+      .button,
+      button {
         margin-right: 0;
         margin-left: 5px;
       }
