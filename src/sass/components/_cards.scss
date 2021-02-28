@@ -1,100 +1,105 @@
 .card {
-  background: $light-color;
-  padding: 1.333em;
-  overflow: auto;
-  overflow-x: hidden;
-  width: 100% !important;
-  margin: auto;
-  margin-bottom: 1.333em;
+	background: $light-color;
+	padding: 1.333em;
+	overflow: auto;
+	overflow-x: hidden;
+	width: 100% !important;
+	margin: auto;
+	margin-bottom: 1.333em;
 
-  hr:first-of-type {
-    position: relative;
-    top: 0.667em;
-    margin-bottom: 1.333em;
-    margin-left: -1.333em;
-    margin-right: -1.333em;
-  }
+	hr:first-of-type {
+		position: relative;
+		top: 0.667em;
+		margin-bottom: 1.333em;
+		margin-left: -1.333em;
+		margin-right: -1.333em;
+	}
 
-  .left h2 {
-    margin-top: 0.333em;
-  }
+	.left h2 {
+		margin-top: 0.333em;
+	}
+}
 
-  .taskbar {
-    background: $light-grey-color;
-    padding: 1.333em;
-    margin: 1.333em -1.333em -1.333em;
-    display: flex;
+.taskbar {
+	background: $light-grey-color;
+	padding: 1.333em;
+	margin: 1.333em -1.333em -1.333em;
+	display: flex;
 
-    .button,
-    button {
-      margin-right: 5px;
-    }
+	.button,
+	button {
+		margin-right: 5px;
+	}
 
-    .ms-Button--command {
-      height: auto;
-      margin-left: -8px;
-    }
+	.ms-Button--command {
+		height: auto;
+		margin-left: -8px;
+	}
 
-    .right {
-      float: none;
-      text-align: right;
+	.right {
+		float: none;
+		text-align: right;
 
-      .button,
-      button {
-        margin-right: 0;
-        margin-left: 5px;
-      }
-    }
+		.button,
+		button {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
 
-    .to-the-right {
-      margin-left: auto;
+	.to-the-right {
+		margin-left: auto;
 
-      .button,
-      button {
-        margin-right: 0;
-        margin-left: 5px;
-      }
-    }
-  }
+		.button,
+		button {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
+}
+.ms-Panel {
+	.taskbar {
+		margin: 0;
+	}
 }
 
 .cards-steps {
-  .card {
-    background: #e9e9e9;
-    border-left: 0.333em solid $accent-color;
-  }
-  .view-done {
-    border-color: $green-color;
-  }
+	.card {
+		background: #e9e9e9;
+		border-left: 0.333em solid $accent-color;
+	}
+	.view-done {
+		border-color: $green-color;
+	}
 
-  .view-warning {
-    border-color: $yellow-color;
-  }
+	.view-warning {
+		border-color: $yellow-color;
+	}
 
-  .view-error {
-    /* TODO: add to docs */
-    border-color: $red-color;
-  }
+	.view-error {
+		/* TODO: add to docs */
+		border-color: $red-color;
+	}
 }
 
 .cards-actions .card {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .cards-actions .card,
 .cards-steps .card {
-  h4 ~ *,
-  h4 ~ * {
-    display: none;
-  }
+	h4 ~ *,
+	h4 ~ * {
+		display: none;
+	}
 
-  &.opened,
-  &.opened {
-    background: $light-color;
-  }
+	&.opened,
+	&.opened {
+		background: $light-color;
+	}
 
-  &.opened h4 ~ *,
-  &.opened h4 ~ * {
-    display: block;
-  }
+	&.opened h4 ~ *,
+	&.opened h4 ~ * {
+		display: block;
+	}
 }
