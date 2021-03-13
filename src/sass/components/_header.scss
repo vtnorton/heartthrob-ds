@@ -4,6 +4,17 @@
 	height: 3.200em;
 	z-index: 20;
 	position: fixed;
+
+	.ms-Persona {
+		height: 48px !important;
+		padding-left: 10px;
+		padding-bottom: 4px;
+
+		.primaryText-55 {
+			color: #fff;
+		}
+	}
+
 	a {
 		font-weight: normal;
 	}
@@ -124,6 +135,11 @@
 			background: #3a3a3a;
 			transition: all 0.3s;
 		}
+
+		&:last-child .menu li svg,
+		&:last-child .menu li i,{
+			margin-top: 1px;
+		}
 	}
 
 	.search {
@@ -205,6 +221,12 @@
 			}
 			&.line {
 				background: none;
+			}
+
+			&:last-child a{
+				svg, i {
+					margin-top: 1px;
+				}
 			}
 		}
 

@@ -14,6 +14,7 @@
     "rules": {
         "indent": ["error", "tab"],
         "space-before-function-paren": ["error", "never"],
-        "no-tabs": 0
+        "no-tabs": 0,
+        "quotes": ["error", "single"]
     }
 }

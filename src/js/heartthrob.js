@@ -42,21 +42,40 @@ $(document).ready(function() {
 		minNav(true)
 	}
 
-	$('.nav-action').clickToggle(function() {
-		if (menustate) { maxNav(true) } else { minNav(true) }
-	}, function() {
-		if (menustate) { minNav(true) } else { maxNav(true) }
-	})
+	$('.nav-action').clickToggle(
+		function() {
+			if (menustate) {
+				maxNav(true)
+			} else {
+				minNav(true)
+			}
+		},
+		function() {
+			if (menustate) {
+				minNav(true)
+			} else {
+				maxNav(true)
+			}
+		}
+	)
 
 	$('header .search a').clickToggle(
 		function() {
 			$('header .search a').addClass('searchactived', function() {
-				$('header .search input').effect('slide', { direction: 'right', mode: 'show' }, 300).focus()
+				$('header .search input')
+					.effect('slide', { direction: 'right', mode: 'show' }, 300)
+					.focus()
 			})
-		}, function() {
-			$('header .search input').effect('slide', { direction: 'right', mode: 'hide' }, 300, function() {
-				$('header .search a').removeClass('searchactived')
-			})
+		},
+		function() {
+			$('header .search input').effect(
+				'slide',
+				{ direction: 'right', mode: 'hide' },
+				300,
+				function() {
+					$('header .search a').removeClass('searchactived')
+				}
+			)
 		}
 	)
 
@@ -74,9 +93,13 @@ $(document).ready(function() {
 
 	if ($('.nav ul li ul li a').hasClass('active')) {
 		$('.nav a.active').parent().parent().parent().css('background', '#555')
-		$('.nav.light a.active').parent().parent().parent().css('background', '#d9d9d9')
+		$('.nav.light a.active')
+			.parent()
+			.parent()
+			.parent()
+			.css('background', '#d9d9d9')
 		$('.nav a.active').parent().parent().show()
-	};
+	}
 
 	dialog = function(env) {
 		if (!env.cancel) {
@@ -85,12 +108,29 @@ $(document).ready(function() {
 
 		var buttons
 		if (env.confirm && env.action) {
-			buttons = '<a class="btn close" onclick="closeDialog();">' + env.cancel + '</a> <a class="btn btn-primary" onclick="' + env.action + '">' + env.confirm + '</a>'
+			buttons =
+				'<a class="btn close" onclick="closeDialog();">' +
+				env.cancel +
+				'</a> <a class="btn btn-primary" onclick="' +
+				env.action +
+				'">' +
+				env.confirm +
+				'</a>'
 		} else {
-			buttons = '<div class="right"><a class="btn btn-primary close" onclick="closeDialog();">' + env.cancel + '</a></div>'
+			buttons =
+				'<div class="right"><a class="btn btn-primary close" onclick="closeDialog();">' +
+				env.cancel +
+				'</a></div>'
 		}
 
-		var html = '<div class="alert-modal"><div id=\'dialog52895\' class="alert"><h3>' + env.title + '</h3><p>' + env.description + '</p>' + buttons + '</div></div>'
+		var html =
+			'<div class="alert-modal"><div id=\'dialog52895\' class="alert"><h3>' +
+			env.title +
+			'</h3><p>' +
+			env.description +
+			'</p>' +
+			buttons +
+			'</div></div>'
 
 		$('html').append(html)
 		$('.alert-modal').addClass('show-alert')
@@ -110,7 +150,7 @@ function minNav(cookie) {
 	$('.nav:not(.middle) a').css('overflow', 'hidden')
 	$('.nav:not(.middle) a i').css('color', '#fff')
 	$('.nav:not(.middle).light a i').css('color', '#000')
-	$('.nav:not(.middle)').animate({ 'width': '65px' }, 300, function() {
+	$('.nav:not(.middle)').animate({ width: '65px' }, 300, function() {
 		$('content').css('width', 'calc(100% - 65px)')
 		$('content content').css('width', 'calc(100% - 150px)')
 		$('content .left + content').css('width', 'calc(100% - 260px)')
@@ -124,7 +164,7 @@ function maxNav(cookie) {
 	}
 
 	var menu = $('.nav-action').parent().parent()
-	$('.nav:not(.middle)').animate({ 'width': '250px' }, 250, function() {
+	$('.nav:not(.middle)').animate({ width: '250px' }, 250, function() {
 		$('.nav:not(.middle) a.child').removeClass('closed')
 		$('.nav:not(.middle) a').css('color', '#fff')
 		$('.nav:not(.middle).light a').css('color', '#000')
@@ -143,11 +183,14 @@ function closeMenus(menu) {
 
 	if ($(menu).next('ul').is(':hidden')) {
 		$(menu).next('ul').slideDown('fast')
-	};
+	}
 }
 
 function getIntials(towork) {
-	towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase().trim()
+	towork = removeAcento(towork)
+		.replace(/\W*(\w)\w*/g, '$1')
+		.toUpperCase()
+		.trim()
 	return towork[0] + towork[towork.length - 1]
 }
 
@@ -217,7 +260,7 @@ function setCookie(name, value, days) {
 	var expires = ''
 	if (days) {
 		var date = new Date()
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+		date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
 		expires = '; expires=' + date.toUTCString()
 	}
 	document.cookie = name + '=' + (value || '') + expires + '; path=/'
@@ -246,15 +289,23 @@ function checkStrength(password, output) {
 	if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) strength += 1
 	if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) strength += 1
 	if (password.match(/([!,%,&,@@,#,$,^,*,?,_,~])/)) strength += 1
-	if (password.match(/(.*[!,%,&,@@,#,$,^,*,?,_,~].*[!,%,&,@@,#,$,^,*,?,_,~])/)) strength += 1
+	if (
+		password.match(/(.*[!,%,&,@@,#,$,^,*,?,_,~].*[!,%,&,@@,#,$,^,*,?,_,~])/)
+	) {
+		strength += 1
+	}
 	if (strength < 2) {
 		$('#' + output).removeClass()
 		$('#' + output).addClass('validator weak')
-		$('#' + output).html('Sua senha está fraca, é preciso adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.')
+		$('#' + output).html(
+			'Sua senha está fraca, é preciso adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.'
+		)
 	} else if (strength === 2) {
 		$('#' + output).removeClass()
 		$('#' + output).addClass('validator good')
-		$('#' + output).html('Tente adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.')
+		$('#' + output).html(
+			'Tente adicionar ao menos uma letra maíscula, minúscula, número ou caracter especial.'
+		)
 	} else {
 		$('#' + output).removeClass()
 		$('#' + output).addClass('validator strong')
@@ -262,7 +313,9 @@ function checkStrength(password, output) {
 	}
 
 	if (password.length === 0) {
-		$('#' + output).removeClass().html('')
+		$('#' + output)
+			.removeClass()
+			.html('')
 	}
 }
 
@@ -270,7 +323,15 @@ function checkPasswordMatch(input, output) {
 	var password = $('#password').val()
 	var confirmPassword = $(input).val()
 
-	if (password !== confirmPassword) { $('#' + output).addClass('validator').html('As senhas estão diferentes, por favor, tente novamente') } else { $('#' + output).removeClass('validator').html('') }
+	if (password !== confirmPassword) {
+		$('#' + output)
+			.addClass('validator')
+			.html('As senhas estão diferentes, por favor, tente novamente')
+	} else {
+		$('#' + output)
+			.removeClass('validator')
+			.html('')
+	}
 }
 
 function allTheSame(array) {
@@ -286,13 +347,14 @@ function pesquisarCep(value) {
 		var validacep = /^[0-9]{8}$/
 		if (validacep.test(cep)) {
 			var script = document.createElement('script')
-			script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados'
+			script.src =
+				'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados'
 			document.body.appendChild(script)
 		} else {
 			console.error('Formato de CEP inválido: ' + cep)
 		}
 	}
-};
+}
 
 function preencherdados(content) {
 	if (!('erro' in content)) {
