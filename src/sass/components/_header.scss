@@ -10,8 +10,8 @@
 		padding-left: 10px;
 		padding-bottom: 4px;
 
-		.primaryText-55 {
-			color: #fff;
+		.ms-Persona-primaryText {
+			color: #fff !important;
 		}
 	}
 
@@ -25,6 +25,15 @@
 			margin: 0.800em 0 0 0.800em;
 			cursor: pointer;
 			width: auto;
+		}
+
+		h1{
+			color: #fff;
+			font-size: 1.5em;
+			line-height: 48px;
+			margin-top: -3px;
+			margin-right: -8px;
+			margin-left: 15px;
 		}
 	}
 	.line {
@@ -137,7 +146,7 @@
 		}
 
 		&:last-child .menu li svg,
-		&:last-child .menu li i,{
+		&:last-child .menu li i{
 			margin-top: 1px;
 		}
 	}
@@ -258,22 +267,14 @@
 			-moz-border-radius: 50%;
 			-ms-border-radius: 50%;
 			-o-border-radius: 50%;
-}
+		}
 		i,
 		svg {
 			position: relative;
 			z-index: 7;
 		}
 	}
-
 }
-.header .right ul li:last-child .menu li svg,
-.header .right ul li:last-child .menu li i,
-.header .menu li:last-child a i,
-.header .menu li:last-child a svg {
-	margin-top: 0.533em;
-}
-
 .header .user-img,
 .icon {
 	width: 2.133em;
