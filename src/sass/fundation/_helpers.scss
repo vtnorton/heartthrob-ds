@@ -84,12 +84,13 @@ code .tag {
 }
 
 .validator {
-  border-top: 0.2em solid $accent-color;
+  border-top: 5px solid $accent-color;
   padding-top: 0.2em;
   display: block;
   width: 100%;
   font-size: 0.933em;
   margin-bottom: 0.533em;
+	margin-top: 5px;
 
   &.strong {
     border-top-color: $green-color;
