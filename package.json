@@ -7,7 +7,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-rename": "1.4.0",
+    "gulp-rename": "^2.0.0",
     "heartthrob-vision": "^1.1.6",
     "merge-stream": "^2.0.0"
   },
@@ -17,13 +17,14 @@
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "gulp-js-minify": "^0.0.3",
     "gulp-remove-empty-lines": "^0.1.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.1",
     "stylelint": "^13.9.0",
-    "stylelint-config-recommended": "^3.0.0"
+    "stylelint-config-recommended": "^5.0.0"
   },
   "scripts": {
     "postinstall": "npm update",

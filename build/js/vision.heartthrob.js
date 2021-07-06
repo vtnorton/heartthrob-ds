@@ -25,8 +25,12 @@ function hVision (conf) {
 		}
 	}
 
+	if (!conf.subscriptionKey || !conf.uriBase) {
+		console.erro('heartthrob-vision: please make sure to have a Azure subscription key and a uri base for your service. ')
+	}
+
 	if (conf.localProjectWarning && !window.location.hostname.startsWith('http')) {
-		console.warn('heartthrob-vision: your project/images must be online to have caption in your images. More info at: https://heartthrob.vtnorton.com/vision')
+		console.warn('heartthrob-vision: your project/images must be online to have caption in your images. More info at: https://heartthrob.vtnorton.com/vision.html')
 	} else {
 		var images = document.querySelectorAll('img')
 		images.forEach(function (element) {
@@ -43,8 +47,13 @@ function hVision (conf) {
 }
 
 function hProcessImage (img, conf) {
+	// TODO: descartar caso não seja uma imagem em formato conhecido
+	// TODO: mensagem de erro caso o response não seja ok
+	// TOOD: mensagem de erro baseado na resposta recebida
+	// TODO: verificar  a funcionalidade do localProjectWarning
+	// TODO: adicionar readme
+	// TODO: adicionar secret
 	var sourceImageUrl = hGetImageSource(img)
-
 	var data = '{"url": ' + '"' + sourceImageUrl + '"}'
 	var headers = new Headers()
 
@@ -55,16 +64,17 @@ function hProcessImage (img, conf) {
 		method: 'POST',
 		headers: headers,
 		body: data
-	}).then(function (response) {
-		if (!response.ok) {
-			throw Error(response.statusText)
-		}
-		img.setAttribute('alt', response.description.captions[0].text)
-		console.log(JSON.stringify(response, null, 2))
-	}).catch(function (error) {
-		// TODO: get the error code from the response
-		console.log('There was an error with your request. Check if you are not using a local image. Error: ' + error)
 	})
+		.then(response => response.json())
+		.then(function (response) {
+			/*	if (!response.ok) {
+				throw Error(response.statusText)
+			} */
+			console.log(JSON.stringify(response, null, 2))
+			img.setAttribute('alt', response.description.captions[0].text)
+		}).catch(function (error) {
+			console.log('There was an error with your request. Check if you are not using a local image. Error: ' + error)
+		})
 }
 
 function hGetImageSource (img) {
@@ -75,6 +85,8 @@ function hGetImageSource (img) {
 		var domainIndex = window.location.href.indexOf(domain)
 		var longAppName = window.location.href.slice(domainIndex + domain.length)
 		var directoryAppName = longAppName.substring(0, longAppName.lastIndexOf('/'))
+
+		if (!directoryAppName) { directoryAppName = 'http://' + domain }
 
 		if (sourceImageUrl.startsWith('./')) {
 			sourceImageUrl = sourceImageUrl.replace('./', '')

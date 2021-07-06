@@ -1,18 +1,18 @@
-let gulp = require('gulp')
-var concat = require('gulp-concat')
-var rename = require('gulp-rename')
-var merge = require('merge-stream')
-var minifyjs = require('gulp-js-minify')
-var sass = require('gulp-sass')
-var removeEmptyLines = require('gulp-remove-empty-lines')
+const gulp = require('gulp')
+const concat = require('gulp-concat')
+const rename = require('gulp-rename')
+const merge = require('merge-stream')
+const minifyjs = require('gulp-js-minify')
+const sass = require('gulp-sass')(require('sass'))
+const removeEmptyLines = require('gulp-remove-empty-lines')
 
-var deps = {
+const deps = {
 	'heartthrob-vision': {
 		'build/js/**': ''
 	}
 }
 
-gulp.task('restore', async() => {
+gulp.task('restore', async () => {
 	var streams = []
 
 	for (var prop in deps) {
@@ -27,31 +27,31 @@ gulp.task('restore', async() => {
 })
 
 /* building sass */
-gulp.task('build-sass-normal', function() {
+gulp.task('build-sass-normal', function () {
 	return gulp.src('src/sass/main.scss')
-		.pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(removeEmptyLines({ removeComments: true }))
 		.pipe(rename('heartthrob.css'))
 		.pipe(gulp.dest('build/css/'))
 })
 
-gulp.task('build-sass-min', function() {
+gulp.task('build-sass-min', function () {
 	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(rename('heartthrob.min.css'))
 		.pipe(gulp.dest('build/css/'))
 })
 
-gulp.task('build-sass-dev', function() {
+gulp.task('build-sass-dev', function () {
 	return gulp.src('src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(removeEmptyLines({ removeComments: true }))
 		.pipe(rename('heartthrob.css'))
 		.pipe(gulp.dest('../Heartthrob-docs/heartthrob-docs/wwwroot/lib/heartthrob/css'))
-		// using this last gulp.dest() to test on the docs while it's beeing develop, a better solution will be provided.
+	// using this last gulp.dest() to test on the docs while it's beeing develop, a better solution will be provided.
 })
 
-gulp.task('minify-js', function() {
+gulp.task('minify-js', function () {
 	return gulp.src('src/js/*.js')
 		.pipe(concat('heartthrob.js'))
 		.pipe(rename('heartthrob.min.js'))
