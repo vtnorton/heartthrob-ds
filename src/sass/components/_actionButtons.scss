@@ -1,0 +1,51 @@
+.btn-action { 
+	width: intrinsic !important; 
+	width: -moz-max-content !important; 
+	width: -webkit-max-content !important; 
+	
+	.btn { 
+		color: #000 !important; 
+		width: 3em; 
+		height: 3em; 
+		line-height: 3em; 
+		border-radius: 3.333em !important; 
+		box-shadow: 0 0.133em 0.467em rgb(0 0 0 / 25%); 
+		background: #fff !important; 
+		display: inline-flex; 
+		margin: 0 .1em
+
+		i {
+			width: 1em; 
+			margin: auto;
+		}
+
+		&.expanded {
+			min-width: 9.333em !important;
+		}
+
+		&:hover {
+			background: #0078d7 !important; 
+			color: #fff !important; 
+			box-shadow: 0 0.333em 0.933em rgba(0, 0, 0, 0.45); 
+			transition: width 0.2s initial;
+
+			i {
+				margin: 0 .5em 0 15px
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0 !important;
+		}
+
+		&.btn-primary {
+			background: #0078d7 !important; 
+			color: #fff !important; 
+			transition: all 0.35s;
+
+			i {
+				margin: 0 .5em 0 15px
+			}
+		}
+	}
+}
