@@ -462,14 +462,15 @@ nav.light .nav-top-menus:before { border-color: #bcbcbc; }
 .toolbar + * { margin-top: 3.2em !important; }
 .toolbar .btn-link { min-width: 0; margin-top: .267em; padding-right: 0; margin-right: -0.4em; }
 .btn-action { width: intrinsic !important; width: -moz-max-content !important; width: -webkit-max-content !important; }
-.btn-action .btn { color: #000 !important; width: 3em; height: 3em; line-height: 3em; border-radius: 3.333em !important; box-shadow: 0 .133em .467em rgba( 0, 0, 0, .25 ); background: #fff !important; display: inline-flex; margin: 0 .1em i; margin-width: 1em; margin-margin: auto; }
+.btn-action .btn { color: #000 !important; width: 3em; height: 3em; line-height: 3em; border-radius: 3.333em !important; box-shadow: 0 .133em .467em rgba( 0, 0, 0, .25 ); background: #fff !important; display: inline-flex; margin-top: -0.4em 0; margin-left: .1em; margin-right: .1em; margin-bottom: 0; }
+.btn-action .btn i { width: 1em; margin: auto; }
 .btn-action .btn.expanded { min-width: 9.333em !important; }
 .btn-action .btn:hover { background: #0078d7 !important; color: #fff !important; box-shadow: 0 .333em .933em rgba( 0, 0, 0, .45 ); transition: width .2s initial; }
-.btn-action .btn:hover i { margin: 0 .5em 0 9.75px; }
+.btn-action .btn:hover i { margin: 0 .5em 0 .875em; }
 .btn-action .btn:last-of-type { margin-right: 0 !important; }
 .btn-action .btn.btn-primary { background: #0078d7 !important; color: #fff !important; transition: all .35s; }
-.btn-action .btn.btn-primary i { margin: 0 .5em 0 9.75px; }
-.account { background: url( ../img/background.jpg ) no-repeat; background-size: cover; }
+.btn-action .btn.btn-primary i { margin: 0 .5em 0 .875em; }
+.account { background: #0c2743; background-size: cover; }
 .account::after { content: " "; background: #000; opacity: .5; top: 0; left: 0; bottom: 0; right: 0; position: absolute; z-index: -1; }
 .account .card { width: 36em !important; margin: 0 auto; position: relative; }
 .account .card .logo { text-align: center; }
