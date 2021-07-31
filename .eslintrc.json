@@ -1,36 +1,32 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   "env": {
     "browser": true,
     "es6": true
   },
-  "settings": {
+	"settings": {
     "react": {
       "version": "17"
     }
   },
+	"ignorePatterns": ["*.js"],
   "rules": {
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
-    "@typescript-eslint/explicit-module-boundary-types": [0],
-    "@typescript-eslint/no-shadow": ["error"],
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "jsx-quotes": ["error", "prefer-single"],
-    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
-    "no-console": "off",
-    "comma-dangle": ["error", "always-multiline"],
-    "import/prefer-default-export": "off",
-    "func-names": "off",
-    "import/extensions": [0],
-    "no-shadow": "off",
-    "no-use-before-define": "off",
-    "max-len": "off",
-    "semi": ["error", "never"],
-    "nonblock-statement-body-position": ["error", "below"],
-    "quotes": ["error", "single"]
+		"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+		"no-console": "off",
+		"comma-dangle": ["error", "always-multiline"],
+		"import/prefer-default-export": "off",
+		"func-names": "off",
+		"import/extensions": [0],
+		"no-shadow": "off",
+		"no-use-before-define": "off",
+		"max-len": "off",
+		"semi": ["error", "never"],
+		"nonblock-statement-body-position": ["error", "below"],
+		"quotes": ["error", "single"],
   }
 }
