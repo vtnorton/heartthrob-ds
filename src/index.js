@@ -1,4 +1,4 @@
-const css = require('../build/css/heartthrob.css');
+const css = require('../build/heartthrob.css');
 
 const main = { css };
 

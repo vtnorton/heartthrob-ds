@@ -5,7 +5,7 @@ import cssnano from 'cssnano'
 import perfectionist from 'perfectionist'
 
 const buildPath = './build/'
-const inputFile = 'src/index.js'
+const inputFile = './src/compiler.js'
 const defaultJsBuildSettings = [
 	{
 		file: buildPath + 'output.js',
